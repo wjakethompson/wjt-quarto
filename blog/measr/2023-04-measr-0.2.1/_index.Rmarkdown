@@ -1,0 +1,144 @@
+---
+title: "measr 0.2.1"
+subtitle: ""
+excerpt: "Initial release of measr package for estimating and evaluating diagnostic classification models."
+date: 2023-04-10
+author: "Jake Thompson"
+draft: false
+weight: 1
+categories:
+  - R
+  - package
+tags:
+  - dcm
+  - Stan
+layout: single-series
+---
+
+```{r setup, include = FALSE, message = FALSE}
+library(tidyverse)
+library(wjake)
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  comment = "#>",
+  echo = TRUE,
+  cache = FALSE,
+  fig.align = "center",
+  fig.width = 8,
+  fig.retina = 2,
+  out.width = "70%"
+)
+
+wjake::set_theme(base_family = "Source Sans Pro", d_scale = "wjake",
+                 plot_margin = margin(10, 10, 10, 10))
+```
+
+I'm excited to announce the release of [measr](https://measr.info) 0.2.1.
+The goal of measr is to provide applied researchers and psychometricians with a user friendly interface for estimating and evaluating diagnostic classification models (DCMs).
+DCMs are a class of psychometric models that provide classification of students into profiles of proficiency on a predefined set of knowledge, skills, or understandings.
+This offers many advantages over traditional assessment models.
+Because results are reported as proficiency on individual skills, teachers, students, and parents get actionable feedback about which areas could use additional attention.
+However, these models have not been widely used in applied or operational settings, in part due to a lack of user friendly software for estimating and evaluating these models.
+measr aims to bridge this gap between psychometric theory and applied practice.
+
+You can install it from CRAN with:
+
+```{r, eval = FALSE}
+install.packages("measr")
+```
+
+This blog post will highlight the main features of the package.
+
+```{r}
+library(measr)
+```
+
+## Estimating DCMs
+
+To illustrate DCMs and their application with measr, we'll use a simulated data set.
+In this data set, we have 1,000 respondents who each answered 15 questions about addition, multiplication, and fractions.
+For each item, a 1 represents a correct response to the item, and a 0 represents an incorrect response.
+
+```{r}
+library(tidyverse)
+
+dat <- read_csv("data/example-data.csv")
+dat
+```
+
+When using DCMs, a Q-matrix defines which items measure each attribute, or skill.
+In the Q-matrix, a 1 indicates that the item measures the attributes, and a 0 indicates the item does not measure the attribute.
+
+```{r}
+qmatrix <- read_csv("data/example-qmatrix.csv")
+qmatrix
+```
+
+Our goal is to estimate whether each respondent is proficient in each of the skills measured by the assessment, and DCMs are our tool.
+There are many different types of DCMs, each with different constraints or assumptions about how the attributes relate to each other.
+For example, if an item measures multiple attributes, does a respondent need to be proficient on all attributes to answer the item correctly?
+Or can proficiency in one attribute compensate for the lack of proficiency on another?
+
+Also several DCM subtypes are supported by measr, we are primarily focused on the [loglinear cognitive diagnostic model](https://link.springer.com/article/10.1007/s11336-008-9089-5) (LCDM), which is a general DCM.
+This means that it subsumes many of the other DCM subtypes and allows for the data to determine how much (if at all) one attribute might compensate for another.
+
+measr works by wrapping the [*Stan*](https://mc-stan.org) language to estimate DCMs.
+We can estimate the LCDM using `measr_dcm()`.
+This function use the inputs to write a Stan script defining the model and then estimates the model using either the [rstan](https://mc-stan.org/rstan/) or [cmdstanr](https://mc-stan.org/cmdstanr/) packages.
+To estimate the model, we just supply our data set and the Q-matrix.
+Because our data set and Q-matrix contain respondent and item identifiers, respectively, we need to specify the names of the identifier columns.
+We can also specify prior distributions for each of the model parameters.
+Finally, we specify a file for saving the model once it is estimated.
+For more information on model estimation, including details on specifying prior distributions, see the [model estimation vignette](https://measr.info/articles/model-estimation.html).
+
+```{r}
+lcdm <- measr_dcm(data = dat, qmatrix = qmatrix,
+                  resp_id = "resp_id", item_id = "item_id", 
+                  prior = c(prior(normal(0, 2), class = "intercept"),
+                            prior(lognormal(0, 1), class = "maineffect"),
+                            prior(normal(0, 2), class = "interaction")),
+                  file = "fits/example-lcdm")
+```
+
+Once the model has estimated, we can use `measr_extract()` to examine different aspects of the model, such as proportion of respondents with each pattern of proficiency across the attributes.
+
+```{r}
+measr_extract(lcdm, "strc_param")
+```
+
+## Evaluating DCMs
+
+There are several functions included for evaluating the model.
+For example we can examine the probability that each respondent is proficient in each attribute.
+Here, respondent 1 is likely proficient in all skills, whereas respondent 2 is likely only proficient in addition.
+
+```{r}
+lcdm <- add_respondent_estimates(lcdm)
+measr_extract(lcdm, "attribute_prob")
+```
+
+Often, we would dichotomize these probabilities into a 0/1 decision (e.g., proficient/not proficient).
+We can also look at the reliability of those classifications.
+The `add_reliability()` function will calculate the classification consistency and accuracy metrics described by [Johnson & Sinharay (2018)](https://doi.org/10.1111/jedm.12196).
+Here we see that all of the attributes have fairly high accuracy and consistency for classifications.
+
+```{r}
+lcdm <- add_reliability(lcdm)
+measr_extract(lcdm, "classification_reliability")
+```
+
+As you can see, for each type of model evaluation, we follow the same process of `add_{metric}` and then we can use `measr_extract()` to view the results.
+For a complete list of model evaluation options, see `?model_evaluation`.
+
+## Future Development
+
+We're already in the process of adding features and making improvements for the next version of measr.
+Some highlights include:
+
+* Adding support for more DCM subtypes
+* More refined prior specifications
+* Additional vignettes including a complete description of model evaluation and example case studies
+
+If you have a specific feature request, suggestion for improvement, or run into any problems, please [open an issue](https://github.com/wjakethompson/measr/issues) on the project repository!

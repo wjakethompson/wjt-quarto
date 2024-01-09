@@ -1,0 +1,30 @@
+# Date format
+date-format: "dddd, MMMM D, YYYY"
+
+# Enable banner-style title blocks
+title-block-banner: "#272727"
+
+# Add blog-post class to the banner header area
+format: 
+  html:
+    quarto-template-params:
+      banner-header-class: "blog-post"
+
+# Default for table of contents
+toc: true
+toc-title: Contents
+toc-location: left
+
+freeze: true
+
+# Default knitr options
+execute: 
+  echo: true
+  message: true
+  warning: true
+
+# Default author
+author:
+  - name: Jake Thompson
+    url: https://www.wjakethompson.com
+    orcid: 0000-0001-7339-0300

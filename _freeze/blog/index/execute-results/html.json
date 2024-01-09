@@ -1,0 +1,15 @@
+{
+  "hash": "6db6e5f71b167925a3792adbf49499d8",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Blog\"\nauthor: \"\"\ndescription: \"Jake Thompson's blog\"\nlisting:\n  - id: posts_measr\n    contents:\n      - \"measr/**/index.qmd\"\n      - \"measr/**/index.markdown\"\n    sort: \"date desc\"\n    template: ../assets/blog/listing.ejs\n  - id: posts_taylor\n    contents:\n      - \"taylor/**/index.qmd\"\n      - \"taylor/**/index.markdown\"\n    sort: \"date desc\"\n    template: ../assets/blog/listing.ejs\n  - id: posts_standard\n    contents:\n      - \"**/index.qmd\"\n      - \"**/index.markdown\"\n    sort: \"date desc\"\n    template: ../assets/blog/listing.ejs\n    categories: true\npage-layout: full\ncode-tools: false\nengine: knitr\ntoc-location: right\ndate-format: \"MMMM D, YYYY\"\n---\n\n::: {.cell}\n<style type=\"text/css\">\n#title-block-header .description {\n    display: none;\n}\n</style>\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,131 @@
+---
+title: "taylor 2.0.0"
+subtitle: ""
+excerpt: "Initial release of taylor for accessing data on Taylor Swift's discography."
+date: 2022-11-13
+author: "Jake Thompson"
+draft: false
+weight: 1
+categories:
+  - R
+  - package
+tags:
+  - Taylor Swift
+layout: single-series
+---
+
+```{r setup, include = FALSE, message = FALSE}
+library(downlit)
+library(wjake)
+library(ggplot2)
+
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  comment = "#>",
+  echo = TRUE,
+  cache = FALSE,
+  fig.align = "center",
+  fig.width = 6,
+  fig.asp = 0.618,
+  out.width = "80%"
+)
+
+set_theme(base_family = "Source Sans Pro",
+          plot_margin = margin(10, 10, 10, 10))
+```
+
+```{r sidebar-image, include = FALSE, eval = FALSE}
+library(magick)
+
+img <- image_read("~/Documents/GIT/packages/taylor-logo/final-hex/Midnights.png")
+
+image_blank(3748, 2164, "transparent") %>% 
+  image_composite(image_scale(img, "x2164"), operator = "over",
+                  offset = "+937+0") %>% 
+  image_write(here::here("content", "blog", "taylor", "2022-11-13-taylor-2.0.0",
+                         "sidebar-hex.png"))
+```
+
+I'm remarkably excited to announce the release of [taylor](https://taylor.wjakethompson.com) 2.0.0.
+taylor provides data on Taylor Swift's discography, including lyrics from [Genius](https://genius.com/artists/Taylor-swift) and song characteristics from [Spotify](https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02).
+
+You can install it from CRAN with:
+
+```{r, eval = FALSE}
+install.packages("taylor")
+```
+
+This blog post will highlight the major changes in this release, including the addition of data from *Midnights*.
+
+```{r}
+library(taylor)
+```
+
+
+## Midnights
+
+The most important update is the addition of data from *Midnights*.
+You can now find Spotify data and lyrics for all 23 songs in [`taylor_all_songs`](`r autolink_url("taylor::taylor_all_songs")`).
+The Target-exclusive tracks ("Hits Different," "You're On Your Own, Kid (Strings Remix)," and "Sweet Nothing (Piano Remix)") are not yet on Spotify.
+For now, only lyrics are available for these tracks.
+Spotify audio data will be added if and when these tracks get added to Spotify.
+
+```{r}
+library(tidyverse)
+
+taylor_all_songs %>% 
+  filter(album_name == "Midnights")
+```
+
+*Midnights* has also been added to [`taylor_albums`](`r autolink_url("taylor::taylor_albums")`).
+A user score provided by Metacritic has also been added to this data.
+
+```{r}
+taylor_albums
+```
+
+Finally, a new color palette inspired by the *Midnights* album cover has been added to the [`album_palettes`](`r autolink_url("taylor::album_palettes")`), and the [package website](https://taylor.wjakethompson.com) has been updated with a new theme and logo, also inspired by the album cover.
+
+```{r echo = FALSE, fig.asp = NA}
+#| fig.alt: >
+#|   The five colors of the Midnights color palette. The hexadecimal codes are
+#|   #121D27, #5A658B, #6F86A2, #85A7BA, and #AA9EB6
+
+scales::show_col(unname(album_palettes$midnights))
+```
+
+This palette can be used inside any of the [`scale_*_taylor()`](https://taylor.wjakethompson.com/reference/scale_taylor.html) functions.
+
+```{r}
+#| fig.alt: >
+#|   A horizontal bar graph showing track names on the y-axis and song energey
+#|   on the x-axis. Bars a filled with colors derived from the Midnights color
+#|   palette, ranging from navy to light blue and lavender.
+
+taylor_album_songs %>% 
+  filter(album_name == "Midnights", !is.na(energy)) %>% 
+  mutate(track_name = fct_inorder(track_name)) %>% 
+  ggplot(aes(x = energy, y = fct_rev(track_name))) +
+  geom_col(aes(fill = track_name), show.legend = FALSE) +
+  scale_fill_taylor_d(album = "Midnights") +
+  labs(x = "Song Energy (From Spotify)", y = NULL)
+```
+
+
+## Breaking Changes
+
+In addition to adding *Midnights* to [`taylor_all_songs`](`r autolink_url("taylor::taylor_all_songs")`) and [`taylor_album_songs`](`r autolink_url("taylor::taylor_album_songs")`), other audio data has also been updated.
+Spotify has updated the audio data for [*Red (Taylor's Version)*](https://github.com/wjakethompson/taylor/commit/4395cc107ce13afdc5ff535bd6c3d67ac8ed2567) and ["Renegade"](https://github.com/wjakethompson/taylor/commit/be95df878bb85ab5ee884ecf9d7e91ba99849e33#diff-16e84b1ed731fef624b1ef567ca9c073ddab95fc49cca127999c606c3d939918) (Taylor's feature with Big Red Machine) since the last release.
+These data sets have been updated to reflect these changes accordingly.
+
+## Minor Changes
+
+There were also a number of minor improvements:
+
+* Additional singles and remixes have been added to `taylor_all_songs`: "Lover (Remix)" with Shawn Mendes; "Carolina" from the *Where the Crawdads Sings* soundtrack; Ed Sheeran's "The Joker and the Queen;" Taylor's cover of Earth, Wind, and Fire's *September*; and "Three Sad Virgins" from Saturday Night Live.
+* This Love (Taylor's Version) has been added as a non-ablum song. Presumably, this song will eventually move to *1989 (Taylor's Version)*.
+* The album color palettes have been slightly tweaked to better capture the vibe of each album, rather than just pulling colors from the cover.
+
+See the [changelog](https://taylor.wjakethompson.com/news/index.html) for a complete list of changes.

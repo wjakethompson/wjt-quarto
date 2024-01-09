@@ -1,0 +1,163 @@
+---
+title: "taylor 0.2.0"
+subtitle: ""
+excerpt: "Initial release of taylor for accessing data on Taylor Swift's discography."
+date: 2021-09-01
+author: "Jake Thompson"
+draft: false
+weight: 1
+categories:
+  - R
+  - package
+tags:
+  - Taylor Swift
+layout: single-series
+---
+
+```{r setup, include = FALSE, message = FALSE}
+library(downlit)
+library(wjake)
+library(ggplot2)
+
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  comment = "#>",
+  echo = TRUE,
+  cache = FALSE,
+  fig.align = "center",
+  fig.width = 6,
+  fig.asp = 0.618,
+  out.width = "80%"
+)
+
+set_theme(base_family = "Source Sans Pro",
+          plot_margin = margin(10, 10, 10, 10))
+```
+
+I'm delighted to announce the release of [taylor](https://taylor.wjakethompson.com) 0.2.0.
+taylor provides data on Taylor Swift's discography, including lyrics from [Genius](https://genius.com/artists/Taylor-swift) and song characteristics from [Spotify](https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02).
+
+You can install it from CRAN with:
+
+```{r, eval = FALSE}
+install.packages("taylor")
+```
+
+This blog post will highlight the main features of the package.
+
+```{r}
+library(taylor)
+```
+
+
+## Data sets
+
+The main focus of taylor is to provide data for Taylor Swift's discography.
+There most  data sets.
+The first is [`taylor_all_songs`](`r autolink_url("taylor::taylor_all_songs")`).
+This data set contains meta data about each song (e.g., album, track number, release date); audio characteristics from the Spotify API such as the key, danceability, and valence; and a list column, `lyrics`, that contains the lyrics for each song.
+See [`?taylor_all_songs`](`r autolink_url("taylor::taylor_all_songs")`) for a complete description of all the variables that are included.
+
+```{r}
+taylor_all_songs
+```
+
+We can see the lyrics using [`tidyr::unnest()`](`r autolink_url("tidyr::unnest")`).
+For example, if we want all of the lyrics from *Lover*, we can see those with
+
+```{r}
+library(tidyverse)
+
+taylor_all_songs %>%
+  filter(album_name == "Lover") %>%
+  select(album_name, track_name, lyrics) %>%
+  unnest(lyrics)
+```
+
+The lyrics is are in a nice tidy format with one row in the tibble per line in the song.
+The goal is to make the lyrics as ready for text analysis as possible.
+If you're into that sort of thing, I highly recommended checking out [Emil Hvitfeldt](https://twitter.com/Emil_Hvitfeldt) and [Julia Silge's](https://twitter.com/juliasilge) [*Supervised Machine Learning for Text Analysis in R*](https://smltar.com/).
+
+In addition to `taylor_all_songs`, there are two additional data sets included.
+The first is [`taylor_album_songs`](`r autolink_url("taylor::taylor_album_songs")`).
+This is just a filtered version of `taylor_all_songs` that includes only songs from Taylor's studio albums.
+This means that single-only releases (e.g. *Only the Young*, *Christmas Tree Farm*) are not included, nor are songs that Taylor is only featured on (e.g., *Renegade* by Big Red Machine, *Gasoline (Remix)* by HAIM).
+Additionally, this data only includes versions of the songs Taylor owns where possible.
+For example, *Fearless (Taylor's Version)* is included in `taylor_album_songs`, and the original *Fearless*.
+Additionally, although *Red* is currently included, it will be removed in favor of *Red (Taylor's Version)* when that album is released in November.
+
+```{r}
+taylor_all_songs
+```
+
+Finally, there is a small data, [`taylor_albums`](`r autolink_url("taylor::taylor_albums")`), that contains meta data for Taylor's albums, including the release date and the [Metacritic](https://www.metacritic.com/person/taylor-swift) score.
+A full description of all the variables can be seen using [`?taylor_albums`](`r autolink_url("taylor::taylor_albums")`).
+
+```{r}
+taylor_albums
+```
+
+## Other Features
+
+Although the main focus of taylor is to provide access to audio characteristics and lyrics, I also built in a few additional features, mostly as an opportunity to learn some new tools!
+Each of these features will get detail in future posts, but I'll provide a high level overview here.
+
+### Color Palettes
+
+First, inspired by [Josiah Parry's](https://twitter.com/JosiahParry) work on the [cpcinema](https://github.com/JosiahParry/cpcinema) package, taylor includes a special vector class that allow users to build and visualize their own color palettes.
+The color palettes are built using the [vctrs](https://vctrs.r-lib.org) package.
+In a future post, I'll describe how the `color_palette` class works internally.
+Several palettes are built into taylor based on Taylor's album covers.
+For example, here a palette based on Taylor's debut album, *Taylor Swift*:
+
+```{r}
+album_palettes$taylor_swift
+```
+
+The full printing is not rendered here, but in your console, you will see a color swatch next to each hex code showing the color.
+All of the album-based palettes can be see, with full rendering, can be seen on the [taylor website](`r autolink_url("taylor::album_palettes")`).
+In addition, there is an [`album_compare`](`r autolink_url("taylor::album_compare")`) palette which includes one color from each individual album palette.
+
+### ggplot2 Scales
+
+The other feature is a set of ggplot2 color scales that can be used to easily apply the color palettes to plots.
+For an example, let's look at the [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) data.
+We can use [`scale_color_taylor_d()`](`r autolink_url("taylor::scale_color_taylor_d")`) to apply an album color palette to a discrete variable.
+As might be expected there are also [`scale_color_taylor_c()`](`r autolink_url("taylor::scale_color_taylor_c")`) and [`scale_color_taylor_b()`](`r autolink_url("taylor::scale_color_taylor_b")`) variants for continuous and binned scales as well.
+
+```{r warning = FALSE}
+library(palmerpenguins)
+
+ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
+  geom_point(aes(color = species, shape = species)) +
+  # scale_color_manual(values = album_palettes$evermore[1:3])
+  scale_color_taylor_d(album = "Lover")
+```
+
+There is also the [`scale_fill_albums()`](`r autolink_url("taylor::scale_color_albums")`) function, which will automatically map colors from each album palette to the appropriate album name.
+
+```{r warning = FALSE}
+taylor_albums %>%
+  filter(!ep) %>%
+  mutate(album_name = factor(album_name, levels = album_levels)) %>%
+  ggplot(aes(x = metacritic_score, y = album_name)) +
+  geom_col(aes(fill = album_name), show.legend = FALSE) +
+  scale_fill_albums()
+```
+
+For more examples, check out the [plotting article](https://taylor.wjakethompson.com/articles/plotting.html) on the taylor website.
+In a future post I'll describe how I built ggplot2 scales on top of the color palettes.
+
+## Conclusion
+
+This is the initial release of taylor, so I expect that you will find bugs, or maybe even a song or two that I missed.
+If you do, please file an issue on the [GitHub repository](https://github.com/wjakethompson/taylor).
+I'm planning another release of taylor in November after *Red (Taylor's Version)* drops, so I will aim to have any fixed in place by then.
+In the mean time, stay tuned for my upcoming posts on using vctrs classes and creating ggplot2 scales within taylor!
+
+```{r echo = FALSE}
+knitr::include_graphics("https://media.giphy.com/media/geuXiMq0MNqfAyxS7b/giphy.gif")
+```
+

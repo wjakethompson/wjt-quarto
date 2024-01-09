@@ -1,0 +1,132 @@
+---
+title: "taylor 1.0.0"
+subtitle: ""
+excerpt: "Initial release of taylor for accessing data on Taylor Swift's discography."
+date: 2021-12-17
+author: "Jake Thompson"
+draft: false
+weight: 1
+categories:
+  - R
+  - package
+tags:
+  - Taylor Swift
+layout: single-series
+---
+
+```{r setup, include = FALSE, message = FALSE}
+library(downlit)
+library(wjake)
+library(ggplot2)
+
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  comment = "#>",
+  echo = TRUE,
+  cache = FALSE,
+  fig.align = "center",
+  fig.width = 6,
+  fig.asp = 0.618,
+  out.width = "80%"
+)
+
+set_theme(base_family = "Source Sans Pro",
+          plot_margin = margin(10, 10, 10, 10))
+```
+
+```{r sidebar-image, include = FALSE, eval = FALSE}
+library(magick)
+
+img <- image_read("~/Documents/GIT/packages/taylor-logo/final-hex/red-tv.png")
+
+image_blank(3748, 2164, "transparent") %>% 
+  image_composite(image_scale(img, "x2164"), operator = "over",
+                  offset = "+937+0") %>% 
+  image_write(here::here("content", "blog", "taylor", "2021-12-17-taylor-1.0.0",
+                         "sidebar-hex.png"))
+```
+
+I'm all too excited to announce the release of [taylor](https://taylor.wjakethompson.com) 1.0.0.
+taylor provides data on Taylor Swift's discography, including lyrics from [Genius](https://genius.com/artists/Taylor-swift) and song characteristics from [Spotify](https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02).
+
+You can install it from CRAN with:
+
+```{r, eval = FALSE}
+install.packages("taylor")
+```
+
+This blog post will highlight the major changes in this release, including the addition of data from *Red (Taylor's Version)* and other updates to [color palette functionality](/blog/taylor/2021-10-24-taylor-palettes/).
+
+```{r}
+library(taylor)
+```
+
+
+## Red (Taylor's Version)
+
+The biggest update is the addition of data from *Red (Taylor's Version)*
+You can now find Spotify data and lyrics for all 30(!!) songs in [`taylor_all_songs`](`r autolink_url("taylor::taylor_all_songs")`).
+
+```{r}
+library(tidyverse)
+
+taylor_all_songs %>% 
+  filter(album_name == "Red (Taylor's Version)")
+```
+
+*Red (Taylor's Version)* has also replaced the original *Red* in [`taylor_album_songs`](`r autolink_url("taylor::taylor_album_songs")`).
+So if you want only songs from Taylor's albums, you will get *Red (Taylor's Version)*, and *Fearless (Taylor's Version)*, by default, because we stan artists owning their art.
+
+```{r echo = FALSE}
+#| fig.alt: >
+#|   Taylor Swift happily dancing on the Tonight Show with Jimmy Fallon.
+knitr::include_graphics("https://media.giphy.com/media/gromG2nn1K3Tg50ojX/giphy.gif")
+```
+
+```{r}
+taylor_album_songs %>% 
+  distinct(album_name)
+```
+
+*Red (Taylor's Version)* has also been added to [`taylor_albums`](`r autolink_url("taylor::taylor_albums")`), and has the highest Metacritic score of any of Taylor's albums.
+
+```{r}
+taylor_albums
+```
+
+Finally, a new color palette inspired by the *Red (Taylor's Version)* album cover has been added to the [`album_palettes`](`r autolink_url("taylor::album_palettes")`), and the [package website](https://taylor.wjakethompson.com) has been updated with a new theme and logo, also inspired by the album cover.
+
+```{r echo = FALSE, fig.asp = NA}
+scales::show_col(unname(album_palettes$red_tv))
+```
+
+## Breaking Changes
+
+In addition to *Red (Taylor's Version)* replacing *Red* in [`taylor_album_songs`](`r autolink_url("taylor::taylor_album_songs")`), there is one other breaking change in this release.
+The `type` argument of [`color_palette()`](`r autolink_url("taylor::color_palette")`) has been deprecated in favor of an automatic interpolation.
+
+In previous version, if we wanted to interpolate additional colors from a smaller color palette, we needed to specify `type = "continuous"`.
+
+```{r eval = FALSE}
+my_colors <- c(ku_blue = "#0051ba", "firebrick", "#ffc82d")
+my_palette <- color_palette(my_colors)
+
+# old
+color_palette(my_palette, n = 10, type = "continuous")
+color_palette(my_palette, n = 2, type = "discrete")
+```
+
+In the latest release, this happens automatically.
+If you specify an `n` that is larger than the size of the palette (for example, `n = 10` when `my_palette` has only 3 colors), we now automatically interpolate additional colors.
+Similarly, if you specify an `n` that is smaller than the number of colors in the palette, an evenly spaced sample will be taken.
+
+## Minor Changes
+
+There were also a number of minor improvements:
+
+* Wildest Dreams (Taylor's Version) has been added as a non-ablum song. Presumably, this song will eventually move to *1989 (Taylor's Version)*.
+* [`color_palette()`](`r autolink_url("taylor::color_palette")`) now preserves color names, either through values in [`colors()`](`r autolink_url("grDevices::colors")`), or a named vector supplied to `pal`.
+
+See the [changelog](https://taylor.wjakethompson.com/news/index.html) for a complete list of changes.

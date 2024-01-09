@@ -1,0 +1,192 @@
+---
+title: "taylor 3.0.0"
+subtitle: ""
+excerpt: "Welcoming 1989 (Taylor's Version) and Speak Now (Taylor's Version) to the {taylor} package."
+date: 2023-11-09
+author: "Jake Thompson"
+draft: false
+weight: 1
+categories:
+  - R
+  - package
+tags:
+  - Taylor Swift
+layout: single-series
+---
+
+```{r setup, include = FALSE, message = FALSE}
+library(downlit)
+library(wjake)
+library(ggplot2)
+
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  comment = "#>",
+  echo = TRUE,
+  cache = FALSE,
+  fig.align = "center",
+  fig.width = 6,
+  fig.asp = 0.618,
+  out.width = "80%"
+)
+
+set_theme(base_family = "Source Sans Pro",
+          plot_margin = margin(10, 10, 10, 10))
+```
+
+```{r sidebar-image, include = FALSE, eval = FALSE}
+library(magick)
+
+img <- image_read("~/Documents/GIT/packages/taylor-logo/final-hex/1989-tv.png")
+
+image_blank(3748, 2164, "transparent") %>% 
+  image_composite(image_scale(img, "x2164"), operator = "over",
+                  offset = "+937+0") %>% 
+  image_write(here::here("content", "blog", "taylor", "2023-11-09-taylor-3.0.0",
+                         "sidebar-hex.png"))
+```
+
+I'm overjoyed to announce the release of [taylor](https://taylor.wjakethompson.com) 3.0.0.
+taylor provides data on Taylor Swift's discography, including lyrics from [Genius](https://genius.com/artists/Taylor-swift) and song characteristics from [Spotify](https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02).
+
+You can install it from CRAN with:
+
+```{r, eval = FALSE}
+install.packages("taylor")
+```
+
+This blog post will highlight the major changes in this release, including the addition of data from *Speak Now (Taylor's Version)* and *1989 (Taylor's Version)*.
+
+```{r}
+library(taylor)
+```
+
+
+## Entering Our *Taylor's Version* Era
+
+Over the past few months Taylor has released two new rerecords: *Speak Now (Taylor's Version)* and *1989 (Taylor's Version)*.
+You can now find Spotify data and lyrics for both albums in [`taylor_all_songs`](`r autolink_url("taylor::taylor_all_songs")`).
+There is one Target-exclusive from from *1989 (Taylor's Version)*, "Sweeter Than Fiction (Taylor's Version)," which is not yet on Spotify and therefore doesn't have audio data.
+For now, only lyrics are available for this track.
+Spotify audio data will be added in the future if and when it gets added to Spotify.
+
+```{r}
+library(tidyverse)
+
+taylor_all_songs %>% 
+  filter(album_name == "Speak Now (Taylor's Version)")
+
+taylor_all_songs %>% 
+  filter(album_name == "1989 (Taylor's Version)")
+```
+
+Both rerecords have also been added to [`taylor_albums`](`r autolink_url("taylor::taylor_albums")`).
+
+```{r}
+taylor_albums
+```
+
+The color palettes have also been updated to include palette inspired by the each album cover and can be accessed in the [`album_palettes`](`r autolink_url("taylor::album_palettes")`) list.
+
+```{r echo = FALSE, fig.asp = NA}
+#| fig.alt: >
+#|   The five colors of the Speak Now (Taylor's Version) color palette.
+
+scales::show_col(unname(album_palettes$speak_now_tv))
+```
+
+```{r echo = FALSE, fig.asp = NA}
+#| fig.alt: >
+#|   The five colors of the 1989 (Taylor's Version) color palette.
+
+scales::show_col(unname(album_palettes$`1989_tv`))
+```
+
+These palettes can be used inside any of the [`scale_*_taylor()`](https://taylor.wjakethompson.com/reference/scale_taylor.html) functions.
+
+```{r}
+#| out.width: "100%"
+#| fig.alt: >
+#|   A horizontal bar graph showing track names on the y-axis and song energey
+#|   on the x-axis. Bars a filled with colors derived from the 1989 (Taylor's
+#|   Version) color palette, ranging from blue to tan.
+
+taylor_album_songs %>% 
+  filter(album_name == "1989 (Taylor's Version)", !is.na(energy)) %>% 
+  mutate(track_name = fct_inorder(track_name)) %>% 
+  ggplot(aes(x = energy, y = fct_rev(track_name))) +
+  geom_col(aes(fill = track_name), show.legend = FALSE) +
+  scale_fill_taylor_d(album = "1989 (Taylor's Version)") +
+  labs(x = "Song Energy (From Spotify)", y = NULL)
+```
+
+Finally, the [package website](https://taylor.wjakethompson.com) has been updated with a new theme and logo, inspired by the *1989 (Taylor's Version)* album cover.
+
+## The Eras Tour Data
+
+This release also comes with a new data set, [`eras_tour_surprise`](`r autolink_url("taylor::eras_tour_surprise")`).
+This data set includes all of the surprise that Taylor has played, including the location, the night, and the instrument that was used.
+
+```{r}
+eras_tour_surprise
+```
+
+We can use this data to, for example, look at how many and when songs have been played from each album.
+
+<details><summary>Plot code</summary>
+
+```{r eras-plot, eval = FALSE}
+eras_tour_surprise |> 
+  left_join(taylor_all_songs %>%
+               filter(is.na(ep) | !ep) %>%
+               distinct(track_name, album_name),
+             join_by(song == track_name),
+             relationship = "many-to-one") |> 
+  select(date, city, night, album_name, song) |> 
+  mutate(total = 1:n(),
+         .by = album_name) |> 
+  complete(nesting(date, city, night), album_name) |> 
+  select(-song) |>
+  slice_max(total, by = c(date, city, night, album_name)) |>
+  arrange(album_name, date) |> 
+  group_by(album_name) |> 
+  fill(total, .direction = "down") |> 
+  ungroup() |> 
+  mutate(total = replace_na(total, 0L),
+         show = 1:n(),
+         .by = album_name) |> 
+  filter(!is.na(album_name)) |> 
+  mutate(album_name = factor(album_name, album_levels)) |> 
+  ggplot() +
+  facet_wrap(~album_name, ncol = 3) +
+  geom_line(data = ~rename(.x, album = album_name),
+            aes(x = show, y = total, group = album),
+            color = "grey80") +
+  geom_line(aes(x = show, y = total, color = album_name),
+            linewidth = 2, show.legend = FALSE) +
+  scale_color_albums() +
+  labs(x = "Shows", y = "Surprise Songs")
+```
+
+</details>
+
+```{r eras-plot, echo = FALSE}
+#| out.width: "100%"
+#| fig.width: 8
+#| fig.asp: 1.2
+#| fig.alt: >
+#|    Line plot showing the cumulative number of songs played as surprise songs
+#|    from each album over the course of The Eras Tour.
+```
+
+## Minor Changes
+
+There were also a number of minor improvements:
+
+* Spotify data was added for "Hits Different," "Snow on the Beach (More Lana Del Rey)," and "Karma (Remix)" after they were released to streaming as part of *Midnights (The Til Dawn Edition)*.
+* Additional non-album songs have been added to `taylor_all_songs`: "All of the Girls You Loved Before" from *The More Lover Chapter*, "Eyes Open (Taylor's Version)" and "Safe & Sound (Taylor's Version)" from *The More Red (Taylor's Version) Chapter*, and "If This Was a Movie (Taylor's Version)" from *The More Fearless (Taylor's Version) Chapter*.
+* "This Love (Taylor's Version)" and "Wildest Dreams (Taylor's Version)" have been removed from the non-album singles now that *1989 (Taylor's Version)* has been released.
+
+See the [changelog](https://taylor.wjakethompson.com/news/index.html) for a complete list of changes.

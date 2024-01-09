@@ -6,4 +6,5 @@
 .quarto
 
 /.quarto/
+_site/*
 assets/wjakethompson/*

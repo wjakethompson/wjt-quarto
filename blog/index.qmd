@@ -3,24 +3,11 @@ title: "Blog"
 author: ""
 description: "Jake Thompson's blog"
 listing:
-  - id: posts_measr
-    contents:
-      - "measr/**/index.qmd"
-      - "measr/**/index.markdown"
-    sort: "date desc"
-    template: ../assets/blog/listing.ejs
-  - id: posts_taylor
-    contents:
-      - "taylor/**/index.qmd"
-      - "taylor/**/index.markdown"
-    sort: "date desc"
-    template: ../assets/blog/listing.ejs
   - id: posts_standard
     contents:
       - "**/index.qmd"
       - "**/index.markdown"
     sort: "date desc"
-    template: ../assets/blog/listing.ejs
     categories: true
 page-layout: full
 code-tools: false

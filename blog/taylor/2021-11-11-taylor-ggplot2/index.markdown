@@ -1,24 +1,26 @@
 ---
-title: Creating ggplot2 fill and color scales
-author: Jake Thompson
-date: '2021-11-11'
+title: "Creating ggplot2 fill and color scales"
+date: 2021-11-11
+subtitle: ""
+description: "Learn to create custom fill and color scales for ggplot2 to make your
+  plots *Gorgeous*."
+image: "sidebar-plots.png"
+twitter-card:
+  image: "sidebar-plots.png"
+open-graph:
+  image: "sidebar-plots.png"
 categories:
-  - package
   - R
-tags:
-  - Taylor Swift
+  - package
+  - taylor
   - ggplot2
-excerpt: Learn to create custom fill and color scales for ggplot2 to make your
-  plots *Gorgeous*.
-draft: no
-weight: 1
-layout: single-series
+  - Taylor Swift
 ---
 
 
 
-In the first post in the [taylor series](https://www.wjakethompson.com/blog/taylor/), I introduced the [taylor](https://taylor.wjakethompson.com) package for accessing data on Taylor Swift's discography.
-We then began exploring some of the internals of the package by examining how taylor uses vctrs to [create a custom color palette class](../2021-10-24-taylor-palettes/).
+In the first post in the [taylor series](https://www.wjakethompson.com/blog/#category=taylor), I introduced the [taylor](https://taylor.wjakethompson.com) package for accessing data on Taylor Swift's discography.
+We then began exploring some of the internals of the package by examining how taylor uses vctrs to [create a custom color palette class](../2021-10-16-taylor-palettes/).
 In this post, we'll extend that work to see how the color palettes can be wrapped into color and fill scales for [ggplot2](https://ggplot2.tidyverse.org).
 
 ## ggplot2 scales
@@ -42,7 +44,7 @@ p <- ggplot(faithfuld, aes(x = waiting, y = eruptions, fill = density)) +
 p
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/default-example-1.png" title="Heat-map showing the relationship between eruption time and waiting time for the Old Faithful geyser. Most eruptions are either long after a long wait, or a short eruption after a short wait. The heat map is show using the default viridis color palette." alt="Heat-map showing the relationship between eruption time and waiting time for the Old Faithful geyser. Most eruptions are either long after a long wait, or a short eruption after a short wait. The heat map is show using the default viridis color palette." width="80%" style="display: block; margin: auto;" />
+<img src="index_files/figure-html/default-example-1.png" title="Heat-map showing the relationship between eruption time and waiting time for the Old Faithful geyser. Most eruptions are either long after a long wait, or a short eruption after a short wait. The heat map is show using the default viridis color palette." alt="Heat-map showing the relationship between eruption time and waiting time for the Old Faithful geyser. Most eruptions are either long after a long wait, or a short eruption after a short wait. The heat map is show using the default viridis color palette." width="80%" style="display: block; margin: auto;" />
 
 By default, the [viridis palette](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html) is used for continuous scales.
 We can update to a Taylor Swift themed palette using `scale_fill_taylor_c()`.
@@ -55,7 +57,7 @@ p +
   scale_fill_taylor_c(album = "Fearless (Taylor's Version)")
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/fearlesstv-example-1.png" title="The same heat-map as the previous figure, but the color palette has been changed to use color inspired by the album cover for Fearless (Taylor's Version)." alt="The same heat-map as the previous figure, but the color palette has been changed to use color inspired by the album cover for Fearless (Taylor's Version)." width="80%" style="display: block; margin: auto;" />
+<img src="index_files/figure-html/fearlesstv-example-1.png" title="The same heat-map as the previous figure, but the color palette has been changed to use color inspired by the album cover for Fearless (Taylor's Version)." alt="The same heat-map as the previous figure, but the color palette has been changed to use color inspired by the album cover for Fearless (Taylor's Version)." width="80%" style="display: block; margin: auto;" />
 
 In this post, we'll dig into how the `scale_fill_taylor_*()` functions are built.
 
@@ -280,6 +282,6 @@ We could have used the `album_palettes` with ggplot2 by using `ggplot2::scale_co
 But where's the fun in that?!
 
 This is the last post for now digging into the internals of taylor.
-However, you can expect a new release post soon, as *Red (Taylor's Version)* is being release in just a few hours!
+However, you can expect a new release post soon, as *Red (Taylor's Version)* is being released in just a few hours!
 
 <img src="https://media.giphy.com/media/OiU4E2Y8tSU0/giphy.gif" width="80%" style="display: block; margin: auto;" />

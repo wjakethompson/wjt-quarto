@@ -1,0 +1,57 @@
+model,state_name,state_abbr,trump,biden
+2016 Map,Alabama,AL,1,0
+2016 Map,Alaska,AK,1,0
+2016 Map,Arizona,AZ,1,0
+2016 Map,Arkansas,AR,1,0
+2016 Map,California,CA,0,1
+2016 Map,Colorado,CO,0,1
+2016 Map,Connecticut,CT,0,1
+2016 Map,Delaware,DE,0,1
+2016 Map,Florida,FL,1,0
+2016 Map,Georgia,GA,1,0
+2016 Map,Hawaii,HI,0,1
+2016 Map,Idaho,ID,1,0
+2016 Map,Illinois,IL,0,1
+2016 Map,Indiana,IN,1,0
+2016 Map,Iowa,IA,1,0
+2016 Map,Kansas,KS,1,0
+2016 Map,Kentucky,KY,1,0
+2016 Map,Louisiana,LA,1,0
+2016 Map,Maine,ME,0,1
+2016 Map,Maryland,MD,0,1
+2016 Map,Massachusetts,MA,0,1
+2016 Map,Michigan,MI,1,0
+2016 Map,Minnesota,MN,0,1
+2016 Map,Mississippi,MS,1,0
+2016 Map,Missouri,MO,1,0
+2016 Map,Montana,MT,1,0
+2016 Map,Nebraska,NE,1,0
+2016 Map,Nevada,NV,0,1
+2016 Map,New Hampshire,NH,0,1
+2016 Map,New Jersey,NJ,0,1
+2016 Map,New Mexico,NM,0,1
+2016 Map,New York,NY,0,1
+2016 Map,North Carolina,NC,1,0
+2016 Map,North Dakota,ND,1,0
+2016 Map,Ohio,OH,1,0
+2016 Map,Oklahoma,OK,1,0
+2016 Map,Oregon,OR,0,1
+2016 Map,Pennsylvania,PA,1,0
+2016 Map,Rhode Island,RI,0,1
+2016 Map,South Carolina,SC,1,0
+2016 Map,South Dakota,SD,1,0
+2016 Map,Tennessee,TN,1,0
+2016 Map,Texas,TX,1,0
+2016 Map,Utah,UT,1,0
+2016 Map,Vermont,VT,0,1
+2016 Map,Virginia,VA,0,1
+2016 Map,Washington,WA,0,1
+2016 Map,West Virginia,WV,1,0
+2016 Map,Wisconsin,WI,1,0
+2016 Map,Wyoming,WY,1,0
+2016 Map,District of Columbia,DC,0,1
+2016 Map,ME-1,ME-1,0,1
+2016 Map,ME-2,ME-2,1,0
+2016 Map,NE-1,NE-1,1,0
+2016 Map,NE-2,NE-2,1,0
+2016 Map,NE-3,NE-3,1,0

@@ -1,0 +1,57 @@
+model,state_name,state_abbr,trump,biden
+Electoral Polls,Alabama,AL,1,0
+Electoral Polls,Alaska,AK,0.982,0.018000000000000016
+Electoral Polls,Arizona,AZ,0.404,0.596
+Electoral Polls,Arkansas,AR,1,0
+Electoral Polls,California,CA,0,1
+Electoral Polls,Colorado,CO,0,1
+Electoral Polls,Connecticut,CT,0,1
+Electoral Polls,Delaware,DE,0,1
+Electoral Polls,District of Columbia,DC,0,1
+Electoral Polls,Florida,FL,0.30299999999999994,0.6970000000000001
+Electoral Polls,Georgia,GA,0.5660000000000001,0.43399999999999994
+Electoral Polls,Hawaii,HI,0,1
+Electoral Polls,Idaho,ID,1,0
+Electoral Polls,Illinois,IL,0,1
+Electoral Polls,Indiana,IN,1,0
+Electoral Polls,Iowa,IA,0.569,0.43100000000000005
+Electoral Polls,Kansas,KS,1,0
+Electoral Polls,Kentucky,KY,1,0
+Electoral Polls,Louisiana,LA,1,0
+Electoral Polls,Maine,ME,0,1
+Electoral Polls,Maryland,MD,0,1
+Electoral Polls,Massachusetts,MA,0,1
+Electoral Polls,ME-1,ME-1,0,1
+Electoral Polls,ME-2,ME-2,0.44399999999999995,0.556
+Electoral Polls,Michigan,MI,0.03200000000000003,0.968
+Electoral Polls,Minnesota,MN,0.015000000000000013,0.985
+Electoral Polls,Mississippi,MS,1,0
+Electoral Polls,Missouri,MO,1,0
+Electoral Polls,Montana,MT,1,0
+Electoral Polls,NE-1,NE-1,0.773,0.22699999999999998
+Electoral Polls,NE-2,NE-2,0.32499999999999996,0.675
+Electoral Polls,NE-3,NE-3,1,0
+Electoral Polls,Nebraska,NE,1,0
+Electoral Polls,Nevada,NV,0.15200000000000002,0.848
+Electoral Polls,New Hampshire,NH,0.005999999999999894,0.9940000000000001
+Electoral Polls,New Jersey,NJ,0,1
+Electoral Polls,New Mexico,NM,0,1
+Electoral Polls,New York,NY,0,1
+Electoral Polls,North Carolina,NC,0.40700000000000003,0.593
+Electoral Polls,North Dakota,ND,1,0
+Electoral Polls,Ohio,OH,0.644,0.356
+Electoral Polls,Oklahoma,OK,1,0
+Electoral Polls,Oregon,OR,0,1
+Electoral Polls,Pennsylvania,PA,0.10599999999999998,0.894
+Electoral Polls,Rhode Island,RI,0,1
+Electoral Polls,South Carolina,SC,1,0
+Electoral Polls,South Dakota,SD,1,0
+Electoral Polls,Tennessee,TN,1,0
+Electoral Polls,Texas,TX,0.7859999999999999,0.21400000000000008
+Electoral Polls,Utah,UT,1,0
+Electoral Polls,Vermont,VT,0,1
+Electoral Polls,Virginia,VA,0,1
+Electoral Polls,Washington,WA,0,1
+Electoral Polls,West Virginia,WV,1,0
+Electoral Polls,Wisconsin,WI,0.020000000000000018,0.98
+Electoral Polls,Wyoming,WY,1,0

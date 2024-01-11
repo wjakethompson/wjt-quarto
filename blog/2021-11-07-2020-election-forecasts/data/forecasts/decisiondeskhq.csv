@@ -1,0 +1,57 @@
+model,state_name,state_abbr,trump,biden
+Decision Desk HQ,Alabama,AL,0.9942,0.005800000000000027
+Decision Desk HQ,Alaska,AK,0.8106,0.1894
+Decision Desk HQ,Arizona,AZ,0.4367,0.5633
+Decision Desk HQ,Arkansas,AR,0.9998,1.9999999999997797e-4
+Decision Desk HQ,California,CA,0,1
+Decision Desk HQ,Colorado,CO,0.0684,0.9316
+Decision Desk HQ,Connecticut,CT,0.0016,0.9984
+Decision Desk HQ,Delaware,DE,0.0014,0.9986
+Decision Desk HQ,District of Columbia,DC,0,1
+Decision Desk HQ,Florida,FL,0.3527,0.6473
+Decision Desk HQ,Georgia,GA,0.4944,0.5056
+Decision Desk HQ,Hawaii,HI,0,1
+Decision Desk HQ,Idaho,ID,0.9996,3.9999999999995595e-4
+Decision Desk HQ,Illinois,IL,0.0133,0.9867
+Decision Desk HQ,Indiana,IN,0.9279999999999999,0.07200000000000006
+Decision Desk HQ,Iowa,IA,0.5656,0.4344
+Decision Desk HQ,Kansas,KS,0.9598,0.040200000000000014
+Decision Desk HQ,Kentucky,KY,0.9247,0.07530000000000003
+Decision Desk HQ,Louisiana,LA,0.9952,0.0048000000000000265
+Decision Desk HQ,Maine,ME,0.0634,0.9366
+Decision Desk HQ,Maryland,MD,2e-4,0.9998
+Decision Desk HQ,Massachusetts,MA,0,1
+Decision Desk HQ,ME-1,ME-1,0.0173,0.9827
+Decision Desk HQ,ME-2,ME-2,0.4562,0.5438000000000001
+Decision Desk HQ,Michigan,MI,0.1937,0.8063
+Decision Desk HQ,Minnesota,MN,0.1346,0.8654
+Decision Desk HQ,Mississippi,MS,0.9682,0.03180000000000005
+Decision Desk HQ,Missouri,MO,0.8508,0.1492
+Decision Desk HQ,Montana,MT,0.7912,0.20879999999999999
+Decision Desk HQ,NE-1,NE-1,0.9062,0.0938
+Decision Desk HQ,NE-2,NE-2,0.3886,0.6113999999999999
+Decision Desk HQ,NE-3,NE-3,1,0
+Decision Desk HQ,Nebraska,NE,1,0
+Decision Desk HQ,Nevada,NV,0.2263,0.7737
+Decision Desk HQ,New Hampshire,NH,0.1034,0.8966
+Decision Desk HQ,New Jersey,NJ,0.0136,0.9864
+Decision Desk HQ,New Mexico,NM,0.0418,0.9582
+Decision Desk HQ,New York,NY,7e-4,0.9993
+Decision Desk HQ,North Carolina,NC,0.4378,0.5622
+Decision Desk HQ,North Dakota,ND,0.9844,0.015599999999999947
+Decision Desk HQ,Ohio,OH,0.5546,0.4454
+Decision Desk HQ,Oklahoma,OK,0.9985,0.0014999999999999458
+Decision Desk HQ,Oregon,OR,0.0236,0.9764
+Decision Desk HQ,Pennsylvania,PA,0.2584,0.7416
+Decision Desk HQ,Rhode Island,RI,0.0016,0.9984
+Decision Desk HQ,South Carolina,SC,0.8615,0.13849999999999996
+Decision Desk HQ,South Dakota,SD,0.9578,0.042200000000000015
+Decision Desk HQ,Tennessee,TN,0.968,0.03200000000000003
+Decision Desk HQ,Texas,TX,0.609,0.391
+Decision Desk HQ,Utah,UT,0.92,0.07999999999999996
+Decision Desk HQ,Vermont,VT,8e-4,0.9992
+Decision Desk HQ,Virginia,VA,0.0653,0.9347
+Decision Desk HQ,Washington,WA,0.0013,0.9987
+Decision Desk HQ,West Virginia,WV,0.977,0.02300000000000002
+Decision Desk HQ,Wisconsin,WI,0.2141,0.7859
+Decision Desk HQ,Wyoming,WY,0.9999,9.999999999998899e-5

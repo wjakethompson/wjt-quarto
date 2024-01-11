@@ -1,17 +1,17 @@
 ---
-title: "Predicting the Winner of the 2017 Big 12/SEC Challenge"
-subtitle: ""
-excerpt: "Which conference is most likely to come out on top?"
+title: "Predicting the winner of the 2017 Big 12/SEC Challenge"
 date: 2017-01-27
-author: "Jake Thompson"
-draft: false
+subtitle: ""
+description: "Which conference is most likely to come out on top?"
+image: "featured.png"
+twitter-card:
+  image: "featured.png"
+open-graph:
+  image: "featured.png"
 categories:
   - R
-tags:
   - sports
   - ggplot2
-  - basketball
-layout: single
 ---
 
 
@@ -23,7 +23,7 @@ As always, the code and data for this post are available on my [Github](https://
 
 ## The Ratings
 
-The team ratings are composite ratings, based off of Elo ratings and adjusted efficiencies). We first have to adjust these ratings for home court advantage[^1], and then we can calculate the probability that the Big 12 will win each game using the [Log-5 formula](https://en.wikipedia.org/wiki/Log5).
+The team ratings are composite ratings, based off of Elo ratings and adjusted efficiencies. We first have to adjust these ratings for home court advantage[^1], and then we can calculate the probability that the Big 12 will win each game using the [Log-5 formula](https://en.wikipedia.org/wiki/Log5).
 
 [^1]: The home team's offense is increased by 30% and defense is decreased by 30%, and the reverse is done for the away team.
 
@@ -57,7 +57,7 @@ After accounting for the location of each game, we can see, for example, that Ka
 
 ## Monte Carlo Simulation
 
-It's not possible for us to repeat the Big 12/SEC challenge multiple times in real life, but we can do this through a process called Monte Carlo simulation. In a Monte Carlo simulation we can generate data for an event multiple times, and then average the results over all replications. To illustrate we can simulate the winner of the Kansas vs. Kentucky game. According to the model, Kansas has a 28% chance of winning. We generate a random number between 0 and 1. If that number is less than 0.28, then Kansas is the winner of the simulation, otherwise, Kentucky is the winner. We do this for every game, and then count the number of winners that come from the Big 12 to determine which conference won the challenge (or if it was a tie). We then repeat this process over and over again to simulate many replications of the challenge.
+It's not possible for us to repeat the Big 12/SEC challenge multiple times in real life, but we can do this through a process called Monte Carlo simulation. In a Monte Carlo simulation we can generate data for an event multiple times, and then average the results over all replications. To illustrate, we can simulate the winner of the Kansas vs. Kentucky game. According to the model, Kansas has a 28% chance of winning. We generate a random number between 0 and 1. If that number is less than 0.28, then Kansas is the winner of the simulation, otherwise, Kentucky is the winner. We do this for every game, and then count the number of winners that come from the Big 12 to determine which conference won the challenge (or if it was a tie). We then repeat this process over and over again to simulate many replications of the challenge.
 
 To enact this process in R, we'll first need to define some functions. The first function will take in the probability of a team winning (in our case the Big 12 team), and return a 1 if that team wins, and a 0 otherwise.
 

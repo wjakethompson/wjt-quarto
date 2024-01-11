@@ -1,5 +1,5 @@
 ---
-title:  "Making Win Probability Plots with ggplot2"
+title:  "Making win probability plots with ggplot2"
 date: 2017-01-11
 subtitle: ""
 description: "Calculate the win probability for college basketball games, and then make a plot"

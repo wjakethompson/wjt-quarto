@@ -1,5 +1,5 @@
 ---
-title:  "Evaluating Election Forecasts"
+title:  "Evaluating election forecasts"
 date: 2016-11-08
 subtitle: ""
 description: "Let's look at how the forecasters did for the 2016 Presidential election"

@@ -1,0 +1,57 @@
+model,state_name,state_abbr,trump,biden
+Race to the White House,Alabama,AL,1,0
+Race to the White House,Alaska,AK,0.941,0.059
+Race to the White House,Arizona,AZ,0.177,0.823
+Race to the White House,Arkansas,AR,1,0
+Race to the White House,California,CA,0,1
+Race to the White House,Colorado,CO,0,1
+Race to the White House,Connecticut,CT,0.005,0.995
+Race to the White House,Delaware,DE,0.001,0.999
+Race to the White House,Florida,FL,0.137,0.863
+Race to the White House,Georgia,GA,0.4,0.6
+Race to the White House,Hawaii,HI,0,1
+Race to the White House,Idaho,ID,1,0
+Race to the White House,Illinois,IL,0.006,0.994
+Race to the White House,Indiana,IN,0.998,0.002
+Race to the White House,Iowa,IA,0.67,0.33
+Race to the White House,Kansas,KS,1,0
+Race to the White House,Kentucky,KY,1,0
+Race to the White House,Louisiana,LA,1,0
+Race to the White House,Maine,ME,0,1
+Race to the White House,Maryland,MD,0,1
+Race to the White House,Massachusetts,MA,0,1
+Race to the White House,Michigan,MI,0.003,0.997
+Race to the White House,Minnesota,MN,0.001,0.999
+Race to the White House,Mississippi,MS,1,0
+Race to the White House,Missouri,MO,0.981,0.019
+Race to the White House,Montana,MT,0.986,0.014
+Race to the White House,Nebraska,NE,1,0
+Race to the White House,Nevada,NV,0.024,0.976
+Race to the White House,New Hampshire,NH,0,1
+Race to the White House,New Jersey,NJ,0,1
+Race to the White House,New Mexico,NM,0.001,0.999
+Race to the White House,New York,NY,0,1
+Race to the White House,North Carolina,NC,0.26,0.74
+Race to the White House,North Dakota,ND,0.987,0.013
+Race to the White House,Ohio,OH,0.488,0.512
+Race to the White House,Oklahoma,OK,1,0
+Race to the White House,Oregon,OR,0,1
+Race to the White House,Pennsylvania,PA,0.027,0.973
+Race to the White House,Rhode Island,RI,0,1
+Race to the White House,South Carolina,SC,0.995,0.005
+Race to the White House,South Dakota,SD,0.988,0.012
+Race to the White House,Tennessee,TN,1,0
+Race to the White House,Texas,TX,0.697,0.303
+Race to the White House,Utah,UT,0.987,0.013
+Race to the White House,Vermont,VT,0,1
+Race to the White House,Virginia,VA,0,1
+Race to the White House,Washington,WA,0,1
+Race to the White House,West Virginia,WV,0.998,0.002
+Race to the White House,Wisconsin,WI,0.003,0.997
+Race to the White House,Wyoming,WY,1,0
+Race to the White House,District of Columbia,DC,0,1
+Race to the White House,ME-1,ME-1,0.028,0.972
+Race to the White House,ME-2,ME-2,0.285,0.715
+Race to the White House,NE-1,NE-1,0.958,0.042
+Race to the White House,NE-2,NE-2,0.293,0.707
+Race to the White House,NE-3,NE-3,1,0

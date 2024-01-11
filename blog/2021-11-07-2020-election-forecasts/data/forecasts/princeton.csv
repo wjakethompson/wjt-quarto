@@ -1,0 +1,57 @@
+model,state_name,state_abbr,trump,biden
+Princeton,Alabama,AL,1,0
+Princeton,Alaska,AK,0.99,0.01
+Princeton,Arizona,AZ,0.18000000000000005,0.82
+Princeton,Arkansas,AR,1,0
+Princeton,California,CA,0,1
+Princeton,Colorado,CO,0,1
+Princeton,Connecticut,CT,0,1
+Princeton,Delaware,DE,0,1
+Princeton,District of Columbia,DC,0,1
+Princeton,Florida,FL,0.17000000000000004,0.83
+Princeton,Georgia,GA,0.36,0.64
+Princeton,Hawaii,HI,0,1
+Princeton,Idaho,ID,1,0
+Princeton,Illinois,IL,0,1
+Princeton,Indiana,IN,1,0
+Princeton,Iowa,IA,0.63,0.37
+Princeton,Kansas,KS,1,0
+Princeton,Kentucky,KY,1,0
+Princeton,Louisiana,LA,1,0
+Princeton,Maine,ME,0,1
+Princeton,Maryland,MD,0,1
+Princeton,Massachusetts,MA,0,1
+Princeton,ME-1,ME-1,0,1
+Princeton,ME-2,ME-2,0.19999999999999996,0.8
+Princeton,Michigan,MI,0.040000000000000036,0.96
+Princeton,Minnesota,MN,0.010000000000000009,0.99
+Princeton,Mississippi,MS,0.98,0.02
+Princeton,Missouri,MO,1,0
+Princeton,Montana,MT,0.97,0.03
+Princeton,NE-1,NE-1,1,0
+Princeton,NE-2,NE-2,0.10999999999999999,0.89
+Princeton,NE-3,NE-3,1,0
+Princeton,Nebraska,NE,1,0
+Princeton,Nevada,NV,0.06999999999999995,0.93
+Princeton,New Hampshire,NH,0.06000000000000005,0.94
+Princeton,New Jersey,NJ,0,1
+Princeton,New Mexico,NM,0,1
+Princeton,New York,NY,0,1
+Princeton,North Carolina,NC,0.26,0.74
+Princeton,North Dakota,ND,1,0
+Princeton,Ohio,OH,0.8200000000000001,0.18
+Princeton,Oklahoma,OK,1,0
+Princeton,Oregon,OR,0,1
+Princeton,Pennsylvania,PA,0.08999999999999997,0.91
+Princeton,Rhode Island,RI,0,1
+Princeton,South Carolina,SC,0.99,0.01
+Princeton,South Dakota,SD,0.96,0.04
+Princeton,Tennessee,TN,0.96,0.04
+Princeton,Texas,TX,0.8200000000000001,0.18
+Princeton,Utah,UT,1,0
+Princeton,Vermont,VT,0.010000000000000009,0.99
+Princeton,Virginia,VA,0,1
+Princeton,Washington,WA,0,1
+Princeton,West Virginia,WV,0.96,0.04
+Princeton,Wisconsin,WI,0.040000000000000036,0.96
+Princeton,Wyoming,WY,1,0

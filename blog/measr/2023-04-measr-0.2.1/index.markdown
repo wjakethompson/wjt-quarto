@@ -1,18 +1,19 @@
 ---
 title: "measr 0.2.1"
-subtitle: ""
-excerpt: "Initial release of measr package for estimating and evaluating diagnostic classification models."
 date: 2023-04-10
-author: "Jake Thompson"
-draft: false
-weight: 1
+subtitle: ""
+description: "Initial release of measr package for estimating and evaluating diagnostic classification models."
+image: "sidebar-hex.png"
+twitter-card:
+  image: "sidebar-hex.png"
+open-graph:
+  image: "sidebar-hex.png"
 categories:
   - R
   - package
-tags:
+  - measr
   - dcm
   - Stan
-layout: single-series
 ---
 
 

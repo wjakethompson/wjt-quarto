@@ -1,0 +1,57 @@
+model,state_name,state_abbr,trump,biden
+Progress Campaign,Alabama,AL,0.9990000000000001,0.001
+Progress Campaign,Alaska,AK,0.84,0.16
+Progress Campaign,Arizona,AZ,0.345,0.655
+Progress Campaign,Arkansas,AR,0.9990000000000001,0.001
+Progress Campaign,California,CA,0.001,0.9990000000000001
+Progress Campaign,Colorado,CO,0.03,0.97
+Progress Campaign,Connecticut,CT,0.001,0.9990000000000001
+Progress Campaign,Delaware,DE,0.001,0.9990000000000001
+Progress Campaign,District of Columbia,DC,0.001,0.9990000000000001
+Progress Campaign,Florida,FL,0.431,0.569
+Progress Campaign,Georgia,GA,0.451,0.5489999999999999
+Progress Campaign,Hawaii,HI,0.001,0.9990000000000001
+Progress Campaign,Idaho,ID,0.9990000000000001,0.001
+Progress Campaign,Illinois,IL,0.001,0.9990000000000001
+Progress Campaign,Indiana,IN,0.966,0.034
+Progress Campaign,Iowa,IA,0.506,0.494
+Progress Campaign,Kansas,KS,0.9540000000000001,0.046
+Progress Campaign,Kentucky,KY,0.9990000000000001,0.001
+Progress Campaign,Louisiana,LA,0.9990000000000001,0.001
+Progress Campaign,Maine,ME,0.039,0.961
+Progress Campaign,Maryland,MD,0.001,0.9990000000000001
+Progress Campaign,Massachusetts,MA,0.001,0.9990000000000001
+Progress Campaign,ME-1,ME-1,0.001,0.9990000000000001
+Progress Campaign,ME-2,ME-2,0.423,0.5770000000000001
+Progress Campaign,Michigan,MI,0.11,0.89
+Progress Campaign,Minnesota,MN,0.127,0.873
+Progress Campaign,Mississippi,MS,0.9109999999999999,0.08900000000000001
+Progress Campaign,Missouri,MO,0.8320000000000001,0.168
+Progress Campaign,Montana,MT,0.8340000000000001,0.166
+Progress Campaign,NE-1,NE-1,0.9990000000000001,0.001
+Progress Campaign,NE-2,NE-2,0.336,0.664
+Progress Campaign,NE-3,NE-3,0.9990000000000001,0.001
+Progress Campaign,Nebraska,NE,0.9990000000000001,0.001
+Progress Campaign,Nevada,NV,0.207,0.7929999999999999
+Progress Campaign,New Hampshire,NH,0.094,0.9059999999999999
+Progress Campaign,New Jersey,NJ,0.001,0.9990000000000001
+Progress Campaign,New Mexico,NM,0.028999999999999998,0.971
+Progress Campaign,New York,NY,0.001,0.9990000000000001
+Progress Campaign,North Carolina,NC,0.42200000000000004,0.578
+Progress Campaign,North Dakota,ND,0.9990000000000001,0.001
+Progress Campaign,Ohio,OH,0.503,0.49700000000000005
+Progress Campaign,Oklahoma,OK,0.9990000000000001,0.001
+Progress Campaign,Oregon,OR,0.026000000000000002,0.9740000000000001
+Progress Campaign,Pennsylvania,PA,0.271,0.7290000000000001
+Progress Campaign,Rhode Island,RI,0.001,0.9990000000000001
+Progress Campaign,South Carolina,SC,0.787,0.213
+Progress Campaign,South Dakota,SD,0.9990000000000001,0.001
+Progress Campaign,Tennessee,TN,0.9990000000000001,0.001
+Progress Campaign,Texas,TX,0.47600000000000003,0.524
+Progress Campaign,Utah,UT,0.997,0.002
+Progress Campaign,Vermont,VT,0.001,0.9990000000000001
+Progress Campaign,Virginia,VA,0.028999999999999998,0.971
+Progress Campaign,Washington,WA,0.001,0.9990000000000001
+Progress Campaign,West Virginia,WV,0.9990000000000001,0.001
+Progress Campaign,Wisconsin,WI,0.165,0.835
+Progress Campaign,Wyoming,WY,0.9990000000000001,0.001

@@ -1,0 +1,57 @@
+model,state_name,state_abbr,trump,biden
+Lean Tossup,Alabama,AL,0.9992666666666666,7.333333333333333e-4
+Lean Tossup,Alaska,AK,0.8818,0.1182
+Lean Tossup,Arizona,AZ,0.09873333333333334,0.9012666666666667
+Lean Tossup,Arkansas,AR,0.9998666666666667,1.3333333333333334e-4
+Lean Tossup,California,CA,0,1
+Lean Tossup,Colorado,CO,1.3333333333333334e-4,0.9998666666666667
+Lean Tossup,Connecticut,CT,0,1
+Lean Tossup,Delaware,DE,0,1
+Lean Tossup,District of Columbia,DC,0,1
+Lean Tossup,Florida,FL,0.13293333333333332,0.8670666666666667
+Lean Tossup,Georgia,GA,0.22206666666666666,0.7779333333333334
+Lean Tossup,Hawaii,HI,0,1
+Lean Tossup,Idaho,ID,1,0
+Lean Tossup,Illinois,IL,0,1
+Lean Tossup,Indiana,IN,0.9960666666666667,0.003933333333333333
+Lean Tossup,Iowa,IA,0.4402,0.5598
+Lean Tossup,Kansas,KS,0.915,0.085
+Lean Tossup,Kentucky,KY,1,0
+Lean Tossup,Louisiana,LA,0.8848,0.1152
+Lean Tossup,Maine,ME,4.6666666666666666e-4,0.9995333333333334
+Lean Tossup,Maryland,MD,0,1
+Lean Tossup,Massachusetts,MA,0,1
+Lean Tossup,ME-1,ME-1,0,1
+Lean Tossup,ME-2,ME-2,0.23173333333333335,0.7682666666666667
+Lean Tossup,Michigan,MI,0.007533333333333334,0.9924666666666667
+Lean Tossup,Minnesota,MN,0.0054666666666666665,0.9945333333333334
+Lean Tossup,Mississippi,MS,0.9686666666666667,0.03133333333333333
+Lean Tossup,Missouri,MO,0.9892666666666666,0.010733333333333333
+Lean Tossup,Montana,MT,0.9017333333333334,0.09826666666666667
+Lean Tossup,NE-1,NE-1,0.9988,0.0012
+Lean Tossup,NE-2,NE-2,0.0508,0.9492
+Lean Tossup,NE-3,NE-3,1,0
+Lean Tossup,Nebraska,NE,1,0
+Lean Tossup,Nevada,NV,0.021266666666666666,0.9787333333333333
+Lean Tossup,New Hampshire,NH,0.007,0.993
+Lean Tossup,New Jersey,NJ,0,1
+Lean Tossup,New Mexico,NM,0,1
+Lean Tossup,New York,NY,0,1
+Lean Tossup,North Carolina,NC,0.17206666666666667,0.8279333333333333
+Lean Tossup,North Dakota,ND,1,0
+Lean Tossup,Ohio,OH,0.3572,0.6428
+Lean Tossup,Oklahoma,OK,1,0
+Lean Tossup,Oregon,OR,6.666666666666667e-5,0.9999333333333333
+Lean Tossup,Pennsylvania,PA,0.05806666666666667,0.9419333333333333
+Lean Tossup,Rhode Island,RI,0,1
+Lean Tossup,South Carolina,SC,0.9036,0.0964
+Lean Tossup,South Dakota,SD,1,0
+Lean Tossup,Tennessee,TN,0.9996666666666667,3.333333333333333e-4
+Lean Tossup,Texas,TX,0.28086666666666665,0.7191333333333333
+Lean Tossup,Utah,UT,0.9698666666666667,0.030133333333333335
+Lean Tossup,Vermont,VT,0,1
+Lean Tossup,Virginia,VA,5.333333333333334e-4,0.9994666666666666
+Lean Tossup,Washington,WA,0,1
+Lean Tossup,West Virginia,WV,1,0
+Lean Tossup,Wisconsin,WI,0.0288,0.9712
+Lean Tossup,Wyoming,WY,1,0

@@ -1,0 +1,100 @@
+---
+title: "Making an Animated Contour Plot"
+subtitle: ""
+excerpt: "Recreate contour plots using ggplot2 and gganimate."
+date: 2018-09-05
+author: "Jake Thompson"
+draft: false
+categories:
+  - R
+tags:
+  - ggplot2
+  - gganimate
+  - tidyverse
+layout: single
+---
+
+```{r setup, include = FALSE, message = FALSE}
+library(tidyverse)
+library(gganimate)
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  comment = "#>",
+  echo = TRUE,
+  cache = FALSE,
+  fig.align = "center",
+  fig.width = 8,
+  fig.retina = 2,
+  out.width = "100%"
+)
+```
+
+Earlier this week [Mike Bostock](https://twitter.com/mbostock/) tweeted a interesting looking contour plot with a [link](https://t.co/joWfPgUAAU) to edit the formula and manipulate the graphic using D3.js.
+
+```{r orig-tweet, echo = FALSE}
+blogdown::shortcode("tweet", "1036664864897298437")
+```
+
+I decided I would attempt to recreate the image using [**ggplot2**](https://ggplot2.tidyverse.org/), and animate it using the new [**gganimate**](https://github.com/thomasp85/gganimate) package.
+
+## Creating the data
+
+I started by creating a data frame with all the combinations of `x` and `y` on a grid between -10 and 10, in intervals of 0.1. Then I defined a third variable, `z` as a function of `x` and `y`, using the same equation as originally used [here](https://t.co/joWfPgUAAU).
+
+```{r create-data}
+plot_data <- crossing(x = seq(-10, 10, 0.1), y = seq(-10, 10, 0.1)) %>%
+  mutate(z = sin(sin(x * (sin(y) - cos(x)))) - cos(cos(y * (cos(x) - sin(y)))))
+
+plot_data
+```
+
+Now we can use that data to make the image!
+
+## Create the plot
+
+To create the plot, we are basically making a heat map of sorts, where the fill is defined by the newly calculated `z` variable. I use `geom_raster` because it offers speed improvements over `geom_tile` when all tiles are the szme size, which they are in this case. Given that we have a lot of tiles, I'll take the speed!
+
+```{r static-plot}
+ggplot(plot_data, aes(x = x, y = y)) +
+  geom_raster(aes(fill = z), interpolate = TRUE, show.legend = FALSE) +
+  scale_fill_viridis_c(option = "C") +
+  coord_equal() +
+  theme_void()
+```
+
+Pretty good! But then, [Jeff Baumes](https://twitter.com/jeffbaumes) upped the stakes!
+
+```{r time-tweet, echo = FALSE}
+blogdown::shortcode("tweet", "1036978929184256002")
+```
+
+Well now I can't not animate it. So...
+
+## Add time and animate
+
+To create an animated plot, we need a time variable, `t`. We start by creating a data frame similar to the one we created above. It includes all combinations of `x` and `y` from -10 to 10 in increments of 0.1, but now those values are also cross with the time variable, `t`, which goes from 0 to 5 in increments of 0.1. The `z` variable, which will still be our fill color, is now a function of `x`, `y`, and `t`, as in [Jeff's example](https://beta.observablehq.com/@jeffbaumes/function-plot-with-time). Finally, we can use the same **ggplot2** code as above, with the addition of the `transition_time` function from **gganimate**. 
+
+```{r animate-plot, eval = FALSE}
+t_lookup = data_frame(t = c(seq(0, 5, 0.1), seq(4.9, 0, -0.1)),
+                      t2 = seq(0, 10, 0.1))
+
+plot_data <- crossing(x = seq(-10, 10, 0.1), y = seq(-10, 10, 0.1),
+                      t2 = seq(0, 10, 0.1)) %>%
+  left_join(t_lookup, by = "t2") %>%
+  mutate(z = sin(sin(x * (sin(y + t) - cos(x - t)))) - cos(cos(y * (cos(x - t) - sin(y + t)))))
+
+ggplot(plot_data, aes(x = x, y = y)) +
+  geom_raster(aes(fill = z), interpolate = TRUE, show.legend = FALSE) +
+  scale_fill_viridis_c(option = "C") +
+  coord_equal() +
+  theme_void() +
+  transition_time(t2)
+```
+
+```{r show-animate-plot, echo = FALSE}
+knitr::include_graphics("https://media.giphy.com/media/mbBNB2gR0BDALqgpvk/giphy.gif")
+```
+
+And there we have it! With just one extra variable and one additional line of code for our plot, we have an animated contour plot!

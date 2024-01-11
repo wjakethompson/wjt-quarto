@@ -1,0 +1,128 @@
+---
+title: "Tidy Sports Analytics, Part 1: dplyr"
+subtitle: ""
+excerpt: "Learn how to use dplyr for data manipulation as we explore NFL data."
+date: 2017-06-09
+author: "Jake Thompson"
+draft: false
+weight: 1
+categories:
+  - R
+tags:
+  - sports
+  - nfl
+  - tidyverse
+layout: single-series
+---
+
+```{r setup, include = FALSE, message = FALSE}
+library(here)
+
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  comment = "#>",
+  echo = TRUE,
+  cache = FALSE,
+  fig.align = "center",
+  fig.width = 6,
+  fig.asp = 0.7,
+  out.width = "80%"
+)
+```
+
+Welcome to the first in a series of blog posts where I'll be using sports data to demonstrate the power of the [**tidyverse**](http://www.tidyverse.org/) tools in the context of sports analytics. The **tidyverse** is a suite of packages developed mainly by [Hadley Wickham](https://twitter.com/hadleywickham), with contributions from over 100 other people in the *R* community. The goal of the **tidyverse** is to provide easy to use *R* packages for a data science workflow that all follow a consistent philosophy and API. In each post in this series, I'll be focusing on one package within the **tidyverse** in order to demonstrate how each of the major pieces of the **tidyverse** works. In all of the posts, I'll be exploring the play-by-play data for every game of the 2016 NFL season. This data comes from [Armchair Analysis](http://armchairanalysis.com/), which is pay-walled. However, for a a one time flat rate, you can have access to their historical database with yearly updates forever.
+
+This post will focus on the [**dplyr**](http://dplyr.tidyverse.org/) package, which is used for data manipulation.
+
+## dplyr
+
+Before we get into how **dplyr** works, let's first load in our data.
+
+```{r load-data, message = FALSE, warning = FALSE}
+library(tidyverse)
+
+nfl_pbp <- read_rds("data/nfl_pbp_2016.rds")
+nfl_pbp
+```
+
+Here we can see that there were a total of `r format(nrow(nfl_pbp), big.mark = ",")` plays in the 2016 NFL season, and we have `r ncol(nfl_pbp)` variables for each play. The **dplyr** package provides a way to manipulate this data so that we can easily answer research questions. There are five main functions in **dplyr** that take care of the majority of data manipulation tasks:
+
+- `arrange`: sort the data by a variable or set of variables;
+- `filter`: filter observations based on one or more criteria;
+- `mutate`: create new variables as functions of existing variables;
+- `select`: choose variables by name, or rename variables;
+- `summarize`: calculate summary statistics according to one or more grouping variables.
+
+To demonstrate how these functions work, let's calculate the rate of successful plays for each team. For the NFL, we'll consider a play successful if the team gains a certain percentage of the yards necessary, that varies by down. Specifically, the yards needed in order for they play to be successful by down is as follows:
+
+- 1st down: 45 percent of the needed yards;
+- 2nd down: 60 percent of the needed yards;
+- 3rd and 4th down: 100 percent of the needed yards
+
+These values comes from Bob Carroll, Pete Palmer, and John Thorn in [*The Hidden Game of Football*](https://www.amazon.com/Hidden-Game-Football-Bob-Carroll/dp/0446514144). In this definition, each play is independent. Say for example that a team starts with a 1st down and 10 yards to go. In order for the play to be successful, they need to gain 4.5 yards. They gain 6, so this play is successful. Now it is 2nd and 4. For this play to be successful, they need 60 percent of the 4 yards remaining, meaning they need to gain 2.4 yards. Instead they lose 1 yard, so this play is unsuccessful and it is now 3rd and 5. On third down they need all 5 yards (meaning they need to make the new set of downs), in order for the play to be successful. The calculations continue in this way for every play in the data set.
+
+## Using dplyr
+
+First I'll pull out the needed variables using the `select` function.
+
+```{r select}
+success <- select(nfl_pbp, game_id = gid, play_id = pid, offense = off,
+  defense = def, play_type = type, down = dwn, to_go = ytg, gained = yds)
+success
+```
+
+Notice that in the `select` statement, we not only chose the variables we wanted, but we also gave them new names that more clearly convey the information included in that variable. For example, we chose to keep the unique game identifier, but we renamed it from `gid` to `game_id`.
+
+Next, we need to filter out plays that don't fall into our operational definition of success. For example, under the definition above, how would we determine if a kickoff was successful? Since only passing or rushing plays have criteria for success, we will use the `filter` function to select only passing or rushing plays.
+
+```{r filter}
+success <- filter(success, play_type %in% c("PASS", "RUSH"))
+success
+```
+
+This leaves us with `r format(nrow(success), big.mark = ",")` plays. The next step is to calculate the number of yards needed in order for the play to be deemed successful. This can be done using the `mutate` function along with the `case_when` function. The `case_when` function acts like a series of if statements to determine the proper condition.
+
+```{r mutate}
+success <- mutate(success, needed = case_when(
+  down == 1 ~ to_go * 0.45,
+  down == 2 ~ to_go * 0.60,
+  TRUE ~ to_go * 1.00
+))
+success
+```
+
+In this chunk, I'm saying if the down is equal to 1, then the yards needed is equal to 45 percent of the yards to go. If the down isn't equal to 1, then we go to the second condition. If the down is equal to 2, the yards needed is equal to 60 percent of the yards to go. Finally, if the down isn't equal to 2, then we go to the final condition which says that for all other downs, yards needed is equal to 100 percent of the yards to go. We can then determine which plays were a success by using mutate again to calculate if the yards gained is greater than the yards needed.
+
+```{r calc-success}
+success <- mutate(success, play_success = case_when(
+  gained >= needed ~ TRUE,
+  gained < needed ~ FALSE
+))
+success
+```
+
+Now that we've calculated whether each play was a success, we can calculate the overall success rate for each team. To do this, we need to group our data by team. This can be accomplished using the `group_by` function. This function doesn't do anything to the data, but it will allow other functions to operate within each of the groups. Specifically, we will use the `summarize` function to calculate the rate of successful plays within each group.
+
+```{r summarize}
+success <- group_by(success, team = offense)
+success <- summarize(success, success_rate = mean(play_success, na.rm = TRUE))
+success
+```
+
+Finally, I will use the `arrange` function to sort this data set by the success rate, allowing us to see which teams were the most successful on average. Note that I use the `desc` function to sort success rate in a descending manner, so that the teams with the highest success rates are first. By default the `arrange` function sorts ascending.
+
+```{r arrange}
+success <- arrange(success, desc(success_rate))
+success
+```
+
+One consideration from these results is that I grouped by the offensive team. Thus, this analysis tells us how often the teams' offenses were successful. To evaluate a team overall, you would also want to examine defensive success rates. However, these results do seem to make intuitive sense, as the top three teams (New Orleans, Dallas, and Atlanta), all had very good offenses last season.
+
+## Conclusion
+
+This post shows how the **dplyr** package, which is the main data manipulation package in the **tidyverse**, can be used to quickly manipulate and analyze data with just a few lines of code. In the upcoming posts I'll be using the **tidyr** package to help tidy data and **ggplot2** to visualize data. I'll also be introducing the pipe operator in the next post, which will make our code more readable. For more **dplyr** resources, check out:
+
+- [dplyr.tidyverse.org](http://dplyr.tidyverse.org/)
+- [*R for Data Science*, Data Transformation](http://r4ds.had.co.nz/transform.html)

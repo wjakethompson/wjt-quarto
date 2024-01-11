@@ -1,17 +1,18 @@
 ---
 title: "taylor 0.2.0"
-subtitle: ""
-excerpt: "Initial release of taylor for accessing data on Taylor Swift's discography."
 date: 2021-09-01
-author: "Jake Thompson"
-draft: false
-weight: 1
+subtitle: ""
+description: "Initial release of taylor for accessing data on Taylor Swift's discography"
+image: "sidebar-hex.png"
+twitter-card:
+  image: "sidebar-hex.png"
+open-graph:
+  image: "sidebar-hex.png"
 categories:
   - R
   - package
-tags:
+  - taylor
   - Taylor Swift
-layout: single-series
 ---
 
 
@@ -199,7 +200,7 @@ ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
   scale_color_taylor_d(album = "Lover")
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-8-1.png" width="80%" style="display: block; margin: auto;" />
+<img src="index_files/figure-html/unnamed-chunk-8-1.png" width="80%" style="display: block; margin: auto;" />
 
 There is also the [`scale_fill_albums()`](https://taylor.wjakethompson.com/reference/scale_albums.html) function, which will automatically map colors from each album palette to the appropriate album name.
 
@@ -213,7 +214,7 @@ taylor_albums %>%
   scale_fill_albums()
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-9-1.png" width="80%" style="display: block; margin: auto;" />
+<img src="index_files/figure-html/unnamed-chunk-9-1.png" width="80%" style="display: block; margin: auto;" />
 
 For more examples, check out the [plotting article](https://taylor.wjakethompson.com/articles/plotting.html) on the taylor website.
 In a future post I'll describe how I built ggplot2 scales on top of the color palettes.

@@ -1,17 +1,18 @@
 ---
 title: "taylor 2.0.0"
-subtitle: ""
-excerpt: "Initial release of taylor for accessing data on Taylor Swift's discography."
 date: 2022-11-13
-author: "Jake Thompson"
-draft: false
-weight: 1
+subtitle: ""
+description: "Updated release of taylor to include <em>Midnights</em>."
+image: "sidebar-hex.png"
+twitter-card:
+  image: "sidebar-hex.png"
+open-graph:
+  image: "sidebar-hex.png"
 categories:
   - R
   - package
-tags:
+  - taylor
   - Taylor Swift
-layout: single-series
 ---
 
 
@@ -100,7 +101,7 @@ taylor_albums
 
 Finally, a new color palette inspired by the *Midnights* album cover has been added to the [`album_palettes`](https://taylor.wjakethompson.com/reference/album_palettes.html), and the [package website](https://taylor.wjakethompson.com) has been updated with a new theme and logo, also inspired by the album cover.
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-1.png" alt="The five colors of the Midnights color palette. The hexadecimal codes are #121D27, #5A658B, #6F86A2, #85A7BA, and #AA9EB6" width="80%" style="display: block; margin: auto;" />
+<img src="index_files/figure-html/unnamed-chunk-5-1.png" alt="The five colors of the Midnights color palette. The hexadecimal codes are #121D27, #5A658B, #6F86A2, #85A7BA, and #AA9EB6" width="80%" style="display: block; margin: auto;" />
 
 This palette can be used inside any of the [`scale_*_taylor()`](https://taylor.wjakethompson.com/reference/scale_taylor.html) functions.
 
@@ -115,7 +116,7 @@ taylor_album_songs %>%
   labs(x = "Song Energy (From Spotify)", y = NULL)
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-6-1.png" alt="A horizontal bar graph showing track names on the y-axis and song energey on the x-axis. Bars a filled with colors derived from the Midnights color palette, ranging from navy to light blue and lavender." width="80%" style="display: block; margin: auto;" />
+<img src="index_files/figure-html/unnamed-chunk-6-1.png" alt="A horizontal bar graph showing track names on the y-axis and song energey on the x-axis. Bars a filled with colors derived from the Midnights color palette, ranging from navy to light blue and lavender." width="80%" style="display: block; margin: auto;" />
 
 
 ## Breaking Changes
@@ -129,7 +130,7 @@ These data sets have been updated to reflect these changes accordingly.
 There were also a number of minor improvements:
 
 * Additional singles and remixes have been added to `taylor_all_songs`: "Lover (Remix)" with Shawn Mendes; "Carolina" from the *Where the Crawdads Sings* soundtrack; Ed Sheeran's "The Joker and the Queen;" Taylor's cover of Earth, Wind, and Fire's *September*; and "Three Sad Virgins" from Saturday Night Live.
-* This Love (Taylor's Version) has been added as a non-ablum song. Presumably, this song will eventually move to *1989 (Taylor's Version)*.
+* "This Love (Taylor's Version)" has been added as a non-ablum song. Presumably, this song will eventually move to *1989 (Taylor's Version)*.
 * The album color palettes have been slightly tweaked to better capture the vibe of each album, rather than just pulling colors from the cover.
 
 See the [changelog](https://taylor.wjakethompson.com/news/index.html) for a complete list of changes.

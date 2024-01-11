@@ -1,0 +1,95 @@
+---
+title: "Previewing the 2017 Men's NCAA Basketball Tournament"
+subtitle: ""
+excerpt: "Who got the toughest draw, and who is the best bet to cut down the nets?"
+date: 2017-03-13
+author: "Jake Thompson"
+draft: false
+categories:
+  - R
+tags:
+  - sports
+  - basketball
+layout: single
+---
+
+```{r setup, include = FALSE, message = FALSE}
+library(knitr)
+library(here)
+
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  echo = TRUE,
+  cache = TRUE,
+  fig.align = "center",
+  fig.ext = "png",
+  fig.width = 8,
+  fig.asp = 0.7,
+  out.width = "90%"
+)
+options(scipen = 999)
+```
+
+March Madness officially tips off tomorrow with the First Four games in Dayton before the round of 64 begins on Thursday. In this post, we'll look at each team's chance of advancing and winning the national title. We'll also look at who was help and hurt most by how the committee seeded the tournament.
+
+As always, the code and data for this post are available on my [Github](https://github.com/wjakethompson/wjakethompson.com) page.
+
+
+## The Ratings
+
+Using the composite ratings (based off of Elo ratings and adjusted efficiencies), we can calculate the probability of any team beating another using the [Log-5 formula](https://en.wikipedia.org/wiki/Log5). Using those probabilities, we can calculate the probability of any team advancing to each round.
+
+```{r read_data, message = FALSE}
+library(dplyr)
+library(ggplot2)
+
+bracket2017 <- readRDS("data/2017bracket.rds")
+```
+
+## Round by Round Probabilities
+
+```{r}
+bracket2017 %>%
+  select(Seed, School, Region, Round_3:Champion) %>%
+  knitr::kable(digits = 3, col.names = gsub("_", " ", colnames(.)),
+    align = "c", booktabs = TRUE)
+```
+
+Gonzaga comes in as the favorite using my ratings with a 15.8% chance winning the title, followed by North Carolina and overall number 1 seed Villanova. Kansas, the other number 1 seed is the 7th most likely team to cut down the nets with a 5.2% chance.
+
+## Region Difficulty
+
+To see who got help and hurt by their seeding, we can first look at the talent level in each region. To do this, I'll take the average offensive and defensive rating of all the teams in a region, and then calculate a net rating. To keep the extra teams playing in the First Four from bringing down the region average, I'll keep only favorite from each of the play in games.
+
+```{r}
+bracket2017 %>%
+  filter(!grepl("a", Seed)) %>%
+  group_by(Region) %>%
+  summarize(Offense = mean(Offense), Defense = mean(Defense)) %>%
+  mutate(Net = Offense - Defense) %>%
+  arrange(desc(Net)) %>%
+  knitr::kable(digits = 2, align = "c", booktabs = TRUE)
+```
+
+Villanova and Kansas, although the top two seeds in the tournament, weren't given any favors, as they ended up in the two toughest regions in field. North Carolina, on the other hand, has the easiest region using these ratings.
+
+We can also look at the direct impact of the seeding process. Using the consensus bracket from the [Bracket Matrix](http://www.bracketmatrix.com/), we can get a good gauge of where teams should have been seeded. I have calculated the probability of each team making the Final Four using the consensus bracket so we can compare these numbers to the probabilities from the real bracket.
+
+```{r}
+seeding <- bracket2017 %>%
+  select(Seed, School, Region, Con_Final4, Final_4) %>%
+  mutate(Change = Final_4 - Con_Final4) %>%
+  select(-(Con_Final4:Final_4)) %>%
+  arrange(desc(Change))
+
+knitr::kable(head(seeding), digits = 3, align = "c", booktabs = TRUE)
+```
+
+Although Kansas is in the second hardest region, they are 6.4% more likely to make the Final Four under the real bracket compared to the consensus bracket. This is because the bottom half of the Midwest region is much stronger relative to other regions, while the top half is slightly easier. Thus, the region as a whole is strong, but Kansas would only have to beat one of the teams from the bottom half in order to advance to the Final Four. Unsurprisingly, North Carolina, who is in the easiest region, benefits the most from the real seeding. They are 7.3% more likely to make the Final Four than when using the consensus bracket.
+
+```{r}
+knitr::kable(tail(seeding), digits = 3, align = "c", booktabs = TRUE)
+```
+
+On the other end of the spectrum, Villanova was hurt the most by the real bracket by far. They are 12.9% less likely to make the Final Four than if the consensus bracket were used. In fact, this list is dominated by good teams who were all placed in the East region, and therefore have to fight each other to get out. The exception is Kentucky, who is 5.9% less likely to make the Final Four after drawing potential matchups with Wichita State, UCLA, and North Carolina.

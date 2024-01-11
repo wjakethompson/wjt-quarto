@@ -1,0 +1,57 @@
+model,state_name,state_abbr,trump,biden
+Economist,Alabama,AL,1,0
+Economist,Alaska,AK,0.949075,0.050925
+Economist,Arizona,AZ,0.2684875,0.7315125
+Economist,Arkansas,AR,1,0
+Economist,California,CA,0,1
+Economist,Colorado,CO,0.0013250000000000206,0.998675
+Economist,Connecticut,CT,0,1
+Economist,Delaware,DE,0,1
+Economist,District of Columbia,DC,0,1
+Economist,Florida,FL,0.200225,0.799775
+Economist,Georgia,GA,0.4170125,0.5829875
+Economist,Hawaii,HI,0,1
+Economist,Idaho,ID,1,0
+Economist,Illinois,IL,1.2499999999970868e-5,0.9999875
+Economist,Indiana,IN,0.99925,7.5e-4
+Economist,Iowa,IA,0.5494749999999999,0.450525
+Economist,Kansas,KS,0.99865,0.00135
+Economist,Kentucky,KY,1,0
+Economist,Louisiana,LA,0.9993875,6.125e-4
+Economist,Maine,ME,3.874999999999851e-4,0.9996125
+Economist,Maryland,MD,0,1
+Economist,Massachusetts,MA,0,1
+Economist,ME-1,ME-1,3.874999999999851e-4,0.9996125
+Economist,ME-2,ME-2,3.874999999999851e-4,0.9996125
+Economist,Michigan,MI,0.016212499999999963,0.9837875
+Economist,Minnesota,MN,0.010362500000000052,0.9896375
+Economist,Mississippi,MS,0.997875,0.002125
+Economist,Missouri,MO,0.9816,0.0184
+Economist,Montana,MT,0.9827,0.0173
+Economist,NE-1,NE-1,0.999725,2.75e-4
+Economist,NE-2,NE-2,0.999725,2.75e-4
+Economist,NE-3,NE-3,0.999725,2.75e-4
+Economist,Nebraska,NE,0.999725,2.75e-4
+Economist,Nevada,NV,0.05212499999999998,0.947875
+Economist,New Hampshire,NH,0.01441250000000005,0.9855875
+Economist,New Jersey,NJ,0,1
+Economist,New Mexico,NM,0.002287499999999998,0.9977125
+Economist,New York,NY,0,1
+Economist,North Carolina,NC,0.30157500000000004,0.698425
+Economist,North Dakota,ND,1,0
+Economist,Ohio,OH,0.556925,0.443075
+Economist,Oklahoma,OK,1,0
+Economist,Oregon,OR,1.2499999999970868e-5,0.9999875
+Economist,Pennsylvania,PA,0.052974999999999994,0.947025
+Economist,Rhode Island,RI,0,1
+Economist,South Carolina,SC,0.976225,0.023775
+Economist,South Dakota,SD,0.999975,2.5e-5
+Economist,Tennessee,TN,0.999975,2.5e-5
+Economist,Texas,TX,0.6969875,0.3030125
+Economist,Utah,UT,0.99995,5e-5
+Economist,Vermont,VT,0,1
+Economist,Virginia,VA,0.0026000000000000467,0.9974
+Economist,Washington,WA,0,1
+Economist,West Virginia,WV,1,0
+Economist,Wisconsin,WI,0.019887499999999947,0.9801125
+Economist,Wyoming,WY,1,0

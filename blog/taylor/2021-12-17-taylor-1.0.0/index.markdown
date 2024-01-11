@@ -1,17 +1,18 @@
 ---
 title: "taylor 1.0.0"
-subtitle: ""
-excerpt: "Initial release of taylor for accessing data on Taylor Swift's discography."
 date: 2021-12-17
-author: "Jake Thompson"
-draft: false
-weight: 1
+subtitle: ""
+description: "Initial release of taylor for accessing data on Taylor Swift's discography."
+image: "sidebar-hex.png"
+twitter-card:
+  image: "sidebar-hex.png"
+open-graph:
+  image: "sidebar-hex.png"
 categories:
   - R
   - package
-tags:
+  - taylor
   - Taylor Swift
-layout: single-series
 ---
 
 
@@ -28,7 +29,7 @@ You can install it from CRAN with:
 install.packages("taylor")
 ```
 
-This blog post will highlight the major changes in this release, including the addition of data from *Red (Taylor's Version)* and other updates to [color palette functionality](/blog/taylor/2021-10-24-taylor-palettes/).
+This blog post will highlight the major changes in this release, including the addition of data from *Red (Taylor's Version)* and other updates to [color palette functionality](/blog/taylor/2021-10-16-taylor-palettes/).
 
 
 ```r
@@ -117,7 +118,7 @@ taylor_albums
 
 Finally, a new color palette inspired by the *Red (Taylor's Version)* album cover has been added to the [`album_palettes`](https://taylor.wjakethompson.com/reference/album_palettes.html), and the [package website](https://taylor.wjakethompson.com) has been updated with a new theme and logo, also inspired by the album cover.
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-1.png" width="80%" style="display: block; margin: auto;" />
+<img src="index_files/figure-html/unnamed-chunk-7-1.png" width="80%" style="display: block; margin: auto;" />
 
 ## Breaking Changes
 
@@ -144,7 +145,7 @@ Similarly, if you specify an `n` that is smaller than the number of colors in th
 
 There were also a number of minor improvements:
 
-* Wildest Dreams (Taylor's Version) has been added as a non-ablum song. Presumably, this song will eventually move to *1989 (Taylor's Version)*.
+* "Wildest Dreams (Taylor's Version)" has been added as a non-ablum song. Presumably, this song will eventually move to *1989 (Taylor's Version)*.
 * [`color_palette()`](https://taylor.wjakethompson.com/reference/color_palette.html) now preserves color names, either through values in [`colors()`](https://rdrr.io/r/grDevices/colors.html), or a named vector supplied to `pal`.
 
 See the [changelog](https://taylor.wjakethompson.com/news/index.html) for a complete list of changes.

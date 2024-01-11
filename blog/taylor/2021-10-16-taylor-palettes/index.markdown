@@ -1,28 +1,29 @@
 ---
 title: "Creating a custom color palette class with vctrs"
-subtitle: ""
-excerpt: "We're in screaming color! Learn how the custom color palette methods for taylor were made using vctrs."
 date: 2021-10-16
-author: "Jake Thompson"
-draft: false
-weight: 1
+subtitle: ""
+description: "We're in screaming color! Learn how the custom color palette methods for taylor were made using vctrs."
+image: "sidebar-palette.png"
+twitter-card:
+  image: "sidebar-palette.png"
+open-graph:
+  image: "sidebar-palette.png"
 categories:
   - R
   - package
-tags:
+  - taylor
   - Taylor Swift
-layout: single-series
 ---
 
 
 
-In the first post in the [taylor series](https://www.wjakethompson.com/blog/taylor/), I introduced the [taylor](https://taylor.wjakethompson.com) package for accessing data on Taylor Swift's discography.
+In the first post in the [taylor series](https://www.wjakethompson.com/blog/#category=taylor), I introduced the [taylor](https://taylor.wjakethompson.com) package for accessing data on Taylor Swift's discography.
 In this post, we'll dig into how one particular feature works under the hood: the custom color palettes.
 
 First, credit where credit is due. This idea was 100% inspired by [Josiah Parry's](https://twitter.com/JosiahParry) work on the [cpcinema](https://github.com/JosiahParry/cpcinema) package.
 That repository was a great starting point to build off of.
 Although I ended up re-building many of the functions to better suit the needs of taylor, this feature would not exist had I not seen this initial work.
-Second, the [vctrs](https://vctrs.r-lib.org) has excellent documentation that makes building custom classes as straightforward as possible.
+Second, the [vctrs](https://vctrs.r-lib.org) package has excellent documentation that makes building custom classes as straightforward as possible.
 Specifically, I spent a lot of time with the [S3 vectors vignette](https://vctrs.r-lib.org/articles/s3-vector.html).
 It's a great resources for building your own classes.
 Without further ado, let's get to it!
@@ -43,7 +44,7 @@ my_colors
 scales::show_col(my_colors)
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/plain-pal-1.png" title="A series of five squares showing hexadecimal codes. The colors are orange, light orange, grey, light blue, and blue." alt="A series of five squares showing hexadecimal codes. The colors are orange, light orange, grey, light blue, and blue." width="80%" style="display: block; margin: auto;" />
+<img src="index_files/figure-html/plain-pal-1.png" title="A series of five squares showing hexadecimal codes. The colors are orange, light orange, grey, light blue, and blue." alt="A series of five squares showing hexadecimal codes. The colors are orange, light orange, grey, light blue, and blue." width="80%" style="display: block; margin: auto;" />
 
 Using taylor, we can create a color palette with `color_palette()`.
 The `color_palette()` function returns the same vector of colors, but with a special print method to visualize the colors in the console.

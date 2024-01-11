@@ -1,17 +1,18 @@
 ---
 title: "taylor 3.0.0"
-subtitle: ""
-excerpt: "Welcoming 1989 (Taylor's Version) and Speak Now (Taylor's Version) to the {taylor} package."
 date: 2023-11-09
-author: "Jake Thompson"
-draft: false
-weight: 1
+subtitle: ""
+description: "Welcoming <em>1989 (Taylor's Version)</em> and <em>Speak Now (Taylor's Version)</em> to the taylor package."
+image: "sidebar-hex.png"
+twitter-card:
+  image: "sidebar-hex.png"
+open-graph:
+  image: "sidebar-hex.png"
 categories:
   - R
   - package
-tags:
+  - taylor
   - Taylor Swift
-layout: single-series
 ---
 
 
@@ -123,9 +124,9 @@ taylor_albums
 
 The color palettes have also been updated to include palette inspired by the each album cover and can be accessed in the [`album_palettes`](https://taylor.wjakethompson.com/reference/album_palettes.html) list.
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-1.png" alt="The five colors of the Speak Now (Taylor's Version) color palette." width="80%" style="display: block; margin: auto;" />
+<img src="index_files/figure-html/unnamed-chunk-5-1.png" alt="The five colors of the Speak Now (Taylor's Version) color palette." width="80%" style="display: block; margin: auto;" />
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-6-1.png" alt="The five colors of the 1989 (Taylor's Version) color palette." width="80%" style="display: block; margin: auto;" />
+<img src="index_files/figure-html/unnamed-chunk-6-1.png" alt="The five colors of the 1989 (Taylor's Version) color palette." width="80%" style="display: block; margin: auto;" />
 
 These palettes can be used inside any of the [`scale_*_taylor()`](https://taylor.wjakethompson.com/reference/scale_taylor.html) functions.
 
@@ -140,7 +141,7 @@ taylor_album_songs %>%
   labs(x = "Song Energy (From Spotify)", y = NULL)
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-1.png" alt="A horizontal bar graph showing track names on the y-axis and song energey on the x-axis. Bars a filled with colors derived from the 1989 (Taylor's Version) color palette, ranging from blue to tan." width="100%" style="display: block; margin: auto;" />
+<img src="index_files/figure-html/unnamed-chunk-7-1.png" alt="A horizontal bar graph showing track names on the y-axis and song energey on the x-axis. Bars a filled with colors derived from the 1989 (Taylor's Version) color palette, ranging from blue to tan." width="100%" style="display: block; margin: auto;" />
 
 Finally, the [package website](https://taylor.wjakethompson.com) has been updated with a new theme and logo, inspired by the *1989 (Taylor's Version)* album cover.
 
@@ -208,7 +209,7 @@ eras_tour_surprise |>
 
 </details>
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/eras-plot-1.png" alt="Line plot showing the cumulative number of songs played as surprise songs from each album over the course of The Eras Tour." width="100%" style="display: block; margin: auto;" />
+<img src="index_files/figure-html/eras-plot-1.png" alt="Line plot showing the cumulative number of songs played as surprise songs from each album over the course of The Eras Tour." width="100%" style="display: block; margin: auto;" />
 
 ## Minor Changes
 

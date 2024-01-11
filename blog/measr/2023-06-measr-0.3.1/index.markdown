@@ -1,18 +1,19 @@
 ---
 title: "measr 0.3.1"
-subtitle: ""
-excerpt: ""
 date: 2023-06-06
-author: "Jake Thompson"
-draft: false
-weight: 1
+subtitle: ""
+description: "measr 0.3.1 is a minor release focusing on expanding the set of models that can be estimated."
+image: "sidebar-hex.png"
+twitter-card:
+  image: "sidebar-hex.png"
+open-graph:
+  image: "sidebar-hex.png"
 categories:
   - R
   - package
-tags:
+  - measr
   - dcm
   - Stan
-layout: single-series
 ---
 
 

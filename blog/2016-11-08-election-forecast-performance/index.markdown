@@ -3,11 +3,11 @@ title:  "Evaluating election forecasts"
 date: 2016-11-08
 subtitle: ""
 description: "Let's look at how the forecasters did for the 2016 Presidential election"
-image: "featured-electoral-college.png"
+image: "featured.png"
 twitter-card:
-  image: "featured-electoral-college.png"
+  image: "featured.png"
 open-graph:
-  image: "featured-electoral-college.png"
+  image: "featured.png"
 categories:
   - R
   - politics
@@ -197,3 +197,9 @@ accuracy as measured by the raw and unweighted Brier Score, and it also had the
 best model accuracy, with simulations using their probabilities more closely
 matching the observed data than any other model. In an incredibly messing
 election, Nate Silver was the real winner.
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@element5digital?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Element5 Digital</a> on <a href="https://unsplash.com/photos/white-and-black-rolled-sticker-on-white-surface-ThjUa4yYeX8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  

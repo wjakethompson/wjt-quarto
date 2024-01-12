@@ -201,7 +201,7 @@ a.nav-link:hover {
 
         .active {
             font-weight: 400;
-            color: $orange;
+            color: $wjt-blue;
         }
 
         .quarto-category-count {
@@ -370,13 +370,21 @@ a.nav-link:hover {
 }
 
 .blog-post {
+    .featured-image {
+      // background-image: url(featured.png);
+      background-size: cover;
+      background-position: center;
+      color: white;
+      box-shadow: inset 0 0 0 1000px rgba(105, 103, 115, 0.85);
+    }
+    
     .quarto-title .quarto-categories {
         margin-top: 1.5em;
 
         .quarto-category {
-            background-color: shift-color($wjt-yellow, -25%);
-            border-color: shift-color($wjt-yellow, -45%);
-            color: $wjt-black;
+            background-color: $wjt-gray;
+            border-color: white;
+            color: $white;
             font-size: 0.65em;
             opacity: 1;
         }

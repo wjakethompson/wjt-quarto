@@ -1,0 +1,11 @@
+/* remove styling from title block partial */
+#title-block-header, #title-block-header-title {
+  /* all: unset; */
+  background-image: none !important;
+  box-shadow: inset 0 0 0 1000px #272727;
+
+  h1 {
+    color: #009FB7;
+    grid-column-start: 2;
+  }
+}

@@ -1,5 +1,5 @@
 ---
-title: "Creating an EM:IP Cover Graphic Using ggplot2"
+title: "Creating an EM:IP cover graphic using ggplot2"
 date: 2017-12-06
 subtitle: ""
 description: "Use ggplot2 to visualize multidimensional item response theory models."

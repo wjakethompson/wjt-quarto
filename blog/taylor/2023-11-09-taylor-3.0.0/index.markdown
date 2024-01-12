@@ -2,7 +2,7 @@
 title: "taylor 3.0.0"
 date: 2023-11-09
 subtitle: ""
-description: "Welcoming <em>1989 (Taylor's Version)</em> and <em>Speak Now (Taylor's Version)</em> to the taylor package."
+description: "taylor 3.0.0 is a major release to include data from <em>1989 (Taylor's Version)</em> and <em>Speak Now (Taylor's Version)</em>."
 image: "featured.jpg"
 twitter-card:
   image: "featured.jpg"

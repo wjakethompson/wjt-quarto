@@ -1,5 +1,5 @@
 ---
-title: "Tidy Sports Analytics, Part 4: tidyverse"
+title: "Tidy sports analytics, part 4: tidyverse"
 date: 2017-08-25
 subtitle: ""
 description: "In our concluding entry, we reflect on the tidyverse and look at resources for future learning."

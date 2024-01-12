@@ -2,7 +2,7 @@
 title: "taylor 2.0.0"
 date: 2022-11-13
 subtitle: ""
-description: "Updated release of taylor to include <em>Midnights</em>."
+description: "taylor 2.0.0 is a major release to include data from <em>Midnights</em>."
 image: "featured.jpg"
 twitter-card:
   image: "featured.jpg"

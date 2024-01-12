@@ -1,8 +1,8 @@
 ---
-title:  "Evaluating 2020 Election Forecasts"
+title:  "Evaluating 2020 election forecasts"
 date: 2021-11-07
 subtitle: ""
-description: "A look back on the 2020 election forecasts"
+description: "Take a look back on the 2020 election forecasts."
 image: "featured.jpg"
 twitter-card:
   image: "featured.jpg"

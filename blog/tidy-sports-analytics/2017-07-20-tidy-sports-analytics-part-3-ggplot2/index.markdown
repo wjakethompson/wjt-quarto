@@ -1,5 +1,5 @@
 ---
-title: "Tidy Sports Analytics, Part 3: ggplot2"
+title: "Tidy sports analytics, part 3: ggplot2"
 date: 2017-07-20
 subtitle: ""
 description: "Learn how to use ggplot2 for visualizing our NFL data."

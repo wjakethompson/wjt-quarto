@@ -2,8 +2,8 @@
 title: "Creating ggplot2 fill and color scales"
 date: 2021-11-11
 subtitle: ""
-description: "Learn to create custom fill and color scales for ggplot2 to make your
-  plots *Gorgeous*."
+description: 'Learn to create custom fill and color scales for ggplot2 to make your
+  plots "Gorgeous."'
 image: "featured.jpg"
 twitter-card:
   image: "featured.jpg"

@@ -1,5 +1,5 @@
 ---
-title: "Tidy Sports Analytics, Part 2: tidyr"
+title: "Tidy sports analytics, part 2: tidyr"
 date: 2017-06-25
 subtitle: ""
 description: "Learn how to use tidyr for making tidy data frames as we continue our exploration of NFL data."

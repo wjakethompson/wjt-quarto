@@ -1,8 +1,8 @@
 ---
-title: "Making Your Own ggclock"
+title: "Making your own ggclock"
 date: 2018-11-27
 subtitle: ""
-description: "Make yourself a ggplot2-themed clock, using ggplot2!"
+description: "Make yourself a ggplot2-themed clock using ggplot2!"
 image: "featured.jpg"
 twitter-card:
   image: "featured.jpg"

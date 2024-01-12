@@ -1,8 +1,8 @@
 ---
-title: "Animated TIE Fighter"
+title: "Animated TIE fighter"
 date: 2018-05-04
 subtitle: ""
-description: "Happy Stars Wars day! Let's make a TIE Figher animation to celebrate!"
+description: "May the fourth be with you!"
 image: "featured.jpg"
 twitter-card:
   image: "featured.jpg"

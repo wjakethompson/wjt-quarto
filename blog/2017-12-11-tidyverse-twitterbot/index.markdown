@@ -1,5 +1,5 @@
 ---
-title: "Using rtweet to Create a tidyverse Twitterbot"
+title: "Using rtweet to create a tidyverse twitterbot"
 date: 2017-12-11
 subtitle: ""
 description: "See the inner workings of a Twitter bot that sends out new tidyverse questions."

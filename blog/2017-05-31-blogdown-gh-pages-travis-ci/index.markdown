@@ -1,8 +1,8 @@
 ---
-title: "Integrating Blogdown with GitHub Pages and Travis-CI"
+title: "Integrating blogdown with GitHub pages and Travis-CI"
 date: 2017-05-31
 subtitle: ""
-description: "Get up and running with automated builds for your blogdown website"
+description: "Get up and running with automated builds for your blogdown website."
 image: "featured.jpg"
 twitter-card:
   image: "featured.jpg"

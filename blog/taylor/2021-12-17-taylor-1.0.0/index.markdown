@@ -2,7 +2,7 @@
 title: "taylor 1.0.0"
 date: 2021-12-17
 subtitle: ""
-description: "Initial release of taylor for accessing data on Taylor Swift's discography."
+description: "taylor 1.0.0 is a major release including data from <em>Red (Taylor's Version)<em>."
 image: "featured.jpg"
 twitter-card:
   image: "featured.jpg"

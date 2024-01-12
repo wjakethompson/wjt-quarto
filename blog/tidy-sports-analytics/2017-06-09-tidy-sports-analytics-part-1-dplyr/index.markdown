@@ -1,5 +1,5 @@
 ---
-title: "Tidy Sports Analytics, Part 1: dplyr"
+title: "Tidy sports analytics, part 1: dplyr"
 date: 2017-06-09
 subtitle: ""
 description: "Learn how to use dplyr for data manipulation as we explore NFL data."

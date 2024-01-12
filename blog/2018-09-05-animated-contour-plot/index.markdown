@@ -1,5 +1,5 @@
 ---
-title: "Making an Animated Contour Plot"
+title: "Making an animated contour plot"
 date: 2018-09-05
 subtitle: ""
 description: "Recreate contour plots using ggplot2 and gganimate."

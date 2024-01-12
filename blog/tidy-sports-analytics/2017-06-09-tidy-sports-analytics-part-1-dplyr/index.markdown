@@ -3,11 +3,11 @@ title: "Tidy Sports Analytics, Part 1: dplyr"
 date: 2017-06-09
 subtitle: ""
 description: "Learn how to use dplyr for data manipulation as we explore NFL data."
-image: "featured.png"
+image: "featured.jpg"
 twitter-card:
-  image: "featured.png"
+  image: "featured.jpg"
 open-graph:
-  image: "featured.png"
+  image: "featured.jpg"
 categories:
   - R
   - sports
@@ -219,3 +219,9 @@ This post shows how the **dplyr** package, which is the main data manipulation p
 
 - [dplyr.tidyverse.org](http://dplyr.tidyverse.org/)
 - [*R for Data Science*, Data Transformation](http://r4ds.had.co.nz/transform.html)
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@aussiedave?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Dave Adamson</a> on <a href="https://unsplash.com/photos/brown-and-black-wilson-football--nATH0CrkMU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

@@ -3,11 +3,11 @@ title: "Predicting the winner of the 2017 Big 12/SEC Challenge"
 date: 2017-01-27
 subtitle: ""
 description: "Which conference is most likely to come out on top?"
-image: "featured.png"
+image: "featured.jpg"
 twitter-card:
-  image: "featured.png"
+  image: "featured.jpg"
 open-graph:
-  image: "featured.png"
+  image: "featured.jpg"
 categories:
   - R
   - sports
@@ -180,3 +180,9 @@ sim_results %>%
 ## Conclusion
 
 The results of the simulation show that the Big 12 has about a 74% chance of winning the challenge and continuing their streak. I'll be [tweeting](https://twitter.com/wjakethompson) out updated probabilities throughout the day tomorrow as the games finish, so follow me there for updates!
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@dannylines?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Danny Lines</a> on <a href="https://unsplash.com/photos/brown-basketball-near-basketball-ring-DJHNtQvdODg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

@@ -3,11 +3,11 @@ title: "Making Your Own ggclock"
 date: 2018-11-27
 subtitle: ""
 description: "Make yourself a ggplot2-themed clock, using ggplot2!"
-image: "featured.png"
+image: "featured.jpg"
 twitter-card:
-  image: "featured.png"
+  image: "featured.jpg"
 open-graph:
-  image: "featured.png"
+  image: "featured.jpg"
 categories:
   - R
   - ggplot2
@@ -246,3 +246,9 @@ ggplot() +
 ## Conclusion
 
 If you are interested in just the code to generate the ggclock, it can be found in this [gist](https://gist.github.com/wjakethompson/7239e991936d26206776dd44689e24fe). If you actually want to get the ggclock made, you can order a custom clock [here](https://www.zazzle.com/pd/spp/pt-aif_wallclock?style=largecircle&areas=%7Blargecircle_front%7D). I’ve also included larger, high resolution ggclock images in the comments of the gist that are suitable for printing. If you do actually get a ggclock made, tweet a picture at me ([@wjakethompson](https://twitter.com/wjakethompson/))! I’d love to see more out in the wild!
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@moritz_photography?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Moritz Kindler</a> on <a href="https://unsplash.com/photos/analog-clock-mGFHA_0TWnA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

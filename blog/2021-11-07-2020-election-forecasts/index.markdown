@@ -1,12 +1,13 @@
 ---
 title:  "Evaluating 2020 Election Forecasts"
 date: 2021-11-07
-subtitle: "A look back on the 2020 election forecasts."
-image: "featured.png"
+subtitle: ""
+description: "A look back on the 2020 election forecasts"
+image: "featured.jpg"
 twitter-card:
-  image: "featured.png"
+  image: "featured.jpg"
 open-graph:
-  image: "featured.png"
+  image: "featured.jpg"
 categories:
   - R
   - politics
@@ -874,3 +875,9 @@ Most models over estimated the number of electoral votes Biden would receive, wi
 ## Final Thoughts
 
 Taken all together, the Electoral Polls forecast and the market derived probabilities from PredictIt showed the best performance for both prediction and model accuracy. I’m still unsure how useful these forecasts are in practice, but I don’t think they’re going anywhere anytime soon. And with the mid-term elections coming up in in 2022, it’s good to be thinking about how accurate different forecasts might be!
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@element5digital?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Element5 Digital</a> on <a href="https://unsplash.com/photos/voted-printed-papers-on-white-surface-ls8Kc0P9hAA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

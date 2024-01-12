@@ -3,11 +3,11 @@ title: "taylor 3.0.0"
 date: 2023-11-09
 subtitle: ""
 description: "Welcoming <em>1989 (Taylor's Version)</em> and <em>Speak Now (Taylor's Version)</em> to the taylor package."
-image: "sidebar-hex.png"
+image: "featured.jpg"
 twitter-card:
-  image: "sidebar-hex.png"
+  image: "featured.jpg"
 open-graph:
-  image: "sidebar-hex.png"
+  image: "featured.jpg"
 categories:
   - R
   - package
@@ -220,3 +220,9 @@ There were also a number of minor improvements:
 * "This Love (Taylor's Version)" and "Wildest Dreams (Taylor's Version)" have been removed from the non-album singles now that *1989 (Taylor's Version)* has been released.
 
 See the [changelog](https://taylor.wjakethompson.com/news/index.html) for a complete list of changes.
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@allvar?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Carl Tronders</a> on <a href="https://unsplash.com/photos/a-white-bird-flying-through-a-blue-sky-_KdMdj8cD2s?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

@@ -3,11 +3,11 @@ title: "Creating an EM:IP Cover Graphic Using ggplot2"
 date: 2017-12-06
 subtitle: ""
 description: "Use ggplot2 to visualize multidimensional item response theory models."
-image: "featured.png"
+image: "featured.jpg"
 twitter-card:
-  image: "featured.png"
+  image: "featured.jpg"
 open-graph:
-  image: "featured.png"
+  image: "featured.jpg"
 categories:
   - R
   - psychometrics
@@ -208,3 +208,9 @@ Figure <a href="#fig:plot-mirt">5</a> is the graphic that is printed on the cove
 >In the 1PL versions of these models, the b-parameters are set to 0, and the discriminations are fixed at 1, making this equivalent to the multidimensional Rasch model. In the 2PL versions, the discrimination is set to 0.8 for the first dimension and 1.8 for the second dimension. Accordingly, we can see the item get easier for individuals with low ability on dimension 1 and harder for individuals with low ability on dimension 2. Finally, in the 3PL versions, the c-parameter is set to 0.2, and we can see the probability level off at 0.2, rather than reaching all the way down to 0 for individuals with low ability on both dimensions. In all of the partially compensatory models, the discrimination for the interaction term is 0.3.
 >
 >These plots show the 1PL, 2PL, and 3PL MIRT models are affected by how compensatory the model is parameterized to be. Additionally, creating 2-dimensional representations of the 3-dimensional curves makes it easier to identify differences in between the partially compensatory and noncompensatory models that tend to look very similar when rendered in 3 dimensions.
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@jessbaileydesigns?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jess Bailey</a> on <a href="https://unsplash.com/photos/colored-pencil-lined-up-on-top-of-white-surface-l3N9Q27zULw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

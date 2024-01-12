@@ -3,11 +3,11 @@ title: "Tidy Sports Analytics, Part 2: tidyr"
 date: 2017-06-25
 subtitle: ""
 description: "Learn how to use tidyr for making tidy data frames as we continue our exploration of NFL data."
-image: "featured.png"
+image: "featured.jpg"
 twitter-card:
-  image: "featured.png"
+  image: "featured.jpg"
 open-graph:
-  image: "featured.png"
+  image: "featured.jpg"
 categories:
   - R
   - sports
@@ -243,3 +243,9 @@ This post shows how the **tidyr** package, which is main the data cleaning packa
 - [tidyr.tidyverse.org](http://tidyr.tidyverse.org/)
 - [*R for Data Science*, Tidy Data](http://r4ds.had.co.nz/tidy-data.html)
 - [Tidy Data, *Journal of Statistical Software*](http://vita.had.co.nz/papers/tidy-data.html)
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@thomascpark?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Thomas Park</a> on <a href="https://unsplash.com/photos/green-and-white-stripe-pathway-fDmpxdV69eA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

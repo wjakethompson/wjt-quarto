@@ -3,11 +3,11 @@ title: "Making an Animated Contour Plot"
 date: 2018-09-05
 subtitle: ""
 description: "Recreate contour plots using ggplot2 and gganimate."
-image: "featured.png"
+image: "featured.jpg"
 twitter-card:
-  image: "featured.png"
+  image: "featured.jpg"
 open-graph:
-  image: "featured.png"
+  image: "featured.jpg"
 categories:
   - R
   - ggplot2
@@ -92,3 +92,9 @@ ggplot(plot_data, aes(x = x, y = y)) +
 <img src="https://media.giphy.com/media/mbBNB2gR0BDALqgpvk/giphy.gif" width="100%" style="display: block; margin: auto;" />
 
 And there we have it! With just one extra variable and one additional line of code for our plot, we have an animated contour plot!
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@dmey503?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Dan Meyers</a> on <a href="https://unsplash.com/photos/white-and-gray-painted-wall-TaM22L_f-cg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

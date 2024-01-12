@@ -4,11 +4,11 @@ date: 2021-11-11
 subtitle: ""
 description: "Learn to create custom fill and color scales for ggplot2 to make your
   plots *Gorgeous*."
-image: "sidebar-plots.png"
+image: "featured.jpg"
 twitter-card:
-  image: "sidebar-plots.png"
+  image: "featured.jpg"
 open-graph:
-  image: "sidebar-plots.png"
+  image: "featured.jpg"
 categories:
   - R
   - package
@@ -285,3 +285,9 @@ This is the last post for now digging into the internals of taylor.
 However, you can expect a new release post soon, as *Red (Taylor's Version)* is being released in just a few hours!
 
 <img src="https://media.giphy.com/media/OiU4E2Y8tSU0/giphy.gif" width="80%" style="display: block; margin: auto;" />
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Pawel Czerwinski</a> on <a href="https://unsplash.com/photos/assorted-color-smoke-3k9PGKWt7ik?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

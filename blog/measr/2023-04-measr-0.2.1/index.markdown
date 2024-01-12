@@ -3,11 +3,11 @@ title: "measr 0.2.1"
 date: 2023-04-10
 subtitle: ""
 description: "Initial release of measr package for estimating and evaluating diagnostic classification models."
-image: "sidebar-hex.png"
+image: "featured.jpg"
 twitter-card:
-  image: "sidebar-hex.png"
+  image: "featured.jpg"
 open-graph:
-  image: "sidebar-hex.png"
+  image: "featured.jpg"
 categories:
   - R
   - package
@@ -198,3 +198,9 @@ Some highlights include:
 * Additional vignettes including a complete description of model evaluation and example case studies
 
 If you have a specific feature request, suggestion for improvement, or run into any problems, please [open an issue](https://github.com/wjakethompson/measr/issues) on the project repository!
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@yer_a_wizard?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Fleur</a> on <a href="https://unsplash.com/photos/drafting-instruments-on-top-of-table-dQf7RZhMOJU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

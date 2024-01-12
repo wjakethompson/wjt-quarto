@@ -3,11 +3,11 @@ title: "Tidy Sports Analytics, Part 4: tidyverse"
 date: 2017-08-25
 subtitle: ""
 description: "In our concluding entry, we reflect on the tidyverse and look at resources for future learning."
-image: "featured.png"
+image: "featured.jpg"
 twitter-card:
-  image: "featured.png"
+  image: "featured.jpg"
 open-graph:
-  image: "featured.png"
+  image: "featured.jpg"
 categories:
   - R
   - sports
@@ -52,3 +52,9 @@ With the huge amount of data that is now available for analyzing sports data, th
 - [tidyverse.org](http://www.tidyverse.org/)
 - [*R for Data Science*](http://r4ds.had.co.nz/)
 - [RStudio cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@hencetheboom?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Adrian Curiel</a> on <a href="https://unsplash.com/photos/photo-of-assorted-nfl-football-collection-uS4an493LkY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

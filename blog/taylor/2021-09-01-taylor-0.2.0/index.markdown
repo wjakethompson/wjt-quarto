@@ -3,11 +3,11 @@ title: "taylor 0.2.0"
 date: 2021-09-01
 subtitle: ""
 description: "Initial release of taylor for accessing data on Taylor Swift's discography"
-image: "sidebar-hex.png"
+image: "featured.jpg"
 twitter-card:
-  image: "sidebar-hex.png"
+  image: "featured.jpg"
 open-graph:
-  image: "sidebar-hex.png"
+  image: "featured.jpg"
 categories:
   - R
   - package
@@ -228,3 +228,8 @@ In the mean time, stay tuned for my upcoming posts on using vctrs classes and cr
 
 <img src="https://media.giphy.com/media/geuXiMq0MNqfAyxS7b/giphy.gif" width="80%" style="display: block; margin: auto;" />
 
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@getuliodt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Getúlio Moraes</a> on <a href="https://unsplash.com/photos/brown-acoustic-guitar-lhM8m_il8BQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

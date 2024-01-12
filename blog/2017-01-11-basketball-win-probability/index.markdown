@@ -3,11 +3,11 @@ title:  "Making win probability plots with ggplot2"
 date: 2017-01-11
 subtitle: ""
 description: "Calculate the win probability for college basketball games, and then make a plot"
-image: "featured.png"
+image: "featured.jpg"
 twitter-card:
-  image: "featured.png"
+  image: "featured.jpg"
 open-graph:
-  image: "featured.png"
+  image: "featured.jpg"
 categories:
   - R
   - sports
@@ -312,3 +312,9 @@ gganimate(d, interval = 0.2)
 ## Limitations
 
 There are several limitations to the way these win probabilities are calculated. First, the calculations assume that each team has a 50% chance of winning if the game goes into overtime. This isn't entirely accurate, as a team favored before the game would still be favored in overtime (but not by as much). Secondly, I don't factor in who has possession of the ball. For example, if a team is down by 1 with 25 seconds to go and the ball, the model probably underestimates their chance of winning. In reality, when calculating the mean of the distribution, expected points on the current possession should be factored into the current margin. However, this model provides a nice starting place, and I think provides a pretty good general idea of how a team's probability of winning changed throughout the game.
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@barnabartis?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Barna Bartis</a> on <a href="https://unsplash.com/photos/green-and-white-basketball-court-in-top-view-photography-J6RjNtwpPII?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

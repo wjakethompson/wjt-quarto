@@ -3,11 +3,11 @@ title: "Animated TIE Fighter"
 date: 2018-05-04
 subtitle: ""
 description: "Happy Stars Wars day! Let's make a TIE Figher animation to celebrate!"
-image: "featured.png"
+image: "featured.jpg"
 twitter-card:
-  image: "featured.png"
+  image: "featured.jpg"
 open-graph:
-  image: "featured.png"
+  image: "featured.jpg"
 categories:
   - R
   - ggplot2
@@ -100,3 +100,9 @@ ggplot(tie_data, aes(x = x, y = y, label = label)) +
 <img src="https://media.giphy.com/media/hNsXC8pFnpzAnBRG77/giphy.gif" width="80%" style="display: block; margin: auto;" />
 
 And that’s it! Just like that we have an animated TIE fighter using **ggplot2** and **gganimate**! Happy Star Wars day!
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@tommyvankessel?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Tommy van Kessel</a> on <a href="https://unsplash.com/photos/star-wars-darth-vader-and-storm-trooper-figurine-n6cUGwvxygA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

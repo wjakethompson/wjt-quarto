@@ -3,11 +3,11 @@ title: "Integrating Blogdown with GitHub Pages and Travis-CI"
 date: 2017-05-31
 subtitle: ""
 description: "Get up and running with automated builds for your blogdown website"
-image: "featured-blogdown-hex.png"
+image: "featured.jpg"
 twitter-card:
-  image: "featured-blogdown-hex.png"
+  image: "featured.jpg"
 open-graph:
-  image: "featured-blogdown-hex.png"
+  image: "featured.jpg"
 categories:
   - R
   - blogdown
@@ -196,3 +196,9 @@ In `before_script` we run two commands that ensure the `_build.sh` and `_deploy.
 Once you have GitHub and Travis set up, adding posts to your website or making changes is super easy. Just create new posts or edit old files, commit the changes, and when you're ready to publish your changes, push to GitHub. Travis will automatically build and deploy every time you push. As an added perk, if you happen to make a change that breaks everything (as I have been known to do), Travis will send you an email letting you know that your build failed so you can go back and fix it.
 
 For an example of what the GitHub repository and all the scripts should look like to make this work, checkout the repository for my website at https://wjakethompson.com.
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@glenncarstenspeters?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Glenn Carstens-Peters</a> on <a href="https://unsplash.com/photos/person-using-macbook-pro-npxXWgQ33ZQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

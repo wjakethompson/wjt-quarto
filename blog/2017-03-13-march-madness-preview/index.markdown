@@ -3,11 +3,11 @@ title: "Previewing the 2017 men's NCAA basketball tournament"
 date: 2017-03-13
 subtitle: ""
 description: "Who got the toughest draw, and who is the best bet to cut down the nets?"
-image: "featured-final4.png"
+image: "featured.jpg"
 twitter-card:
-  image: "featured-final4.png"
+  image: "featured.jpg"
 open-graph:
-  image: "featured-final4.png"
+  image: "featured.jpg"
 categories:
   - R
   - sports
@@ -186,3 +186,9 @@ knitr::kable(tail(seeding), digits = 3, align = "c", booktabs = TRUE)
 |  1   | Villanova |  East  | -0.129 |
 
 On the other end of the spectrum, Villanova was hurt the most by the real bracket by far. They are 12.9% less likely to make the Final Four than if the consensus bracket were used. In fact, this list is dominated by good teams who were all placed in the East region, and therefore have to fight each other to get out. The exception is Kentucky, who is 5.9% less likely to make the Final Four after drawing potential matchups with Wichita State, UCLA, and North Carolina.
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@markusspiske?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Markus Spiske</a> on <a href="https://unsplash.com/photos/ball-under-basketball-ring-BfphcCvhl6E?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

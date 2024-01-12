@@ -3,11 +3,11 @@ title:  "Evaluating election forecasts"
 date: 2016-11-08
 subtitle: ""
 description: "Let's look at how the forecasters did for the 2016 Presidential election"
-image: "featured.png"
+image: "featured.jpg"
 twitter-card:
-  image: "featured.png"
+  image: "featured.jpg"
 open-graph:
-  image: "featured.png"
+  image: "featured.jpg"
 categories:
   - R
   - politics
@@ -201,5 +201,5 @@ election, Nate Silver was the real winner.
 
 ## Acknowledgments {.appendix}
 
-Featured photo by <a href="https://unsplash.com/@element5digital?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Element5 Digital</a> on <a href="https://unsplash.com/photos/white-and-black-rolled-sticker-on-white-surface-ThjUa4yYeX8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+Featured photo by <a href="https://unsplash.com/@element5digital?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Element5 Digital</a> on <a href="https://unsplash.com/photos/white-and-black-rolled-sticker-on-white-surface-ThjUa4yYeX8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
   

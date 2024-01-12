@@ -3,11 +3,11 @@ title: "Creating a custom color palette class with vctrs"
 date: 2021-10-16
 subtitle: ""
 description: "We're in screaming color! Learn how the custom color palette methods for taylor were made using vctrs."
-image: "sidebar-palette.png"
+image: "featured.jpg"
 twitter-card:
-  image: "sidebar-palette.png"
+  image: "featured.jpg"
 open-graph:
-  image: "sidebar-palette.png"
+  image: "featured.jpg"
 categories:
   - R
   - package
@@ -317,3 +317,9 @@ album_compare
 ```
 
 In the next post in this series, we'll look at the [ggplot2](https://ggplot2.tidyverse.org) scales that are included in taylor, and how they can be used to automatically apply these color palettes to graphics.
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@ro_ka?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Robert Katzki</a> on <a href="https://unsplash.com/photos/multicolored-wall-in-shallow-focus-photography-jbtfM0XBeRc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

@@ -3,11 +3,11 @@ title: "Tidy Sports Analytics, Part 3: ggplot2"
 date: 2017-07-20
 subtitle: ""
 description: "Learn how to use ggplot2 for visualizing our NFL data."
-image: "featured.png"
+image: "featured.jpg"
 twitter-card:
-  image: "featured.png"
+  image: "featured.jpg"
 open-graph:
-  image: "featured.png"
+  image: "featured.jpg"
 categories:
   - R
   - sports
@@ -152,3 +152,9 @@ The **ggplot2** package is a powerful tool for data visualization. Here, I've pr
 - [*R for Data Science*, Data Visualization](http://r4ds.had.co.nz/data-visualisation.html)
 - [*R for Data Science*, Graphics for Communication](http://r4ds.had.co.nz/graphics-for-communication.html)
 - [*ggplot2: Elegant Graphics for Data Analysis*](https://www.amazon.com/ggplot2-Elegant-Graphics-Data-Analysis/dp/331924275X/ref=sr_1_1?dchild=1&keywords=ggplot2%3A+Elegant+Graphics+for+Data+Analysis&qid=1630251638&s=books&sr=1-1)
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@bizimel?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Melissa McGovern</a> on <a href="https://unsplash.com/photos/red-football-helmet-on-green-grass-during-daytime-u4w0n2i2bJE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

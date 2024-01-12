@@ -3,11 +3,11 @@ title: "Recreating the datasaurus dozen using tweenr and ggplot2"
 date: 2017-05-05
 subtitle: ""
 description: "A lesson in the importance of visualizing your data, and an opportunity to play with gganimate."
-image: "featured.png"
+image: "featured.jpg"
 twitter-card:
-  image: "featured.png"
+  image: "featured.jpg"
 open-graph:
-  image: "featured.png"
+  image: "featured.jpg"
 categories:
   - R
   - ggplot2
@@ -142,3 +142,9 @@ gganimate(p, title_frame = FALSE)
 <img src="https://media.giphy.com/media/sTLW3CGIjnZdyoieoU/giphy.gif" width="80%" style="display: block; margin: auto;" />
 
 And there you have it! Now we can see all of the points moving between each dataset!
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@barney_dew?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Nate DeWaele</a> on <a href="https://unsplash.com/photos/white-and-red-koi-fish-a_WdM0_T_Fs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

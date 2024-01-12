@@ -3,11 +3,11 @@ title: "Using rtweet to Create a tidyverse Twitterbot"
 date: 2017-12-11
 subtitle: ""
 description: "See the inner workings of a Twitter bot that sends out new tidyverse questions."
-image: "featured-rtweet-hex.png"
+image: "featured.jpg"
 twitter-card:
-  image: "featured-rtweet-hex.png"
+  image: "featured.jpg"
 open-graph:
-  image: "featured-rtweet-hex.png"
+  image: "featured.jpg"
 categories:
   - R
   - tidyverse
@@ -156,3 +156,9 @@ pwalk(.l = all_update, .f = function(title, creation_date, link) {
 ```
 
 Ultimately, I’d like set up [@tidyversetweets](https://twitter.com/tidyversetweets) to run off of webhooks and updating instantaneously, rather than relying on a script to run every five minutes. But for now, this does a decent enough job, and was an excellent opportunity to demonstrate how easy it is to interact with Twitter using **rtweet**. If you have any questions or suggestions for improvement, feel free to leave a comment here, reach out to me on Twitter ([@wjakethompson](https://twitter.com/wjakethompson)), or file an issue on [Github](https://github.com/wjakethompson/tidyverse-tweets/issues).
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@brenkee?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Benjamin Balázs</a> on <a href="https://unsplash.com/photos/silhouette-of-bird-perched-on-tree-PgLOQTUsy1c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

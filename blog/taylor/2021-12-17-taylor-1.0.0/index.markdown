@@ -3,11 +3,11 @@ title: "taylor 1.0.0"
 date: 2021-12-17
 subtitle: ""
 description: "Initial release of taylor for accessing data on Taylor Swift's discography."
-image: "sidebar-hex.png"
+image: "featured.jpg"
 twitter-card:
-  image: "sidebar-hex.png"
+  image: "featured.jpg"
 open-graph:
-  image: "sidebar-hex.png"
+  image: "featured.jpg"
 categories:
   - R
   - package
@@ -149,3 +149,9 @@ There were also a number of minor improvements:
 * [`color_palette()`](https://taylor.wjakethompson.com/reference/color_palette.html) now preserves color names, either through values in [`colors()`](https://rdrr.io/r/grDevices/colors.html), or a named vector supplied to `pal`.
 
 See the [changelog](https://taylor.wjakethompson.com/news/index.html) for a complete list of changes.
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@introspectivedsgn?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Erik Mclean</a> on <a href="https://unsplash.com/photos/gray-asphalt-road-vPJMnUXui5Q?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

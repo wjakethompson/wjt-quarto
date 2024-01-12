@@ -3,11 +3,11 @@ title: "measr 0.3.1"
 date: 2023-06-06
 subtitle: ""
 description: "measr 0.3.1 is a minor release focusing on expanding the set of models that can be estimated."
-image: "sidebar-hex.png"
+image: "featured.jpg"
 twitter-card:
-  image: "sidebar-hex.png"
+  image: "featured.jpg"
 open-graph:
-  image: "sidebar-hex.png"
+  image: "featured.jpg"
 categories:
   - R
   - package
@@ -124,3 +124,10 @@ measr_dcm(data = ecpe_data, qmatrix = ecpe_qmatrix,
 ```
 
 As always, please [open an issue](https://github.com/wjakethompson/measr/issues) with any bugs or feature requests for future development!
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@diana_pole?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Diana Polekhina</a> on <a href="https://unsplash.com/photos/silver-and-black-necklace-on-yellow-textile-iUfusOthmgQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  
+  

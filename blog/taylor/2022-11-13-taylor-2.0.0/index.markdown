@@ -3,11 +3,11 @@ title: "taylor 2.0.0"
 date: 2022-11-13
 subtitle: ""
 description: "Updated release of taylor to include <em>Midnights</em>."
-image: "sidebar-hex.png"
+image: "featured.jpg"
 twitter-card:
-  image: "sidebar-hex.png"
+  image: "featured.jpg"
 open-graph:
-  image: "sidebar-hex.png"
+  image: "featured.jpg"
 categories:
   - R
   - package
@@ -134,3 +134,9 @@ There were also a number of minor improvements:
 * The album color palettes have been slightly tweaked to better capture the vibe of each album, rather than just pulling colors from the cover.
 
 See the [changelog](https://taylor.wjakethompson.com/news/index.html) for a complete list of changes.
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@maciaphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Morgan Macia</a> on <a href="https://unsplash.com/photos/golden-bridge-during-night-4Le88a3LQLA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

@@ -1,3 +1,6 @@
+# Date format
+date-format: "MMMM D, YYYY"
+
 # Freeze computed outputs
 execute: 
   freeze: true

@@ -1,0 +1,15 @@
+{
+  "hash": "9f7e1a73364c0749f0d964b45ae7f03f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"measr\"\nauthor:\n  - Jake Thompson\ndate: 2023-05-27\nslug: measr\nimage: featured.jpg\nalias:\n  - /project/measr/\ncategories:\n  - R\n  - package\n  - dcm\n  - Stan\ndescription: \"Bayesian psychometric measurement using Stan\"\nabstract: ''\nengine: knitr\nlinks:\n- icon: globe\n  name: website\n  url: https://taylor.wjakethompson.com\n- icon: github\n  name: code\n  url: https://github.com/wjakethompson/taylor\n---\n\n\n\n\n\n## measr <a href='https://github.com/wjakethompson/measr'><img src='featured-hex.png' align=\"right\" width=\"120\" alt='Hex logo for the measr package.'/></a>\n\nmeasr is an *R* package for estimating diagnostic classification models (also called cognitive diagnostic models) with [Stan](https://mc-stan.org).\nDiagnostic classification models are confirmatory latent class models, as described by [Rupp et al. (2010)](https://jonathantemplin.com/diagnostic-measurement-theory-methods-applications/), [Bradshaw (2016)](https://doi.org/10.1002/9781118956588.ch13), and [de la Torre and Sorrel (2023)](https://doi.org/10.1017/9781108902724.010).\nmeasr automatically generates the Stan code necessary for a variety of diagnostic models, estimates the model, and provides functionality to evaluate the model's performance using model fit indices, information criteria, and reliability metrics.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

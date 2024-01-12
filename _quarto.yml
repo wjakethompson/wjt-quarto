@@ -34,22 +34,19 @@ website:
   navbar:
     pinned: true
     logo: "assets/wjakethompson/img/wjakethompson.png"
-    tools:
-    - icon: github
-      href: https://www.github.com/wjakethompson/wjakethompson.com
     right:
       - text: About
         aria-label: "About Me"
         href: index.qmd
-      - text: Blog
-        aria-label: "Blog"
-        href: blog/index.qmd
-      - text: Talks
-        aria-label: "Invited Talks"
-        href: talk/index.qmd  
       - text: Projects
         aria-label: "Project Portfolio"
         href: project/index.qmd
+      - text: Talks
+        aria-label: "Invited Talks"
+        href: talk/index.qmd  
+      - text: Blog
+        aria-label: "Blog"
+        href: blog/index.qmd
       - text: CV
         aria-label: "Curriculum Vitae"
         href: https://cv.wjakethompson.com

@@ -1,0 +1,23 @@
+---
+title: "Projects"
+description: |
+  This portfolio includes software I have developed, workshop materials I have
+  presented, and projects I have contributed to.
+listing:
+  contents:
+    - "**/index.qmd"
+  type: grid
+  fields: [title, categories, date, image]
+  sort: "date desc"
+  filter-ui: false
+  image-align: left
+  image-height: 100%
+format:
+  html:
+    page-layout: full
+
+header-includes: >
+  <link rel="stylesheet" href="../assets/blog-listing.scss">
+resources:
+  - ../assets/blog-listing.scss 
+---

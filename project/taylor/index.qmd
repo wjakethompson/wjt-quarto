@@ -1,0 +1,29 @@
+---
+title: "taylor"
+author:
+  - Jake Thompson
+date: 2023-11-06
+slug: taylor
+image: featured.png
+alias:
+  - /project/taylor/
+categories:
+  - R
+  - package
+  - Taylor Swift
+subtitle: "Lyrics and song data for Taylor Swift's discography"
+abstract: ''
+links:
+- icon: globe
+  name: website
+  url: https://taylor.wjakethompson.com
+- icon: github
+  name: code
+  url: https://github.com/wjakethompson/taylor
+---
+
+## taylor <a href='https://github.com/wjakethompson/taylor'><img src='featured-hex.png' align="right" height="200" alt='Hex logo for the taylor package. It features an abstract version of the 1989 (Taylor's Version) album cover.'/></a>
+
+taylor is an *R* package developed to be a comprehensive resource for data on Taylor Swift songs.
+Data is included for  all officially released studio albums, extended plays (EPs), and individual singles. Data comes from 'Genius' (lyrics) and 'Spotify' (song characteristics).
+Additional functions are included for easily creating data visualizations with color palettes inspired by Taylor Swift's album covers.

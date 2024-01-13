@@ -371,11 +371,19 @@ a.nav-link:hover {
 
 .blog-post {
     .featured-image {
-      // background-image: url(featured.png);
-      background-size: cover;
-      background-position: center;
+      background-size: cover !important;
+      background-position: center !important;
       color: white;
-      box-shadow: inset 0 0 0 1000px rgba(105, 103, 115, 0.85);
+      box-shadow: inset 0 0 0 1000px rgba(105, 103, 115, 0.75);
+      
+      h1 {
+        color: white;
+        // grid-column: body-content-start/body-content-end;
+      }
+    }
+    
+    .page-columns .column-page-left {
+      grid-column: body-content-start/body-content-end;
     }
     
     .quarto-title .quarto-categories {
@@ -405,6 +413,17 @@ a.nav-link:hover {
     }
 }
 
+// #title-block-header-title .quarto-categories {
+//     margin-top: 1.5em;
+// 
+//         .quarto-category {
+//             background-color: $wjt-gray;
+//             border-color: white;
+//             color: $white;
+//             font-size: 0.65em;
+//             opacity: 1;
+//         }
+// }
 
 // Research
 .quarto-title-block {
@@ -663,7 +682,7 @@ a.nav-link:hover {
 
         ul.talk-links {
             padding: 0 0.5em;
-            background-color: shift-color($light-orange, -91%);
+            background-color: shift-color($wjt-blue, -91%);
             margin-bottom: 0;
 
             .talk-link {

@@ -1,8 +1,5 @@
 ---
 title: "Projects"
-description: |
-  This portfolio includes software I have developed, workshop materials I have
-  presented, and projects I have contributed to.
 listing:
   contents:
     - "**/index.qmd"
@@ -13,6 +10,7 @@ listing:
   image-align: left
   image-height: 100%
 date-format: "MMMM D, YYYY"
+engine: knitr
 format:
   html:
     page-layout: full
@@ -22,3 +20,13 @@ header-includes: >
 resources:
   - ../assets/blog-listing.scss 
 ---
+
+
+
+```{css, echo = FALSE}
+#title-block-header .description {
+    display: none;
+}
+```
+
+This portfolio includes software I have developed, workshop materials I have presented, and projects I have contributed to.

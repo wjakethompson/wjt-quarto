@@ -5,12 +5,14 @@
 -->
 <!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
 <!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
-<header id="title-block-header" class="quarto-title-block default blog-post page-columns">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full blog-post">
   
-  <div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.jpg); margin-left: -1.5em">
-  
-    <h1 class="title">$title$</h1>
+  <div id="title-block-header-title" class="quarto-title-banner page-columns page-full featured-image" style="background-image: url(featured.jpg)">
     
+    <div class="quarto-title column-page-left">
+      <h1 class="title">$title$</h1>
+    
+  
     $if(description)$
       <p class="subtitle lead description">$description$</p>
     $endif$
@@ -24,6 +26,7 @@
         </div>
       $endif$
     $endif$
+  </div>
   </div>
   
   $title-metadata.html()$

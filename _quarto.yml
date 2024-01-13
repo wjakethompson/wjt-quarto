@@ -43,7 +43,7 @@ website:
         href: project/index.qmd
       - text: Talks
         aria-label: "Invited Talks"
-        href: talk/index.qmd  
+        href: talks/index.qmd  
       - text: Blog
         aria-label: "Blog"
         href: blog/index.qmd

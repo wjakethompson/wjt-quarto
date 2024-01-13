@@ -1,0 +1,6 @@
+format: 
+  html:
+    quarto-template-params:
+      banner-header-class: "blog-post"
+    template-partials:
+      - ../_partials/title-block-link-buttons/title-block.html

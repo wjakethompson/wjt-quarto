@@ -1,0 +1,15 @@
+{
+  "hash": "5d7e728fe6ce6a42788475358f5fe356",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Talks\"\nlisting:\n  - id: talks_2023\n    contents: talks_2023.yml\n    sort: \"date desc\"\n    template: ../assets/talks/listing.ejs\ntitle-block-banner: \"#272727\"\npage-layout: full\ntoc: true\ntoc-location: right\ntoc-title: Year\ndate-format: \"MMMM D, YYYY\"\nengine: knitr\n\nheader-includes: >\n  <link rel=\"stylesheet\" href=\"../assets/blog-listing.scss\">\nresources:\n  - ../assets/blog-listing.scss \n---\n\n::: {.cell}\n<style type=\"text/css\">\n#title-block-header .description {\n    display: none;\n}\n</style>\n:::\n\n\nThis page contains the source code, links, and slides for various workshops, talks, lectures, and presentations I've given. Research presentations given at conferences are typically stored in their respective repositories on GitHub; one-off workshops and talks can all be found in a [catch-all GitHub repository](https://github.com/andrewheiss/talks).\n\n\n## 2023\n\n:::{#talks_2023}\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

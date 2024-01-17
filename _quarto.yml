@@ -37,13 +37,13 @@ website:
     right:
       - text: About
         aria-label: "About Me"
-        href: index.qmd
+        href: about/index.qmd
       - text: Projects
         aria-label: "Project Portfolio"
         href: project/index.qmd
       - text: Talks
         aria-label: "Invited Talks"
-        href: talks/index.qmd  
+        href: talk/index.qmd  
       - text: Blog
         aria-label: "Blog"
         href: blog/index.qmd

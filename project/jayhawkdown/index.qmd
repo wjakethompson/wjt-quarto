@@ -1,0 +1,32 @@
+---
+title: "jayhawkdown"
+author:
+  - Jake Thompson
+date: 2018-03-29
+slug: jayhawkdown
+image: featured.jpg
+alias:
+  - /project/jayhawkdown/
+categories:
+  - R
+  - package
+  - R Markdown
+description: "Thesis formatting for the University of Kansas"
+abstract: ''
+engine: knitr
+links:
+- icon: globe
+  name: website
+  url: https://jayhawkdown.wjakethompson.com
+- icon: github
+  name: code
+  url: https://github.com/wjakethompson/jayhawkdown
+---
+
+
+## jayhawkdown <a href='https://github.com/wjakethompson/jayhawkdown'><img src='featured-hex.png' align="right" width="120" alt='Hex logo for the jayhawkdown package.'/></a>
+
+jayhawkdown is an *R* package that provides a template for writing theses and dissertations that meeting the formatting requirements at the University of Kansas.
+This allows students to focus on writing without worrying about whether or not they have met all formatting specifications.
+In addition to the required PDF document, jayhawkdown also supports web-based versions of documents.
+See the package website for an example report rended to both a website and a final PDF document.

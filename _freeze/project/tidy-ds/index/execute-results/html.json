@@ -1,0 +1,15 @@
+{
+  "hash": "43b7a50c6549ee58f3c651c3a78e170a",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Tidy Data Science\"\nauthor:\n  - Jake Thompson\ndate: 2021-06-14\nslug: tidy-ds\nimage: featured.jpg\nalias:\n  - /project/tidy-ds/\ncategories:\n  - R\n  - workshop\n  - tidyverse\n  - tidymodels\ndescription: \"An introduction data science in R\"\nabstract: ''\nengine: knitr\nlinks:\n- icon: door-open\n  name: 2019 CRMDA Summer Statistical Institute\n  url: https://tidy-ds.wjakethompson.com\n- icon: door-open\n  name: 2021 AAI Summer Research Methods Camp\n  url: https://tidyds-2021.wjakethompson.com\n---\n\n\n\n## Tidy Data Science with the tidyverse and tidymodels\n\nThis week-long workshop provides an introduction to data science using R.\nParticipants learn an entire pipeline of data analysis, from importing data to creating reproducible reports.\nAlong the way we introduce several core [tidyverse](https://tidyverse.org) packages, which work together to make the process of data analysis seamless.\nThese include [dplyr](https://dplyr.tidyverse.org) for data transformation, [tidyr](https://tidyr.tidyverse.org) for data tidying, and [ggplot2](https://ggplot2.tidyverse.org) for creating data visualizations.\nWe then introduce core [tidymodels](https://tidymodels.org) packages for creating modeling pipelines including, [parsnip](https://parsnip.tidymodels.org) for creating model specifications, [recipes](https://recipes.tidymodels.org) for feature engineering, and [yardstick](https://yardstick.tidymodels.org) for evaluating model performance.\nFinally, we discuss how to use [rmarkdown](https://rmarkdown.rstudio.com) for creating reproducible reports.\n\nThis workshop has previously been presented at:\n\n* 2019 Summer Statistical Institute, hosted by the Center for Research Methods and Data Analysis at the University of Kansas\n* 2021 Summer Research Methods Camp, hosted by the Achievement and Assessment Institute at the University of Kansas\n\nSee the workshop websites for more, including links to the GitHub repositories for all workshop materials.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

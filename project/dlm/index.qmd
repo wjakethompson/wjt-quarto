@@ -1,0 +1,28 @@
+---
+title: "Dynamic Learning Maps"
+date: 2023-09-01
+slug: dlm
+image: featured.jpg
+alias:
+  - /project/dlm/
+categories:
+  - assessment
+  - psychometrics
+description: "Instructionally relevant assessments and reporting to help guide instruction"
+abstract: ''
+engine: knitr
+links:
+- icon: globe
+  name: Website
+  url: https://dynamiclearningmaps.org
+---
+
+
+## Dynamic Learnings Maps Alternate Assessment System
+
+I am a Co-Principal Investigator and the Lead Psychometrician for the Dynamic Learning Maps Alternate Assessment System.
+The Dynamic Learning Maps assessments measure student achievement in English language arts, mathematics, and science for the students with the most significant cognitive disabilities.
+The assessments are administered annual to students in grades 3--12 across [22 states](https://dynamiclearningmaps.org/consortium).
+As described in the [technical manual](https://2022-ie-techmanual.dynamiclearningmaps.org/1-overview):
+
+> The Dynamic Learning Maps^&reg;^ (DLM^&reg;^) Alternate Assessment System assesses student achievement in English language arts (ELA), mathematics, and science for students with the most significant cognitive disabilities in grades 3–8 and high school. The purpose of the system is to improve academic experiences and outcomes for students with the most significant cognitive disabilities by setting high and actionable academic expectations and providing appropriate and effective supports to educators. Results from the DLM alternate assessment are intended to support interpretations about what students know and are able to do and to support inferences about student achievement in the given subject. Results provide information that can guide instructional decisions as well as information for use with state accountability programs.

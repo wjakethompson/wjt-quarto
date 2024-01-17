@@ -1,0 +1,35 @@
+---
+title: "Diagnostic Psychometrics"
+author:
+  - Jake Thompson
+date: 2023-06-20
+slug: dcm-r
+image: featured.jpg
+alias:
+  - /project/dcm-r/
+categories:
+  - R
+  - workshop
+  - dcm
+  - measr
+description: "Workshop focused on applying diagnostic classification models in R"
+abstract: ''
+engine: knitr
+links:
+- icon: door-open
+  name: StanCon 2023
+  url: https://stancon2023.measr.info
+---
+
+
+## Diagnostic Psychometrics with R and Stan
+
+This half-day workshop provides an introduction to diagnostic classification models for applied research.
+Participants learn what diagnostic models are, when they are useful, and how which research questions they can answer.
+We then use the [measr](https://measr.info) package to estimate different types of diagnostic models and evaluate model performance.
+
+This workshop has previously been presented at:
+
+* StanCon 2023, Washington University in St. Louis
+
+See the workshop websites for more, including links to the GitHub repositories for all workshop materials.

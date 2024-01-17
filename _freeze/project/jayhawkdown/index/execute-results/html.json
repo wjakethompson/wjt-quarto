@@ -1,0 +1,15 @@
+{
+  "hash": "2227cdcdedd175e12188d22555cc09a0",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"jayhawkdown\"\nauthor:\n  - Jake Thompson\ndate: 2018-03-29\nslug: jayhawkdown\nimage: featured.jpg\nalias:\n  - /project/jayhawkdown/\ncategories:\n  - R\n  - package\n  - R Markdown\ndescription: \"Thesis formatting for the University of Kansas\"\nabstract: ''\nengine: knitr\nlinks:\n- icon: globe\n  name: website\n  url: https://jayhawkdown.wjakethompson.com\n- icon: github\n  name: code\n  url: https://github.com/wjakethompson/jayhawkdown\n---\n\n\n\n## jayhawkdown <a href='https://github.com/wjakethompson/jayhawkdown'><img src='featured-hex.png' align=\"right\" width=\"120\" alt='Hex logo for the jayhawkdown package.'/></a>\n\njayhawkdown is an *R* package that provides a template for writing theses and dissertations that meeting the formatting requirements at the University of Kansas.\nThis allows students to focus on writing without worrying about whether or not they have met all formatting specifications.\nIn addition to the required PDF document, jayhawkdown also supports web-based versions of documents.\nSee the package website for an example report rended to both a website and a final PDF document.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

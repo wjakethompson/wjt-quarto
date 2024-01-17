@@ -1,0 +1,15 @@
+{
+  "hash": "670a039e31af5b63163b7fd682bac780",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Diagnostic Psychometrics\"\nauthor:\n  - Jake Thompson\ndate: 2023-06-20\nslug: dcm-r\nimage: featured.jpg\nalias:\n  - /project/dcm-r/\ncategories:\n  - R\n  - workshop\n  - dcm\n  - measr\ndescription: \"Workshop focused on applying diagnostic classification models in R\"\nabstract: ''\nengine: knitr\nlinks:\n- icon: door-open\n  name: StanCon 2023\n  url: https://stancon2023.measr.info\n---\n\n\n\n## Diagnostic Psychometrics with R and Stan\n\nThis half-day workshop provides an introduction to diagnostic classification models for applied research.\nParticipants learn what diagnostic models are, when they are useful, and how which research questions they can answer.\nWe then use the [measr](https://measr.info) package to estimate different types of diagnostic models and evaluate model performance.\n\nThis workshop has previously been presented at:\n\n* StanCon 2023, Washington University in St. Louis\n\nSee the workshop websites for more, including links to the GitHub repositories for all workshop materials.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

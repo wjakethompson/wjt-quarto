@@ -1,0 +1,34 @@
+---
+title: "ratlas"
+author:
+  - Jake Thompson
+  - Noelle Pablo
+  - Jeffrey Hoover
+date: 2020-01-29
+slug: ratlas
+image: featured.jpg
+alias:
+  - /project/ratlas/
+categories:
+  - R
+  - package
+  - ggplot2
+  - R Markdown
+description: "ATLAS formatting functions and templates"
+abstract: ''
+engine: knitr
+links:
+- icon: globe
+  name: website
+  url: https://ratlas.netlify.app
+- icon: github
+  name: code
+  url: https://github.com/atlas-aai/ratlas
+---
+
+
+## ratlas <a href='https://github.com/atlas-aai/ratlas'><img src='featured-hex.png' align="right" width="120" alt='Hex logo for the ratlas package.'/></a>
+
+ratlas is an *R* package that provides the infrastructure for reproducible reporting writing with Accessible Teaching, Learning, and Assessment Systems (ATLAS) at the University of Kansas.
+Included are various R Markdown templates for generating reports, custom ggplot2 themes, and miscellaneous helper functions for matting numbers, text, and tables.
+This package may be used as an example for creating a similar package within other organizations.

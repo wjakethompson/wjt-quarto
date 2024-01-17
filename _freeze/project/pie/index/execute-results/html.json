@@ -1,0 +1,15 @@
+{
+  "hash": "30544f6b3cd0d295637ac031d67f5dd1",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Pathways for Instructionally Embedded Assessment\"\ndate: 2023-09-01\nslug: pie\nimage: featured.jpg\nalias:\n  - /project/pie/\ncategories:\n  - assessment\n  - grant\n  - psychometrics\ndescription: \"Universally designed assessments to support student learning\"\nabstract: ''\nengine: knitr\nlinks:\n- icon: globe\n  name: Website\n  url: https://pie.atlas4learning.org\n---\n\n\n\n## Pathways for Instructionally Embedded Assessment\n\nI am the Lead Psychometrician for the Pathways for Instructionally Embedded Assessment (PIE) system, a four-year project funded through the U.S. Department of Education, [Office of Elementary and Secondary Education](https://oese.ed.gov/).\nPIE assessments are embedded throughout the school year, and diagnostic feedback is provided to help teachers make instructional decisions.\n\nAs described on the project website:\n\n> PIE is a research and development project aimed at providing a universally designed, innovative assessment model that allows students to demonstrate competencies as they learn while also producing results that may be used for statewide summative assessment purposes. The PIE project team will design, develop, and evaluate a prototype integrated assessment model that provides multiple measures of student progress and achievement using instructionally embedded and end-of-year assessments that are aligned to research-based cognitive models of learning.\n>\n> PIE is a four-year grant-funded project led by the Missouri Department of Elementary and Secondary Education (DESE) in partnership with ATLAS.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

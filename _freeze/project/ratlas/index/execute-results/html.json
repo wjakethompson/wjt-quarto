@@ -1,0 +1,15 @@
+{
+  "hash": "423d09f669976685d0a112062ee84ba6",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"ratlas\"\nauthor:\n  - Jake Thompson\n  - Noelle Pablo\n  - Jeffrey Hoover\ndate: 2020-01-29\nslug: ratlas\nimage: featured.jpg\nalias:\n  - /project/ratlas/\ncategories:\n  - R\n  - package\n  - ggplot2\n  - R Markdown\ndescription: \"ATLAS formatting functions and templates\"\nabstract: ''\nengine: knitr\nlinks:\n- icon: globe\n  name: website\n  url: https://ratlas.netlify.app\n- icon: github\n  name: code\n  url: https://github.com/atlas-aai/ratlas\n---\n\n\n\n## ratlas <a href='https://github.com/atlas-aai/ratlas'><img src='featured-hex.png' align=\"right\" width=\"120\" alt='Hex logo for the ratlas package.'/></a>\n\nratlas is an *R* package that provides the infrastructure for reproducible reporting writing with Accessible Teaching, Learning, and Assessment Systems (ATLAS) at the University of Kansas.\nIncluded are various R Markdown templates for generating reports, custom ggplot2 themes, and miscellaneous helper functions for matting numbers, text, and tables.\nThis package may be used as an example for creating a similar package within other organizations.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

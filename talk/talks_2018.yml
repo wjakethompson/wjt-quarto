@@ -1,0 +1,15 @@
+- title: "Measuring the reliability of student mastery classifications at multiple levels of reporting"
+  date: 2018-04-15
+  description: >-
+    2018 Annual Meeting of the National Council on Measurement in Education (NCME)
+  location: New York, NY
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/measuring-the-reliability-of-diagnostic-mastery-classifications-at-multiple-levels-of-reporting
+    icon: fa-solid fa-chalkboard-user
+  - name: Article
+    url: https://doi.org/10.1080/08957347.2019.1660345
+    icon: fa-solid fa-book
+  - name: Preprint
+    url: https://doi.org/10.35542/osf.io/5vrk4
+    icon: fa-regular fa-newspaper 

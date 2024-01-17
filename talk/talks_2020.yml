@@ -1,0 +1,31 @@
+- title: "Branding and packaging reports with R Markdown"
+  date: 2020-01-30
+  description: >-
+    rstudio::conf(2020L)
+  location: San Francisco, CA
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/branding-and-packaging-reports-with-r-markdown
+    icon: fa-solid fa-chalkboard-user
+  - name: Recording
+    url: https://posit.co/resources/videos/branding-and-packaging-reports-with-r-markdown/
+    icon: fa-solid fa-video
+  - name: Package
+    url: https://ratlas.netlify.app/
+    icon: fa-solid fa-cube
+  - name: GitHub repository
+    url: https://github.com/atlas-aai/ratlas
+    icon: fa-brands fa-github
+
+- title: "Using R for item response theory"
+  date: 2020-02-24
+  description: >-
+    Guest lecture for Item Response Theory (EPSY 922), University of Kansas
+  location: Lawrence, KS
+  links:
+  - name: Slides
+    url: https://epsy922.wjakethompson.com/
+    icon: fa-solid fa-chalkboard-user
+  - name: GitHub repository
+    url: https://github.com/wjakethompson/r-irt
+    icon: fa-brands fa-github

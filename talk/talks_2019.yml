@@ -1,0 +1,38 @@
+- title: "Psychometric considerations for learning-maps-based assessments"
+  date: 2019-02-22
+  description: >-
+    Guest lecture for Research, Evaluation, Measurement, and Statistics (REMS) Graduate Proseminar
+  location: Lawrence, KS
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/psychometric-considerations-for-learning-maps-based-assessments
+    icon: fa-solid fa-chalkboard-user
+
+
+- title: "Empirical methods for evaluating maps: Illustrations and results"
+  date: 2019-04-06
+  description: >-
+    2019 Annual Meeting of the National Council on Measurement in Education (NCME)
+  location: Toronto, Canada
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/empirical-methods-for-evaluating-maps-illustrations-and-results
+    icon: fa-solid fa-chalkboard-user
+  - name: Conference paper
+    url: https://dynamiclearningmaps.org/sites/default/files/documents/presentations/Thompson_Nash_Empirical_evaluation_of_learning_maps.pdf
+    icon: fa-regular fa-newspaper 
+
+
+- title: "Tidy data science"
+  date: 2019-05-20
+  description: >-
+    Workshop presented at the Summer Statistical Institute presented by the 
+    Center for Research Methods and Data Analysis, University of Kansas
+  location: Lawrence, KS
+  links:
+  - name: Companion site, slides, and materials
+    url: https://tidy-ds.wjakethompson.com/
+    icon: fa-solid fa-chalkboard-user
+  - name: GitHub repository
+    url: https://github.com/wjakethompson/tidyds-2019
+    icon: fa-brands fa-github

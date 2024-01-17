@@ -1,0 +1,63 @@
+- title: "Applied diagnostic classification modeling with the R package measr"
+  date: 2023-03-29
+  description: >-
+    2023 Annual Meeting of the National Council on Measurement in Education (NCME)
+  location: Virtual Session
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/applied-diagnostic-classification-modeling-with-the-r-package-measr
+    icon: fa-solid fa-chalkboard-user
+  - name: Article
+    url: https://doi.org/10.21105/joss.05742
+    icon: fa-solid fa-book
+  - name: Package
+    url: https://measr.info/
+    icon: fa-solid fa-cube
+  - name: GitHub repository
+    url: https://github.com/wjakethompson/measr
+    icon: fa-brands fa-github
+
+
+- title: "A simulated retest method for estimating classification reliability"
+  date: 2023-04-13
+  description: >-
+    2023 Annual Meeting of the National Council on Measurement in Education (NCME)
+  location: Chicago, IL
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/a-simulated-retest-method-for-estimating-classification-reliability
+    icon: fa-solid fa-chalkboard-user
+  - name: Article
+    url: https://doi.org/10.1111/jedm.12359
+    icon: fa-solid fa-book
+  - name: Preprint
+    url: https://doi.org/10.35542/osf.io/x2sgj
+    icon: fa-regular fa-newspaper 
+    
+
+- title: "Diagnostic modeling with R and Stan"
+  date: 2023-06-21
+  description: >-
+    Workshop presented at StanCon 2023, Washington University in St. Louis
+  location: St. Louis, MO
+  links:
+  - name: Companion site, slides, and materials
+    url: https://stancon2023.measr.info/
+    icon: fa-solid fa-chalkboard-user
+  - name: GitHub repository
+    url: https://github.com/measr-workshop/stancon2023
+    icon: fa-brands fa-github
+
+
+- title: "Using diagnostic models to evaluate student learning hierarchies in a large-scale assessment"
+  date: 2023-09-07
+  description: >-
+    2023 Frontier Research in Educational Measurement (FREMO)
+  location: Oslo, Norway
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/using-diagnostic-models-to-evaluate-student-learning-hierarchies-in-a-large-scale-assessment
+    icon: fa-solid fa-chalkboard-user
+  - name: Article
+    url: https://doi.org/10.3389/feduc.2021.714736
+    icon: fa-solid fa-book

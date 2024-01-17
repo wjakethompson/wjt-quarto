@@ -1,0 +1,79 @@
+---
+title: "Talks"
+listing:
+  - id: talks_2023
+    contents: talks_2023.yml
+    sort: "date desc"
+    template: ../assets/talks/listing.ejs
+  - id: talks_2021
+    contents: talks_2021.yml
+    sort: "date desc"
+    template: ../assets/talks/listing.ejs
+  - id: talks_2020
+    contents: talks_2020.yml
+    sort: "date desc"
+    template: ../assets/talks/listing.ejs
+  - id: talks_2019
+    contents: talks_2019.yml
+    sort: "date desc"
+    template: ../assets/talks/listing.ejs
+  - id: talks_2018
+    contents: talks_2018.yml
+    sort: "date desc"
+    template: ../assets/talks/listing.ejs
+  - id: talks_old
+    contents: talks_old.yml
+    sort: "date desc"
+    template: ../assets/talks/listing.ejs
+title-block-banner: "#272727"
+page-layout: full
+toc: true
+toc-location: right
+toc-title: Year
+date-format: "MMMM D, YYYY"
+engine: knitr
+
+header-includes: >
+  <link rel="stylesheet" href="../assets/blog-listing.scss">
+resources:
+  - ../assets/blog-listing.scss 
+---
+
+```{css, echo = FALSE}
+#title-block-header .description {
+    display: none;
+}
+```
+
+This page contains the source code, links, and slides for various workshops, talks, lectures, and presentations I've given.
+
+
+## 2023
+
+:::{#talks_2023}
+:::
+
+## 2021
+
+:::{#talks_2021}
+:::
+
+## 2020
+
+:::{#talks_2020}
+:::
+
+## 2019
+
+:::{#talks_2019}
+:::
+
+## 2018
+
+:::{#talks_2018}
+:::
+
+## Older
+
+:::{#talks_old}
+:::

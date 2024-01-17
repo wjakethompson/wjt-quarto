@@ -1,0 +1,28 @@
+- title: "Technical evidence for diagnostic assessments"
+  date: 2021-06-09
+  description: >-
+    2021 Annual Meeting of the National Council on Measurement in Education (NCME)
+  location: Virtual conference
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/technical-evidence-for-diagnostic-assessments
+    icon: fa-solid fa-chalkboard-user
+  - name: Conference paper
+    url: https://dynamiclearningmaps.org/sites/default/files/documents/presentations/NCME_2021_Technical_Evidence_for_Diagnostic_Assessments.pdf
+    icon: fa-regular fa-newspaper 
+  
+
+- title: "Tidy data science with the tidyverse and tidymodels"
+  date: 2021-06-14
+  description: >-
+    Workshop presented at the Summer Research Methods Camp presented by the 
+    Achievement and Assessment Institute, University of Kansas
+  location: Lawrence, KS (via Zoom) 
+  links:
+  - name: Companion site, slides, and materials
+    url: https://tidyds-2021.wjakethompson.com/
+    icon: fa-solid fa-chalkboard-user
+  - name: GitHub repository
+    url: https://github.com/wjakethompson/tidyds-2021
+    icon: fa-brands fa-github
+  

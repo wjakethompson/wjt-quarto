@@ -1,0 +1,15 @@
+{
+  "hash": "4ea5e5d8aab28b63dd4870222c9ce974",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"It's me, hi!\"\npagetitle: \"Jake Thompson\"\nmain-photo: /assets/wjakethompson/img/wjt-2022.png\ntitle-block-banner: \"#009FB7\"\nengine: knitr\nformat:\n  html:\n    template-partials: \n      - ../_partials/title-block-link-buttons/title-block.html\n\nheader-includes: >\n  <link rel=\"stylesheet\" href=\"../assets/blog-listing.scss\">\nresources:\n  - ../assets/blog-listing.scss \n---\n\n::: {.cell}\n<style type=\"text/css\">\n#title-block-header .description {\n    display: none;\n}\n</style>\n:::\n\n\n::: {.grid}\n\n::: {.g-col-12 .g-col-sm-4}\n\n\n```{=html}\n<div class=\"grid\" style=\"--bs-columns: 5; row-gap: 0;\">\n  <div class=\"g-col-1 g-col-sm-0\"></div>\n  <div class=\"g-col-3 g-col-sm-5\">\n    <picture>\n      <source media=\"(min-width: 576px)\" srcset=\"{{< meta main-photo >}}\">\n      <img class=\"img-fluid\" src=\"{{< meta main-photo >}}\" alt=\"{{< meta author-meta >}}\">\n    </picture>\n  </div>\n  <div class=\"g-col-1 g-col-sm-0\"></div>\n</div>\n```\n\n\n:::\n\n::: {.g-col-12 .g-col-sm-8}\n\nI'm the assistant director of psychometrics at [Accessible Teaching, Learning, and Assessment Systems (ATLAS)](https://atlas.ku.edu), a strategic center within the [Achievement and Assessment Institute](https://aai.ku.edu) at the [University of Kansas](https://www.ku.edu).\nI received a PhD in educational psychology and research from the University of Kansas' [School of Education and Human Sciences](https://soehs.ku.edu/) in 2018.\n\nI am the lead psychometrician for the [Dynamic Learning Maps&reg;](https://www.dynamiclearningmaps.org) alternate assessments, which are administered annually to students with significant cognitive disabilities from grades 3--12 in 22 states.\nI have also led the psychometric work innovative assessment projects such as the [Innovations in Science Map, Assessment and Report Technologies (I-SMART)](https://www.ismart.works/) and [Pathways for Instructionally Embedded Assessment (PIE)](https://pie.atlas4learning.org/).\nIn all of these assessments, I am primarily focused on the application of diagnostic psychometric models to improve instructional decision-making and student learning.\n\nMy research interests also include Bayesian modeling, data visualization, and R programming.\nI am the author of several [R](https://www.r-project.org) packages including [measr](https://www.measr.info) for estimating and evaluating diagnostic classification models and [taylor](https://taylor.wjakethompson.com) for accessing lyrics and audio data for [Taylor Swift's](https://www.taylorswift.com/) discography.\nI also regularly lead workshops on how to use R and [Stan](https://www.mc-stan.org) for [applying diagnostic classification models](https://stancon2023.measr.info) and the [tidyverse](https://www.tidyverse.org) for [data science](https://tidyds-2021.wjakethompson.com/).\n\n:::\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

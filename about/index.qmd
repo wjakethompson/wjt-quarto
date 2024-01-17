@@ -1,0 +1,48 @@
+---
+title: "It's me, hi!"
+pagetitle: "Jake Thompson"
+main-photo: /assets/wjakethompson/img/wjt-2022.png
+main-photo-square: /assets/wjakethompson/img/wjt-2022-square.png
+title-block-banner: "#009FB7"
+format:
+  html:
+    quarto-template-params:
+      banner-header-class: "home"
+---
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-sm-4}
+
+```{=html}
+<div class="grid" style="--bs-columns: 5; row-gap: 0;">
+  <div class="g-col-1 g-col-sm-0"></div>
+  <div class="g-col-3 g-col-sm-5">
+    <picture>
+      <source media="(max-width: 576px)" srcset="{{< meta main-photo-square >}}">
+      <source media="(min-width: 576px)" srcset="{{< meta main-photo >}}">
+      <img class="img-fluid" src="{{< meta main-photo >}}" alt="{{< meta author-meta >}}">
+    </picture>
+  </div>
+  <div class="g-col-1 g-col-sm-0"></div>
+</div>
+```
+
+:::
+
+::: {.g-col-12 .g-col-sm-8}
+
+I'm the assistant director of psychometrics at [Accessible Teaching, Learning, and Assessment Systems (ATLAS)](https://atlas.ku.edu), a strategic center within the [Achievement and Assessment Institute](https://aai.ku.edu) at the [University of Kansas](https://www.ku.edu).
+I received a PhD in educational psychology and research from the University of Kansas' [School of Education and Human Sciences](https://soehs.ku.edu/) in 2018.
+
+I am the lead psychometrician for the [Dynamic Learning Maps&reg;](https://www.dynamiclearningmaps.org) alternate assessments, which are administered annually to students with significant cognitive disabilities from grades 3--12 in 22 states.
+I have also led the psychometric work innovative assessment projects such as the [Innovations in Science Map, Assessment and Report Technologies (I-SMART)](https://www.ismart.works/) and [Pathways for Instructionally Embedded Assessment (PIE)](https://pie.atlas4learning.org/).
+In all of these assessments, I am primarily focused on the application of diagnostic psychometric models to improve instructional decision-making and student learning.
+
+My research interests also include Bayesian modeling, data visualization, and R programming.
+I am the author of several [R](https://www.r-project.org) packages including [measr](https://www.measr.info) for estimating and evaluating diagnostic classification models and [taylor](https://taylor.wjakethompson.com) for accessing lyrics and audio data for [Taylor Swift's](https://www.taylorswift.com/) discography.
+I also regularly lead workshops on how to use R and [Stan](https://www.mc-stan.org) for [applying diagnostic classification models](https://stancon2023.measr.info) and the [tidyverse](https://www.tidyverse.org) for [data science](https://tidyds-2021.wjakethompson.com/).
+
+:::
+
+:::

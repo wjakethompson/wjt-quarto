@@ -386,6 +386,10 @@ a.nav-link:hover {
       grid-column: body-content-start/body-content-end;
     }
     
+    .page-columns .column-page-right {
+      grid-column: body-content-start/body-content-end;
+    }
+    
     .quarto-title .quarto-categories {
         margin-top: 1.5em;
 

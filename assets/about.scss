@@ -1,0 +1,24 @@
+/* remove styling from title block partial */
+#title-block-header, #title-block-header-title {
+  /* all: unset; */
+  background-image: none !important;
+  box-shadow: inset 0 0 0 1000px #009FB7;
+
+  h1 {
+    color: white;
+  }
+}
+
+div.quarto-about-trestles {
+  padding-bottom: 3em;
+}
+
+div.quarto-about-trestles .about-entity {
+  flex: 0 0 30%;
+  padding-right: 1.5em;
+}
+
+.about-entity img.about-image {
+  object-fit: contain !important;
+  width: 100% !important;
+}

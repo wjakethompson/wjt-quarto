@@ -1,36 +1,26 @@
 ---
 title: "It's me, hi!"
 pagetitle: "Jake Thompson"
-main-photo: /assets/wjakethompson/img/wjt-2022.png
-main-photo-square: /assets/wjakethompson/img/wjt-2022-square.png
+image: /assets/wjakethompson/img/wjt-2022-hex.png
 title-block-banner: "#009FB7"
+engine: knitr
+page-layout: full
 format:
   html:
-    quarto-template-params:
-      banner-header-class: "home"
+    template-partials:
+      - ../_partials/title-block-link-buttons/title-block.html
+
+about:
+  template: trestles
+  id: hero-heading
+  
+header-includes: >
+  <link rel="stylesheet" href="../assets/about.scss">
+resources:
+  - ../assets/about.scss 
 ---
 
-::: {.grid}
-
-::: {.g-col-12 .g-col-sm-4}
-
-```{=html}
-<div class="grid" style="--bs-columns: 5; row-gap: 0;">
-  <div class="g-col-1 g-col-sm-0"></div>
-  <div class="g-col-3 g-col-sm-5">
-    <picture>
-      <source media="(max-width: 576px)" srcset="{{< meta main-photo-square >}}">
-      <source media="(min-width: 576px)" srcset="{{< meta main-photo >}}">
-      <img class="img-fluid" src="{{< meta main-photo >}}" alt="{{< meta author-meta >}}">
-    </picture>
-  </div>
-  <div class="g-col-1 g-col-sm-0"></div>
-</div>
-```
-
-:::
-
-::: {.g-col-12 .g-col-sm-8}
+::: {#hero-heading}
 
 I'm the assistant director of psychometrics at [Accessible Teaching, Learning, and Assessment Systems (ATLAS)](https://atlas.ku.edu), a strategic center within the [Achievement and Assessment Institute](https://aai.ku.edu) at the [University of Kansas](https://www.ku.edu).
 I received a PhD in educational psychology and research from the University of Kansas' [School of Education and Human Sciences](https://soehs.ku.edu/) in 2018.
@@ -45,4 +35,4 @@ I also regularly lead workshops on how to use R and [Stan](https://www.mc-stan.o
 
 :::
 
-:::
+## Recently...

@@ -7,6 +7,7 @@ project:
     # Things that need to be at the site root
     - "keybase.txt"
     - "pgp_wjt.asc.txt"
+    - "_redirects"
 
 freeze: true
 

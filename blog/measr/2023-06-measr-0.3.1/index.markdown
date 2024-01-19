@@ -128,6 +128,8 @@ As always, please [open an issue](https://github.com/wjakethompson/measr/issues)
 
 ## Acknowledgments {.appendix}
 
+The research reported here was supported by the Institute of Education Sciences, U.S. Department of Education, through Grant [R305D210045](https://ies.ed.gov/funding/grantsearch/details.asp?ID=4546) to the University of Kansas. The opinions expressed are those of the authors and do not represent the views of the the Institute or the U.S. Department of Education.
+
 Featured photo by <a href="https://unsplash.com/@diana_pole?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Diana Polekhina</a> on <a href="https://unsplash.com/photos/silver-and-black-necklace-on-yellow-textile-iUfusOthmgQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
   
   

@@ -202,5 +202,7 @@ If you have a specific feature request, suggestion for improvement, or run into 
 
 ## Acknowledgments {.appendix}
 
+The research reported here was supported by the Institute of Education Sciences, U.S. Department of Education, through Grant [R305D210045](https://ies.ed.gov/funding/grantsearch/details.asp?ID=4546) to the University of Kansas. The opinions expressed are those of the authors and do not represent the views of the the Institute or the U.S. Department of Education.
+
 Featured photo by <a href="https://unsplash.com/@yer_a_wizard?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Fleur</a> on <a href="https://unsplash.com/photos/drafting-instruments-on-top-of-table-dQf7RZhMOJU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
   

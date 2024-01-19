@@ -10,6 +10,53 @@ format:
     template-partials:
       - ../_partials/title-block-link-buttons/title-block.html
 
+listing: 
+- id: blog
+  contents: 
+    - "../blog/*/index.qmd"
+    - "../blog/*/index.markdown"
+    - "../blog/tidy-sports-analytics/*/index.markdown"
+    - "../blog/taylor/*/index.markdown"
+    - "../blog/taylor/*/index.qmd"
+    - "../blog/measr/*/index.markdown"
+    - "../blog/measr/*/index.qmd"
+  sort: date desc
+  type: grid
+  grid-columns: 1
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [title, image]
+  max-items: 1
+- id: talk
+  contents: 
+    - "../talk/talks_2023.yml"
+    - "../talk/talks_2021.yml"
+    - "../talk/talks_2020.yml"
+    - "../talk/talks_2019.yml"
+    - "../talk/talks_2018.yml"
+    - "../talk/talks_old.yml"
+  sort: date desc
+  type: grid
+  grid-columns: 1
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [title, image]
+  max-items: 1
+- id: project
+  contents: 
+    - "../project/*/index.qmd"
+    - "../project/*/index.markdown"
+  sort: date desc
+  type: grid
+  grid-columns: 1
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [title, image]
+  max-items: 1
+
 about:
   template: trestles
   id: hero-heading
@@ -36,3 +83,28 @@ I also regularly lead workshops on how to use R and [Stan](https://www.mc-stan.o
 :::
 
 ## Recently...
+
+:::: {.grid}
+
+::: {.g-col-4}
+#### Blog
+::: {#blog}
+:::
+[See all &rarr;](../blog){.about-links .subtitle}
+:::
+
+::: {.g-col-4}
+#### Talks
+::: {#talk}
+:::
+[See all &rarr;](../talk){.about-links .subtitle}
+:::
+
+::: {.g-col-4}
+#### Projects
+::: {#project}
+:::
+[See all &rarr;](../project){.about-links .subtitle}
+:::
+
+::::

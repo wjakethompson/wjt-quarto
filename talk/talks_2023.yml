@@ -54,6 +54,8 @@
   description: >-
     2023 Frontier Research in Educational Measurement (FREMO)
   location: Oslo, Norway
+  image: ../talk/img/talk.png
+  path: ../talk/
   links:
   - name: Slides
     url: https://speakerdeck.com/wjakethompson/using-diagnostic-models-to-evaluate-student-learning-hierarchies-in-a-large-scale-assessment

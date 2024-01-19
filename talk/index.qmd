@@ -45,8 +45,7 @@ resources:
 }
 ```
 
-This page contains the source code, links, and slides for various workshops, talks, lectures, and presentations I've given.
-
+This page contains resources and materials for workshops, talks, lectures, and presentations I've given.
 
 ## 2023
 

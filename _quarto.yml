@@ -76,4 +76,4 @@ format:
     fig-cap-location: margin
     reference-location: margin
     footnotes-hover: true
-    highlight-style: monokai
+    highlight-style: a11y

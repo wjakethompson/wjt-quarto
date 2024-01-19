@@ -1,0 +1,15 @@
+{
+  "hash": "74a4ed08ddf1c7484339ce7b6277d7ce",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"measr 1.0.0\"\ndate: 2024-01-26\nsubtitle: \"\"\ndescription: \"measr is officially out of beta development!\"\nimage: \"featured.jpg\"\ntwitter-card:\n  image: \"featured.jpg\"\nopen-graph:\n  image: \"featured.jpg\"\ncategories:\n  - R\n  - package\n  - measr\n  - dcm\n  - Stan\nengine: knitr\n---\n\n\nI am thrilled to announce the release of [measr](https://measr.info) 1.0.0.\nThe goal of measr is to provide a user-friendly interface for estimating and evaluating diagnostic classification models (DCMs; also called cognitive diagnostic models [CDMs]).\nThis is a major release to mark the conclusion of the initial development work that was funded by the [Institute of Education Sciences](https://ies.ed.gov).\nImportantly, this does not mean that measr is going dormant!\nWe are still actively developing measr, so we'll continue to [add new features and respond to bug reports](https://github.com/wjakethompson/measr/issues).\n\nYou can install the updated version of measr from CRAN with:\n\n```r\ninstall.packages(\"measr\")\n```\n\nThis blog post will highlight...\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(measr)\n```\n:::\n\n\n## Improved Documentation\n\nThe focus of recent work on measr has been to improve documentation.\nTo that end, \n\n## Minor Changes\n\nThere were also a number of minor improvements:\n\n* The Stan code for estimating models has been updated to be compatible with the new array syntax.\n\n\nFor a complete list of changes, check out the [changelog](https://measr.info/news/index.html#measr-100).\n\n## Acknowledgments {.appendix}\n\nThe research reported here was supported by the Institute of Education Sciences, U.S. Department of Education, through Grant [R305D210045](https://ies.ed.gov/funding/grantsearch/details.asp?ID=4546) to the University of Kansas. The opinions expressed are those of the authors and do not represent the views of the the Institute or the U.S. Department of Education.\n\nFeatured photo by <a href=\"https://unsplash.com/@sernarial?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">patricia serna</a> on <a href=\"https://unsplash.com/photos/assorted-tape-measures-zPZ9vqqDNBA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Unsplash</a>.\n  \n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

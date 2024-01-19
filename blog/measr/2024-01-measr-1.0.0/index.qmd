@@ -1,0 +1,57 @@
+---
+title: "measr 1.0.0"
+date: 2024-01-26
+subtitle: ""
+description: "measr is officially out of beta development!"
+image: "featured.jpg"
+twitter-card:
+  image: "featured.jpg"
+open-graph:
+  image: "featured.jpg"
+categories:
+  - R
+  - package
+  - measr
+  - dcm
+  - Stan
+engine: knitr
+---
+
+I am thrilled to announce the release of [measr](https://measr.info) 1.0.0.
+The goal of measr is to provide a user-friendly interface for estimating and evaluating diagnostic classification models (DCMs; also called cognitive diagnostic models [CDMs]).
+This is a major release to mark the conclusion of the initial development work that was funded by the [Institute of Education Sciences](https://ies.ed.gov).
+Importantly, this does not mean that measr is going dormant!
+We are still actively developing measr, so we'll continue to [add new features and respond to bug reports](https://github.com/wjakethompson/measr/issues).
+
+You can install the updated version of measr from CRAN with:
+
+```r
+install.packages("measr")
+```
+
+This blog post will highlight...
+
+```{r}
+library(measr)
+```
+
+## Improved Documentation
+
+The focus of recent work on measr has been to improve documentation.
+To that end, 
+
+## Minor Changes
+
+There were also a number of minor improvements:
+
+* The Stan code for estimating models has been updated to be compatible with the new array syntax.
+
+
+For a complete list of changes, check out the [changelog](https://measr.info/news/index.html#measr-100).
+
+## Acknowledgments {.appendix}
+
+The research reported here was supported by the Institute of Education Sciences, U.S. Department of Education, through Grant [R305D210045](https://ies.ed.gov/funding/grantsearch/details.asp?ID=4546) to the University of Kansas. The opinions expressed are those of the authors and do not represent the views of the the Institute or the U.S. Department of Education.
+
+Featured photo by <a href="https://unsplash.com/@sernarial?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">patricia serna</a> on <a href="https://unsplash.com/photos/assorted-tape-measures-zPZ9vqqDNBA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

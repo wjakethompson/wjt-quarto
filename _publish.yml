@@ -1,4 +1,4 @@
 - source: project
   netlify:
     - id: ca14d434-d869-40ca-93fb-84ce919590bf
-      url: 'https://glowing-meerkat-060826.netlify.app'
+      url: 'https://wjt-quarto.netlify.app'

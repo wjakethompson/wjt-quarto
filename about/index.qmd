@@ -62,9 +62,9 @@ about:
   id: hero-heading
   
 header-includes: >
-  <link rel="stylesheet" href="../assets/about.scss">
+  <link rel="stylesheet" href="../assets/about.css">
 resources:
-  - ../assets/about.scss 
+  - ../assets/about.css 
 ---
 
 ::: {#hero-heading}

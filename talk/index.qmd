@@ -34,9 +34,9 @@ date-format: "MMMM D, YYYY"
 engine: knitr
 
 header-includes: >
-  <link rel="stylesheet" href="../assets/blog-listing.scss">
+  <link rel="stylesheet" href="../assets/blog-listing.css">
 resources:
-  - ../assets/blog-listing.scss 
+  - ../assets/blog-listing.css 
 ---
 
 ```{css, echo = FALSE}

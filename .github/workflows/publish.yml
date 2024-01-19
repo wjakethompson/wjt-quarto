@@ -22,12 +22,6 @@ jobs:
       
       - name: Intall R dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-          extra-packages:
-            any::knitr
-            any::rmarkdown
-            any::downlit
-            any::xml2
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2

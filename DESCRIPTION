@@ -1,0 +1,19 @@
+Package: wjt-quarto
+Title: Personal website built with Quarto
+Version: 0.0.1
+Authors@R:
+    person(given = "W. Jake",
+           family = "Thompson",
+           role = c("aut", "cre"),
+           email = "wjakethompson@gmail.com",
+           comment = c(ORCID = "0000-0001-7339-0300"))
+URL: https://github.com/wjakethompson/wjt-quarto
+BugReports: https://github.com/wjakethompson/wjt-quarto/issues
+Depends:
+    R (>= 4.3.0)
+Imports:
+    knitr,
+    rmarkdown,
+    downlit,
+    xml2
+Encoding: UTF-8

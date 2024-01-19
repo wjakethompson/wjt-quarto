@@ -27,6 +27,7 @@ listing:
   sort-ui: false
   filter-ui: false
   fields: [title, image]
+  page-size: 999
   max-items: 1
 - id: talk
   contents: 

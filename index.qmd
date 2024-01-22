@@ -16,6 +16,12 @@ about:
   image-width: 28em
   id: hero-heading
   links:
+    - text: "{{< iconify fa6-brands linkedin size=1.1em title='X' >}}"
+      href: https://linkedin.com/in/wjakethompson
+    - text: "{{< iconify fa6-brands orcid size=1.1em title='X' >}}"
+      href: https://orcid.org/0000-0001-7339-0300
+    - text: "{{< iconify fa6-brands google-scholar size=1.1em title='X' >}}"
+      href: https://scholar.google.com/citations?user=Hk98G5QAAAAJ&hl=en
     - text: "{{< iconify fa6-brands github size=1.1em title='Github' >}}"
       href: https://github.com/wjakethompson
     - text: "{{< iconify fa6-brands mastodon size=1.1em title='Mastodon' >}}"
@@ -26,12 +32,6 @@ about:
       href: https://www.threads.net/@wjakethompson
     - text: "{{< iconify fa6-brands x-twitter size=1.1em title='X' >}}"
       href: https://twitter.com/wjakethompson
-    - text: "{{< iconify fa6-brands linkedin size=1.1em title='X' >}}"
-      href: https://linkedin.com/in/wjakethompson
-    - text: "{{< iconify fa6-brands orcid size=1.1em title='X' >}}"
-      href: https://orcid.org/0000-0001-7339-0300
-    - text: "{{< iconify fa6-brands google-scholar size=1.1em title='X' >}}"
-      href: https://scholar.google.com/citations?user=Hk98G5QAAAAJ&hl=en
     
 page-layout: full
 

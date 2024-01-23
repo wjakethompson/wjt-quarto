@@ -2,9 +2,9 @@
 #title-block-header, #title-block-header-title {
   /* all: unset; */
   background-image: none !important;
-  box-shadow: inset 0 0 0 1000px #272727;
+  box-shadow: inset 0 0 0 1000px #009FB7;
 
   h1 {
-    color: #009FB7;
+    color: white;
   }
 }

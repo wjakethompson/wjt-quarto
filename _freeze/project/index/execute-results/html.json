@@ -1,8 +1,8 @@
 {
-  "hash": "bf30afdafc5dfcc50074a7d9a5edad03",
+  "hash": "3d757b4a07a8056cae5155c6b3801404",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Projects\"\nlisting:\n  contents:\n    - \"**/index.qmd\"\n  type: grid\n  fields: [title, categories, date, image]\n  sort: \"date desc\"\n  filter-ui: false\n  image-align: left\n  image-height: 100%\ndate-format: \"MMMM D, YYYY\"\nengine: knitr\nformat:\n  html:\n    page-layout: full\n\nheader-includes: >\n  <link rel=\"stylesheet\" href=\"../assets/blog-listing.scss\">\nresources:\n  - ../assets/blog-listing.scss \n---\n\n::: {.cell}\n<style type=\"text/css\">\n#title-block-header .description {\n    display: none;\n}\n</style>\n:::\n\n\nThis portfolio includes software I have developed, workshop materials I have presented, and projects I have contributed to.\n",
+    "markdown": "---\ntitle: \"Projects\"\nlisting:\n  contents:\n    - \"**/index.qmd\"\n  type: grid\n  fields: [title, categories, date, image]\n  sort: \"date desc\"\n  filter-ui: false\n  image-align: left\n  image-height: 100%\ndate-format: \"MMMM D, YYYY\"\nengine: knitr\nformat:\n  html:\n    page-layout: full\n\nheader-includes: >\n  <link rel=\"stylesheet\" href=\"../assets/blog-listing.css\">\nresources:\n  - ../assets/blog-listing.css \n---\n\n::: {.cell}\n<style type=\"text/css\">\n#title-block-header .description {\n    display: none;\n}\n</style>\n:::\n\n\nThese projects include software I have developed, workshop materials I have presented, and assessment systems I have contributed to.\n<br>\n\n---\n\n<br>\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

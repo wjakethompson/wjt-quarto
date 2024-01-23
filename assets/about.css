@@ -15,7 +15,11 @@ div.quarto-about-trestles {
 
 div.quarto-about-trestles .about-entity {
   flex: 0 0 30%;
-  padding-right: 1.5em;
+  padding-right: 3em;
+}
+
+div.quarto-about-trestles .about-contents {
+  padding-left: 3em;
 }
 
 .about-entity img.about-image {

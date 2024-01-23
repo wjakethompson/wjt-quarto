@@ -29,4 +29,9 @@ resources:
 }
 ```
 
-This portfolio includes software I have developed, workshop materials I have presented, and projects I have contributed to.
+These projects include software I have developed, workshop materials I have presented, and assessment systems I have contributed to.
+<br>
+
+---
+
+<br>

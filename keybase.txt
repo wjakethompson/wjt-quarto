@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/wjakethompson
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://wjakethompson.com
+  * I am wjakethompson (https://keybase.io/wjakethompson) on keybase.
+  * I have a public key ASCdaJsQ1q0HwYJ521-MzmmySVpaSX2bMiJYk-cQSJyEgAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01207178694cef438bca826bbf7fee727af995d4eb3829556476e3a9ef4730c060950a",
+      "host": "keybase.io",
+      "kid": "01209d689b10d6ad07c18279db5f8cce69b2495a5a497d9b32225893e710489c84800a",
+      "uid": "64abe02c5b57b04810f6a7d4244ee919",
+      "username": "wjakethompson"
+    },
+    "merkle_root": {
+      "ctime": 1706107122,
+      "hash": "1669e0d70c81caeb3306f619ba87d32564deb77163ca099c90ead4486cff1d62d198166f4dbde862290793dca44ef6e3048d317b73140a3b9dd7e0af685b61c1",
+      "hash_meta": "7ae2f209e4eea5afdf841258e7aa6a9142139978ede2c266c8e774f8f36d397d",
+      "seqno": 25391310
+    },
+    "service": {
+      "entropy": "JCZaCj/+qowfYxh1Iimejbws",
+      "hostname": "wjakethompson.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.2.5"
+  },
+  "ctime": 1706107143,
+  "expire_in": 504576000,
+  "prev": "633e74b2e1385b04e0b84f3fb2d3c43f5bbd26d06dfa983534e89fb7ce481e86",
+  "seqno": 70,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgnWibENatB8GCedtfjM5psklaWkl9mzIiWJPnEEichIAKp3BheWxvYWTESpcCRsQgYz50suE4WwTguE8/stPEP1u9JtBt+pg1NOift85IHobEIEOIzNbtY3yMmUD9ghE8d3t0QdlsguntIFxxJku5R9VbAgHCo3NpZ8RAdnrAKIQK+N66jgDQWhKR38R+wfGWvseQ52rVwMn+/4mp1p+mGhOUxn8zjFrW13j/rg9Ds0ON2DRivxhFe+UDCKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJafnvroB60Pw94Jgtq7gvY7/6NJvgH/0BZy0ftgH0KMo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/wjakethompson
+
+==================================================================

@@ -1,0 +1,4 @@
+# Our security address
+
+Contact: wjakethompson@gmail.com
+Encryption: https://www.wjakethompson.com/pgp_wjt.asc.txt

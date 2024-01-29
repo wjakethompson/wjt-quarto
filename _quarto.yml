@@ -23,6 +23,10 @@ website:
   site-url: "https://wjakethompson.com"
   repo-url: "https://github.com/wjakethompson/wjt-quarto"
   
+  google-analytics:
+    tracking-id: "G-32TKPRY607"
+    anonymize-id: true
+  
   twitter-card:
     image: "assets/wjakethompson/img/twitter-card-large.png"
     card-style: summary_large_image

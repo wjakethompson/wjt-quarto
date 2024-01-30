@@ -1,6 +1,6 @@
 ---
 title: "measr 1.0.0"
-date: 2024-01-26
+date: 2024-02-05
 subtitle: ""
 description: "measr is officially out of beta development!"
 image: "featured.jpg"

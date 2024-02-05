@@ -1,0 +1,210 @@
+- title: Using transcranial direct current stimulation for the treatment of mood disorders
+  date: '2013-11-22'
+  description: Presentation to the Hoglund Brain Imaging Center Journal Club
+  location: Kansas City, MO
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/using-transcranial-direct-current-stimulation-for-the-treatment-of-mood-disorders
+    icon: fa-solid fa-chalkboard-user
+- title: Dissociating cognitive and affective empathy
+  date: '2014-04-26'
+  description: Honors thesis presentation at the University of Kansas Undergraduate
+    Research Symposium
+  location: Lawrence, KS
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/dissociating-cognitive-and-affective-empathy
+    icon: fa-solid fa-chalkboard-user
+  - name: Thesis
+    url: https://doi.org/10.31234/osf.io/hqjct
+    icon: fa-regular fa-newspaper
+- title: Statistical analysis in sports
+  date: '2015-10-09'
+  description: Presentation to the Research, Evaluation, Measurement, and Statistics
+    (REMS) Graduate Proseminar, University of Kansas
+  location: Lawrence, KS
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/statistical-analysis-in-sports
+    icon: fa-solid fa-chalkboard-user
+- title: Data visualization using ggplot2
+  date: '2016-10-10'
+  description: Presentation to the Research, Evaluation, Measurement, and Statistics
+    (REMS) Graduate Proseminar, University of Kansas
+  location: Lawrence, KS
+  links:
+  - name: Materials
+    url: https://wjakethompson.github.io/ggplot2-seminar-talk
+    icon: fa-regular fa-newspaper
+  - name: Github repository
+    url: https://github.com/wjakethompson/ggplot2-seminar-talk
+    icon: fa-brands fa-github
+- title: Introduction to ggplot2
+  date: '2017-03-01'
+  description: Guest lecture for Multilevel Modeling (POLS 909), University of Kansas
+  location: Lawrence, KS
+  links:
+  - name: Github repository
+    url: https://github.com/wjakethompson/pols-909-ggplot2
+    icon: fa-brands fa-github
+- title: Measuring the reliability of student mastery classifications at multiple
+    levels of reporting
+  date: '2018-04-15'
+  description: 2018 Annual Meeting of the National Council on Measurement in Education
+    (NCME)
+  location: New York, NY
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/measuring-the-reliability-of-diagnostic-mastery-classifications-at-multiple-levels-of-reporting
+    icon: fa-solid fa-chalkboard-user
+  - name: Article
+    url: https://doi.org/10.1080/08957347.2019.1660345
+    icon: fa-solid fa-book
+  - name: Preprint
+    url: https://doi.org/10.35542/osf.io/5vrk4
+    icon: fa-regular fa-newspaper
+- title: Psychometric considerations for learning-maps-based assessments
+  date: '2019-02-22'
+  description: Guest lecture for Research, Evaluation, Measurement, and Statistics
+    (REMS) Graduate Proseminar
+  location: Lawrence, KS
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/psychometric-considerations-for-learning-maps-based-assessments
+    icon: fa-solid fa-chalkboard-user
+- title: 'Empirical methods for evaluating maps: Illustrations and results'
+  id: ncme2019
+  date: '2019-04-06'
+  description: 2019 Annual Meeting of the National Council on Measurement in Education
+    (NCME)
+  location: Toronto, Canada
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/empirical-methods-for-evaluating-maps-illustrations-and-results
+    icon: fa-solid fa-chalkboard-user
+  - name: Conference paper
+    url: https://dynamiclearningmaps.org/sites/default/files/documents/presentations/Thompson_Nash_Empirical_evaluation_of_learning_maps.pdf
+    icon: fa-regular fa-newspaper
+- title: Tidy data science
+  date: '2019-05-20'
+  description: Workshop presented at the Summer Statistical Institute presented by
+    the  Center for Research Methods and Data Analysis, University of Kansas
+  location: Lawrence, KS
+  links:
+  - name: Companion site, slides, and materials
+    url: https://tidy-ds.wjakethompson.com/
+    icon: fa-solid fa-chalkboard-user
+  - name: GitHub repository
+    url: https://github.com/wjakethompson/tidyds-2019
+    icon: fa-brands fa-github
+- title: Branding and packaging reports with R Markdown
+  id: rstudio2020
+  date: '2020-01-30'
+  description: rstudio::conf(2020L)
+  location: San Francisco, CA
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/branding-and-packaging-reports-with-r-markdown
+    icon: fa-solid fa-chalkboard-user
+  - name: Recording
+    url: https://posit.co/resources/videos/branding-and-packaging-reports-with-r-markdown/
+    icon: fa-solid fa-video
+  - name: Package
+    url: https://ratlas.netlify.app/
+    icon: fa-solid fa-cube
+  - name: GitHub repository
+    url: https://github.com/atlas-aai/ratlas
+    icon: fa-brands fa-github
+- title: Using R for item response theory
+  date: '2020-02-24'
+  description: Guest lecture for Item Response Theory (EPSY 922), University of Kansas
+  location: Lawrence, KS
+  links:
+  - name: Slides
+    url: https://epsy922.wjakethompson.com/
+    icon: fa-solid fa-chalkboard-user
+  - name: GitHub repository
+    url: https://github.com/wjakethompson/r-irt
+    icon: fa-brands fa-github
+- title: Technical evidence for diagnostic assessments
+  date: '2021-06-09'
+  description: 2021 Annual Meeting of the National Council on Measurement in Education
+    (NCME)
+  location: Virtual conference
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/technical-evidence-for-diagnostic-assessments
+    icon: fa-solid fa-chalkboard-user
+  - name: Conference paper
+    url: https://dynamiclearningmaps.org/sites/default/files/documents/presentations/NCME_2021_Technical_Evidence_for_Diagnostic_Assessments.pdf
+    icon: fa-regular fa-newspaper
+- title: Tidy data science with the tidyverse and tidymodels
+  date: '2021-06-14'
+  description: Workshop presented at the Summer Research Methods Camp presented by
+    the  Achievement and Assessment Institute, University of Kansas
+  location: Lawrence, KS (via Zoom)
+  links:
+  - name: Companion site, slides, and materials
+    url: https://tidyds-2021.wjakethompson.com/
+    icon: fa-solid fa-chalkboard-user
+  - name: GitHub repository
+    url: https://github.com/wjakethompson/tidyds-2021
+    icon: fa-brands fa-github
+- title: Applied diagnostic classification modeling with the R package measr
+  date: '2023-03-29'
+  description: 2023 Annual Meeting of the National Council on Measurement in Education
+    (NCME)
+  location: Virtual Session
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/applied-diagnostic-classification-modeling-with-the-r-package-measr
+    icon: fa-solid fa-chalkboard-user
+  - name: Article
+    url: https://doi.org/10.21105/joss.05742
+    icon: fa-solid fa-book
+  - name: Package
+    url: https://measr.info/
+    icon: fa-solid fa-cube
+  - name: GitHub repository
+    url: https://github.com/wjakethompson/measr
+    icon: fa-brands fa-github
+- title: A simulated retest method for estimating classification reliability
+  date: '2023-04-13'
+  description: 2023 Annual Meeting of the National Council on Measurement in Education
+    (NCME)
+  location: Chicago, IL
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/a-simulated-retest-method-for-estimating-classification-reliability
+    icon: fa-solid fa-chalkboard-user
+  - name: Article
+    url: https://doi.org/10.1111/jedm.12359
+    icon: fa-solid fa-book
+  - name: Preprint
+    url: https://doi.org/10.35542/osf.io/x2sgj
+    icon: fa-regular fa-newspaper
+- title: Diagnostic modeling with R and Stan
+  date: '2023-06-21'
+  description: Workshop presented at StanCon 2023, Washington University in St. Louis
+  location: St. Louis, MO
+  links:
+  - name: Companion site, slides, and materials
+    url: https://stancon2023.measr.info/
+    icon: fa-solid fa-chalkboard-user
+  - name: GitHub repository
+    url: https://github.com/measr-workshop/stancon2023
+    icon: fa-brands fa-github
+- title: Using diagnostic models to evaluate student learning hierarchies in a large-scale
+    assessment
+  date: '2023-09-07'
+  description: 2023 Frontier Research in Educational Measurement (FREMO)
+  location: Oslo, Norway
+  image: ../talk/img/talk.png
+  path: ../talk/
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/using-diagnostic-models-to-evaluate-student-learning-hierarchies-in-a-large-scale-assessment
+    icon: fa-solid fa-chalkboard-user
+  - name: Article
+    url: https://doi.org/10.3389/feduc.2021.714736
+    icon: fa-solid fa-book

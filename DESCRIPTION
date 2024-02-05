@@ -15,5 +15,6 @@ Imports:
     knitr,
     rmarkdown,
     downlit,
-    xml2
+    xml2,
+    yaml
 Encoding: UTF-8

@@ -31,12 +31,7 @@ listing:
   max-items: 1
 - id: talk
   contents: 
-    - "../talk/talks_2023.yml"
-    - "../talk/talks_2021.yml"
-    - "../talk/talks_2020.yml"
-    - "../talk/talks_2019.yml"
-    - "../talk/talks_2018.yml"
-    - "../talk/talks_old.yml"
+    - "../talk/about_talks.yml"
   sort: date desc
   type: grid
   grid-columns: 1
@@ -88,10 +83,10 @@ I also regularly lead workshops on how to use R and [Stan](https://www.mc-stan.o
 :::: {.grid}
 
 ::: {.g-col-4}
-#### Blog
-::: {#blog}
+#### Projects
+::: {#project}
 :::
-[See all &rarr;](../blog){.about-links .subtitle}
+[See all &rarr;](../project){.about-links .subtitle}
 :::
 
 ::: {.g-col-4}
@@ -102,10 +97,10 @@ I also regularly lead workshops on how to use R and [Stan](https://www.mc-stan.o
 :::
 
 ::: {.g-col-4}
-#### Projects
-::: {#project}
+#### Blog
+::: {#blog}
 :::
-[See all &rarr;](../project){.about-links .subtitle}
+[See all &rarr;](../blog){.about-links .subtitle}
 :::
 
 ::::

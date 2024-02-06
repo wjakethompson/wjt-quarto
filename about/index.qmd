@@ -68,8 +68,8 @@ resources:
 I'm the assistant director of psychometrics at [Accessible Teaching, Learning, and Assessment Systems (ATLAS)](https://atlas.ku.edu), a strategic center within the [Achievement and Assessment Institute](https://aai.ku.edu) at the [University of Kansas](https://www.ku.edu).
 I received a PhD in educational psychology and research from the University of Kansas' [School of Education and Human Sciences](https://soehs.ku.edu/) in 2018.
 
-I am the lead psychometrician for the [Dynamic Learning Maps&reg;](https://www.dynamiclearningmaps.org) alternate assessments, which are administered annually to students with significant cognitive disabilities from grades 3--12 in 22 states.
-I have also led the psychometric work innovative assessment projects such as the [Innovations in Science Map, Assessment and Report Technologies (I-SMART)](https://www.ismart.works/) and [Pathways for Instructionally Embedded Assessment (PIE)](https://pie.atlas4learning.org/).
+As part of my role at ATLAS, I'm the lead psychometrician for the [Dynamic Learning Maps&reg;](https://www.dynamiclearningmaps.org) alternate assessments, which are administered annually to students with significant cognitive disabilities from grades 3--12 in 22 states.
+I have also led the psychometric work for innovative assessment projects such as the [Innovations in Science Map, Assessment and Report Technologies (I-SMART)](https://www.ismart.works/) and [Pathways for Instructionally Embedded Assessment (PIE)](https://pie.atlas4learning.org/).
 In all of these assessments, I am primarily focused on the application of diagnostic psychometric models to improve instructional decision-making and student learning.
 
 My research interests also include Bayesian modeling, data visualization, and R programming.

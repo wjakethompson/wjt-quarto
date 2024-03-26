@@ -1,8 +1,15 @@
-- title: "Diagnostic Assessment"
+- title: "Diagnostic psychometrics"
   date: 2024-03-26
   description: >-
-    Guest lecture for Item Response Theory (EPSY 896), University of Kansas
+    Guest lecture for Introduction to Item Response Theory (EPSY 896), University of Kansas
   location: Lawrence, KS
+  links:
+  - name: Slides
+    url: https://epsy896-dcm.wjakethompson.com/
+    icon: fa-solid fa-chalkboard-user
+  - name: GitHub repository
+    url: https://github.com/wjakethompson/epsy896-dcm
+    icon: fa-brands fa-github
 
 - title: "Diagnostic classification modeling with R and Stan"
   date: 2024-04-11

@@ -16,4 +16,10 @@
   description: >-
     Workshop presented at the 2024 Annual Meeting of the National Council on Measurement in Education (NCME)
   location: Philadelphia, PA
-  
+  links:
+  - name: Companion site, slides, and materials
+    url: https://ncme2024.measr.info/
+    icon: fa-solid fa-chalkboard-user
+  - name: GitHub repository
+    url: https://github.com/measr-workshop/ncme2024
+    icon: fa-brands fa-github

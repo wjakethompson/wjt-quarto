@@ -2,7 +2,7 @@
 title: "Diagnostic Psychometrics"
 author:
   - Jake Thompson
-date: 2023-06-20
+date: 2024-04-10
 slug: dcm-r
 image: featured.jpg
 alias:
@@ -19,6 +19,9 @@ links:
 - icon: door-open
   name: StanCon 2023
   url: https://stancon2023.measr.info
+- icon: door-open
+  name: NCME 2024
+  url: https://ncme2024.measr.info
 ---
 
 
@@ -31,5 +34,6 @@ We then use the [measr](https://measr.info) package to estimate different types 
 This workshop has previously been presented at:
 
 * StanCon 2023, Washington University in St. Louis
+* NCME 2024, Philadelphia, PA
 
 See the workshop websites for more, including links to the GitHub repositories for all workshop materials.

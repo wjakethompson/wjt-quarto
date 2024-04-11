@@ -74,7 +74,7 @@ In all of these assessments, I am primarily focused on the application of diagno
 
 My research interests also include Bayesian modeling, data visualization, and R programming.
 I am the author of several [R](https://www.r-project.org) packages including [measr](https://www.measr.info) for estimating and evaluating diagnostic classification models and [taylor](https://taylor.wjakethompson.com) for accessing lyrics and audio data for [Taylor Swift's](https://www.taylorswift.com/) discography.
-I also regularly lead workshops on how to use R and [Stan](https://www.mc-stan.org) for [applying diagnostic classification models](https://stancon2023.measr.info) and the [tidyverse](https://www.tidyverse.org) for [data science](https://tidyds-2021.wjakethompson.com/).
+I also regularly lead workshops on how to use R and [Stan](https://www.mc-stan.org) for [applying diagnostic classification models](../project/dcm-r/) and the [tidyverse](https://www.tidyverse.org) for [data science](../project/tidy-ds/).
 
 :::
 

@@ -2,7 +2,7 @@
 title: "Diagnostic Psychometrics"
 author:
   - Jake Thompson
-date: 2024-04-10
+date: 2024-04-11
 slug: dcm-r
 image: featured.jpg
 alias:

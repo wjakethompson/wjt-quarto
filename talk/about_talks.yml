@@ -254,3 +254,30 @@
     icon: fa-brands fa-github
   image: ../talk/img/talk.png
   path: ../talk/
+- title: Diagnostic classification modeling with R and Stan
+  date: '2024-04-11'
+  description: Workshop presented at the 2024 Annual Meeting of the National Council
+    on Measurement in Education (NCME)
+  location: Philadelphia, PA
+  links:
+  - name: Companion site, slides, and materials
+    url: https://ncme2024.measr.info/
+    icon: fa-solid fa-chalkboard-user
+  - name: GitHub repository
+    url: https://github.com/measr-workshop/ncme2024
+    icon: fa-brands fa-github
+  image: ../talk/img/talk.png
+  path: ../talk/
+- title: 'Reconceptualizing Diagnostic Classification Models: Applications and New
+    Developments'
+  date: '2024-04-13'
+  description: Invited discussion for the Diagnositc Measurement SIGIMIE symposium
+    at the 2024 Annual Meeting of the National Council on Measurement in Education
+    (NCME)
+  location: Philadelphia, PA
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/discussion-reconceptualizing-diagnostic-classification-models-applications-and-new-developments
+    icon: fa-solid fa-chalkboard-user
+  image: ../talk/img/talk.png
+  path: ../talk/

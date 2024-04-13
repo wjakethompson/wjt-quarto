@@ -23,3 +23,19 @@
   - name: GitHub repository
     url: https://github.com/measr-workshop/ncme2024
     icon: fa-brands fa-github
+
+- title: "Reconceptualizing Diagnostic Classification Models: Applications and New Developments"
+  date: 2024-04-13
+  description: >-
+    Invited discussion for the Diagnositc Measurement SIGIMIE symposium at the 2024 Annual Meeting of the National Council on Measurement in Education (NCME)
+  location: Philadelphia, PA
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/discussion-reconceptualizing-diagnostic-classification-models-applications-and-new-developments
+    icon: fa-solid fa-chalkboard-user
+
+- title: "Diagnostic modeling for educational and psychological assessment"
+  date: 2024-07-09
+  description: >-
+    useR! 2024
+  location: Salzburg, Austria

@@ -2,7 +2,7 @@
 title: "taylor"
 author:
   - Jake Thompson
-date: 2023-11-06
+date: 2024-04-19
 slug: taylor
 image: featured.jpg
 alias:

@@ -26,6 +26,12 @@ execute:
   echo: true
   message: true
   warning: true
+  collapse: true
+  comment: "#>"
+  fig-align: "center"
+  fig-width: 6
+  fig-asp: 0.618
+  out.width: "80%"
 
 # Default author
 author:

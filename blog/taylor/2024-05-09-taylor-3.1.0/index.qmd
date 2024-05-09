@@ -1,0 +1,118 @@
+---
+title: "taylor 3.1.0"
+date: 2024-05-09
+subtitle: ""
+description: "The chairman has cordially invited us to The Tortured Poets Department."
+image: "featured.jpg"
+twitter-card:
+  image: "featured.jpg"
+open-graph:
+  image: "featured.jpg"
+categories:
+  - R
+  - package
+  - taylor
+  - Taylor Swift
+engine: knitr
+---
+
+```{r setup, include = FALSE, message = FALSE}
+library(wjake)
+library(ggplot2)
+
+set_theme(base_family = "Source Sans Pro",
+          plot_margin = margin(10, 10, 10, 10))
+
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+I'm remarkably excited to announce the release of [taylor](https://taylor.wjakethompson.com) 3.1.0.
+taylor provides data on Taylor Swift's discography, including lyrics from [Genius](https://genius.com/artists/Taylor-swift) and song characteristics from [Spotify](https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02).
+
+You can install the updated version from CRAN with:
+
+```{r, eval = FALSE}
+install.packages("taylor")
+```
+
+This blog post will highlight the major changes in this release, including the addition of data from *THE TORTURED POETS DEPARTMENT*.
+
+```{r}
+library(taylor)
+```
+
+## Who uses typewriters, anyway?
+
+The primary update is the addition of data from *THE TORTURED POETS DEPARTMENT (TTPD)*.
+You can now find Spotify data and lyrics for all 31 songs in [`taylor_all_songs`](`r downlit::autolink_url("taylor::taylor_all_songs")`).
+
+```{r}
+#| label: ttpd-data
+#| message: false
+
+library(tidyverse)
+
+taylor_all_songs %>% 
+  filter(album_name == "THE TORTURED POETS DEPARTMENT")
+```
+
+*TTPD* has also been added to [`taylor_albums`](`r downlit::autolink_url("taylor::taylor_albums")`).
+However, Metacritic is currently undergoing some updates, and therefore user scores are currently disabled for albums.
+Thus, only the critic composite score is available for *1989 (Taylor's Version)* and *TTPD*.
+
+```{r}
+#| label: ttpd-albums
+taylor_albums
+```
+
+Finally, a new color palette inspired by the *TTPD* aesthetic has been added to the [`album_palettes`](`r downlit::autolink_url("taylor::album_palettes")`), and the [package website](https://taylor.wjakethompson.com) has been updated with a new theme and logo, also inspired by the album cover.
+
+```{r}
+#| label: fig-ttpd-palette
+#| echo: false
+#| fig-align: "center"
+#| fig-asp: 1
+#| fig-alt: >
+#|   The five colors of the TTPD color palette. The hexadecimal codes are
+#|   #1C160F, #3F3824, #635B3A, #ADA795, and #F7F4F0
+
+scales::show_col(unname(album_palettes$tortured_poets))
+```
+
+This palette can be used inside any of the [`scale_*_taylor_*()`](`r downlit::autolink_url("taylor::scale_color_taylor_d()")`) functions.
+
+```{r}
+#| label: fig-ttpd-energy
+#| fig-align: "center"
+#| fig-asp: 1
+#| fig-alt: >
+#|   A horizontal bar graph showing track names on the y-axis and song energey
+#|   on the x-axis. Bars a filled with colors derived from the TTPD color
+#|   palette, ranging from a light grey to black.
+
+taylor_album_songs %>% 
+  filter(album_name == "THE TORTURED POETS DEPARTMENT", !is.na(energy)) %>% 
+  mutate(track_name = fct_inorder(track_name)) %>% 
+  ggplot(aes(x = energy, y = fct_rev(track_name))) +
+  geom_col(aes(fill = track_name), show.legend = FALSE) +
+  scale_fill_taylor_d(album = "THE TORTURED POETS DEPARTMENT") +
+  labs(x = "Song Energy (From Spotify)", y = NULL)
+```
+
+## Minor Changes
+
+There were also a number of minor improvements:
+
+* Additional documentation has been added to better describe how to access lyrics in [`taylor_all_songs`](`r downlit::autolink_url("taylor::taylor_all_songs")`) and [`taylor_album_songs`](`r downlit::autolink_url("taylor::taylor_album_songs")`) (see [`vignette("lyrics")`](https://taylor.wjakethompson.com/articles/lyrics)).
+* Spotify audio features for "You're Losing Me (From The Vault)" have been added to [`taylor_all_songs`](`r downlit::autolink_url("taylor::taylor_all_songs")`) and [`taylor_album_songs`](`r downlit::autolink_url("taylor::taylor_album_songs")`).
+* Surprise songs data for the South American and Asia-Pacific legs of The Eras Tour have been added to [`eras_tour_surprise`](`r downlit::autolink_url("taylor::eras_tour_surprise")`).
+
+For a complete list of changes, check out the [changelog](https://taylor.wjakethompson.com/news/index.html#taylor-310).
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@trine?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Katrin Hauf</a> on <a href="https://unsplash.com/photos/black-and-white-typewriter-on-white-table-jpkvklXwt98?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+  

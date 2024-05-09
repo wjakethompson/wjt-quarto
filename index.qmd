@@ -26,7 +26,7 @@ about:
       href: https://github.com/wjakethompson
     - text: "{{< iconify fa6-brands mastodon size=1.1em title='Mastodon' >}}"
       href: https://fosstodon.org/@wjakethompson
-    - text: "{{< iconify simple-icons bluesky size=1.1em title='Bluesky' >}}"
+    - text: "{{< iconify fa6-brands bluesky size=1.1em title='Bluesky' >}}"
       href: https://bsky.app/profile/wjakethompson.com
     - text: "{{< iconify fa6-brands threads size=1.1em title='Threads' >}}"
       href: https://www.threads.net/@wjakethompson

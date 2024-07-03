@@ -39,6 +39,13 @@
   description: >-
     useR! 2024
   location: Salzburg, Austria
+  links:
+  - name: Slides
+    url: https://useR2024.measr.info
+    icon: fa-solid fa-chalkboard-user
+  - name: GitHub repository
+    url: https://github.com/wjakethompson/user-2024
+    icon: fa-brands fa-github
 
 - title: "Evaluating methods for assessing model fit in diagnostic classification models"
   date: 2024-07-18

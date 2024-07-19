@@ -52,12 +52,13 @@
   description: >-
     2024 International Meeting of the Psychometric Society (IMPS)
   location: Prague, Czech Republic
+  links:
   - name: Slides
     url: https://imps2024.measr.info
     icon: fa-solid fa-chalkboard-user
   - name: Preprint
     url: https://doi.org/10.35542/osf.io/ytjq9
     icon: fa-regular fa-newspaper
-  - name: OSF project
+  - name: GitHub repository
     url: https://github.com/wjakethompson/bdcm-simulation
     icon: fa-brands fa-github

@@ -281,3 +281,32 @@
     icon: fa-solid fa-chalkboard-user
   image: ../talk/img/talk.png
   path: ../talk/
+- title: Diagnostic modeling for educational and psychological assessment
+  date: '2024-07-09'
+  description: useR! 2024
+  location: Salzburg, Austria
+  links:
+  - name: Slides
+    url: https://useR2024.measr.info
+    icon: fa-solid fa-chalkboard-user
+  - name: GitHub repository
+    url: https://github.com/wjakethompson/user-2024
+    icon: fa-brands fa-github
+  image: ../talk/img/talk.png
+  path: ../talk/
+- title: Evaluating methods for assessing model fit in diagnostic classification models
+  date: '2024-07-18'
+  description: 2024 International Meeting of the Psychometric Society (IMPS)
+  location: Prague, Czech Republic
+  links:
+  - name: Slides
+    url: https://imps2024.measr.info
+    icon: fa-solid fa-chalkboard-user
+  - name: Preprint
+    url: https://doi.org/10.35542/osf.io/ytjq9
+    icon: fa-regular fa-newspaper
+  - name: GitHub repository
+    url: https://github.com/wjakethompson/bdcm-simulation
+    icon: fa-brands fa-github
+  image: ../talk/img/talk.png
+  path: ../talk/

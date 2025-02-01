@@ -24,14 +24,12 @@ about:
       href: https://scholar.google.com/citations?user=Hk98G5QAAAAJ&hl=en
     - text: "{{< iconify fa6-brands github size=1.1em title='Github' >}}"
       href: https://github.com/wjakethompson
-    - text: "{{< iconify fa6-brands mastodon size=1.1em title='Mastodon' >}}"
-      href: https://fosstodon.org/@wjakethompson
     - text: "{{< iconify fa6-brands bluesky size=1.1em title='Bluesky' >}}"
       href: https://bsky.app/profile/wjakethompson.com
+    - text: "{{< iconify fa6-brands mastodon size=1.1em title='Mastodon' >}}"
+      href: https://fosstodon.org/@wjakethompson
     - text: "{{< iconify fa6-brands threads size=1.1em title='Threads' >}}"
       href: https://www.threads.net/@wjakethompson
-    - text: "{{< iconify fa6-brands x-twitter size=1.1em title='X' >}}"
-      href: https://twitter.com/wjakethompson
     
 page-layout: full
 

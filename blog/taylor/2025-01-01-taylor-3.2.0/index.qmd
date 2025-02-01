@@ -2,7 +2,7 @@
 title: "taylor 3.2.0"
 date: 2025-01-13
 subtitle: ""
-description: "The chairman has cordially invited us to The Tortured Poets Department."
+description: "The end of the The Eras era."
 image: "featured.jpg"
 twitter-card:
   image: "featured.jpg"

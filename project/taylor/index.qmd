@@ -2,7 +2,7 @@
 title: "taylor"
 author:
   - Jake Thompson
-date: 2024-04-19
+date: 2024-12-08
 slug: taylor
 image: featured.jpg
 alias:
@@ -22,7 +22,7 @@ links:
   url: https://github.com/wjakethompson/taylor
 ---
 
-## taylor <a href='https://github.com/wjakethompson/taylor'><img src='featured-hex.png' align="right" width="120" alt='Hex logo for the taylor package.'/></a>
+## taylor <a href='https://taylor.wjakethompson.com'><img src='featured-hex.png' align="right" width="120" alt='Hex logo for the taylor package.'/></a>
 
 taylor is an *R* package developed to be a comprehensive resource for data on Taylor Swift songs.
 Data is included for  all officially released studio albums, extended plays (EPs), and individual singles.

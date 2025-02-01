@@ -1,0 +1,148 @@
+---
+title: "taylor 3.2.0"
+date: 2025-01-13
+subtitle: ""
+description: "The chairman has cordially invited us to The Tortured Poets Department."
+image: "featured.jpg"
+twitter-card:
+  image: "featured.jpg"
+open-graph:
+  image: "featured.jpg"
+categories:
+  - R
+  - package
+  - taylor
+  - Taylor Swift
+engine: knitr
+---
+
+```{r setup, include = FALSE, message = FALSE}
+library(wjake)
+library(ggplot2)
+
+set_theme(base_family = "Source Sans Pro",
+          plot_margin = margin(10, 10, 10, 10))
+
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+I'm so happy to announce the release of [taylor](https://taylor.wjakethompson.com) 3.2.0.
+taylor provides data on Taylor Swift's discography, including lyrics from [Genius](https://genius.com/artists/Taylor-swift) and song characteristics from [Spotify](https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02).
+
+You can install the updated version from CRAN with:
+
+```{r, eval = FALSE}
+install.packages("taylor")
+```
+
+This is a minor release to update the package following the end of The Eras Tour.
+This blog post will highlight the changes in this release.
+
+```{r}
+library(taylor)
+```
+
+## It's the end of an Era...
+
+The primary update completion of the `eras_tour_surprise` data to include surprise songs from the European and final North American legs of The Eras Tour.
+You can now find all surprise songs in [`eras_tour_surprise`](`r downlit::autolink_url("taylor::eras_tour_surprise")`).
+
+```{r}
+#| label: surprise-song-data
+#| message: false
+
+library(tidyverse)
+
+eras_tour_surprise %>% 
+  filter(leg == "Europe")
+
+eras_tour_surprise %>% 
+  filter(leg == "North America (Leg 2)")
+```
+
+Using this data, we can, for example, look at the cumulative number of songs Taylor performed from each album over the course of the tour.
+
+```{r}
+#| label: eras-plot
+#| code-fold: true
+#| code-summary: "Plot code"
+#| fig-align: "center"
+#| fig-width: 8
+#| fig-asp: 1.1
+#| out-width: "90%"
+#| fig-alt: >
+#|   A horizontal bar graph showing track names on the y-axis and song energey
+#|   on the x-axis. Bars a filled with colors derived from the TTPD color
+#|   palette, ranging from a light grey to black.
+
+leg_labels <- unique(eras_tour_surprise$leg)
+leg_labels <- gsub("South America", "South\nAmerica", leg_labels)
+
+surprise_song_count <- eras_tour_surprise %>%
+  nest(dat = -c(leg, date, city, night)) %>%
+  arrange(date) %>%
+  mutate(leg = factor(leg, levels = unique(eras_tour_surprise$leg),
+                      labels = leg_labels)) %>%
+  mutate(show_number = seq_len(n()), .after = night) %>%
+  unnest(dat) %>%
+  left_join(distinct(taylor_album_songs, track_name, album_name),
+            join_by(song == track_name),
+            relationship = "many-to-one") %>%
+  count(leg, date, city, night, show_number, album_name) %>%
+  complete(nesting(leg, date, city, night, show_number), album_name) %>%
+  mutate(n = replace_na(n, 0)) %>%
+  arrange(album_name, date, night) %>%
+  mutate(surprise_count = cumsum(n), .by = album_name) %>%
+  left_join(select(taylor_albums, album_name, album_release),
+            by = "album_name") %>%
+  mutate(surprise_count = case_when(
+    album_name == "THE TORTURED POETS DEPARTMENT" &
+      date < album_release ~ NA_integer_,
+    .default = surprise_count
+  )) %>%
+  add_row(leg = factor("Europe"), album_name = "THE TORTURED POETS DEPARTMENT",
+          show_number = 83.5, surprise_count = 0L) %>%
+  mutate(album_name = replace_na(album_name, "Other"),
+         album_group = album_name,
+         album_name = factor(album_name, c(album_levels, "Other"),
+                             labels = c(gsub("POETS DEPARTMENT",
+                                             "POETS<br>DEPARTMENT",
+                                             album_levels), "Other")))
+
+ggplot(surprise_song_count) +
+  facet_wrap(~ album_name, ncol = 3, axes = "all_x") +
+  geom_line(data = ~select(.x, -album_name),
+            aes(x = show_number, y = surprise_count, group = album_group),
+            color = "grey80", na.rm = TRUE) +
+  geom_line(aes(x = show_number, y = surprise_count, color = album_group),
+            show.legend = FALSE, linewidth = 2, na.rm = TRUE) +
+  scale_color_albums(na.value = "grey80") +
+  scale_x_continuous(breaks = c(1, seq(30, 200, 30))) +
+  labs(x = "Show", y = "Songs Played")
+```
+
+Finally, also inspired by some of Taylor's surprise song choices, [`taylor_all_songs`](`r downlit::autolink_url("taylor::taylor_all_songs")`) has been updated to include songs Taylor wrote, but is not the performer (e.g., "This is What You Came For" by Calvin Harris, featuring Rihanna).
+
+```{r}
+taylor_all_songs |> 
+  filter(!str_detect(artist, "Taylor Swift"),
+         is.na(featuring) | !str_detect(featuring, "Taylor Swift"))
+```
+
+
+## Minor Changes
+
+There were also a couple of minor improvements:
+
+* Error messages and color palette displays have been improved thanks to [@olivroy](https://github.com/wjakethompson/taylor/pull/49)
+* Spotify data for "Half Of My Heart" has been removed, as the version featuring Taylor Swift is no longer available.
+
+For a complete list of changes, check out the [changelog](https://taylor.wjakethompson.com/news/index.html#taylor-320).
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@myriamzilles?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Myriam Zilles</a> on <a href="https://unsplash.com/photos/yellow-fireworks-in-the-sky-during-nighttime-L3FwT4qMeT0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+m

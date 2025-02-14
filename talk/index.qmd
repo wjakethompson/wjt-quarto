@@ -1,6 +1,10 @@
 ---
 title: "Talks"
 listing:
+  - id: talks_2025
+    contents: talks_2025.yml
+    sort: "date desc"
+    template: ../assets/talks/listing.ejs
   - id: talks_2024
     contents: talks_2024.yml
     sort: "date desc"
@@ -36,6 +40,7 @@ toc-location: right
 toc-title: Year
 date-format: "MMMM D, YYYY"
 engine: knitr
+freeze: false
 
 header-includes: >
   <link rel="stylesheet" href="../assets/blog-listing.css">
@@ -50,6 +55,11 @@ resources:
 ```
 
 This page contains resources and materials for workshops, talks, lectures, and presentations I've given.
+
+## 2025
+
+:::{#talks_2025}
+:::
 
 ## 2024
 

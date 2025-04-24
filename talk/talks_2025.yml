@@ -3,12 +3,23 @@
   description: >-
     2025 Annual Meeting of the National Council on Measurement in Education (NCME)
   location: Denver, CO
+  links:
+  - name: Slides
+    url: https://ncme2025.measr.info
+    icon: fa-solid fa-chalkboard-user
+  - name: GitHub repository
+    url: https://github.com/wjakethompson/ncme-2025
+    icon: fa-brands fa-github
 
 - title: "Applications of diagnostic models to learning progressions to improve student learning"
   date: 2025-04-26
   description: >-
     2025 Annual Meeting of the National Council on Measurement in Education (NCME)
   location: Denver, CO
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/applications-of-diagnostic-models-to-learning-progressions
+    icon: fa-solid fa-chalkboard-user
 
 - title: "Pathways for instructionally embedded assessment (PIE) proof of concept: Potential future summative uses of an instructionally embedded assessment model"
   date: 2025-06-25

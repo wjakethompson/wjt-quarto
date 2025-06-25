@@ -26,3 +26,7 @@
   description: >-
     2025 National Conference on Student Assessment (NCSA)
   location: Denver, CO
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/pathways-for-instructionally-embedded-assessment-pie-proof-of-concept-potential-future-summative-uses-of-an-instructionally-embedded-assessment-model
+    icon: fa-solid fa-chalkboard-user

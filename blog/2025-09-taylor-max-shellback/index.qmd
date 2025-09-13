@@ -1,0 +1,216 @@
+---
+title: "What is *The Life of a Showgirl*?"
+date: 2025-09-13
+subtitle: ""
+description: "A quick look at Taylor's previous collaborations with Max Martin and Shellback."
+image: "featured.jpg"
+twitter-card:
+  image: "featured.jpg"
+open-graph:
+  image: "featured.jpg"
+categories:
+  - R
+  - package
+  - taylor
+  - Taylor Swift
+engine: knitr
+toc: false
+code-annotations: hover
+---
+
+```{r}
+#| label: setup
+#| include: false
+#| message: false
+
+library(tidyverse)
+library(wjake)
+
+set_theme(base_family = "Source Sans Pro",
+          plot_margin = margin(10, 10, 10, 10))
+
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+We're now less than 3 weeks away from the release of Taylor's 12th album, *The Life of a Showgirl*.
+One of the many reasons I'm excited for the new album is that this is a collaboration with Max Martin and Shellback, who have made some of my [favorite Taylor Swift songs](https://open.spotify.com/playlist/65uAjFTt4N8sEJeonhNOBL?si=aVRxtS-eTLCC6FIUvgfYzQ).
+As we wait for the album release, I thought it would be fun to look at how Taylor's previous collaboration with Max and Shellback compare to the rest of her discography.
+
+To do this we'll use data on the audio characteristics of Taylor's songs from the Spotify API, available in the [taylor](https://taylor.wjakethompson.com) package.
+We'll start by doing some data manipulation.
+First, we'll filter out any songs that aren't Taylor's.
+We'll remove songs where Taylor is features and songs she just has a writing credit for.
+We'll also remove multiple versions of the same song.
+I'm keep the original versions of each song, but keeping the vault tracks, as those have no duplicate version.
+Finally, we can add an indicator variable to the previous collaboration between Taylor and Max Martin or Shellback.
+
+```{r}
+#| label: data-setup
+#| echo: true
+
+library(tidyverse)
+library(taylor)
+
+tms <- taylor_all_songs |> 
+  filter(str_detect(artist, "Taylor Swift")) |> 
+  filter(!str_detect(track_name, "[\\(|\\[]Taylor's Version[\\)|\\]]") | # <1>
+           str_detect(track_name, "From The Vault")) |>                  # <1>
+  mutate(max_shellback = case_when(                                      # <2>
+    track_name %in% c(                                                   # <2>
+      "I Knew You Were Trouble",                                         # <2>
+      "22",                                                              # <2>
+      "We Are Never Ever Getting Back Together",                         # <2>
+      "Message In A Bottle (Taylor's Version) [From The Vault]",         # <2>
+      "Blank Space",                                                     # <2>
+      "Style",                                                           # <2>
+      "All You Had To Do Was Stay",                                      # <2>
+      "Shake It Off",                                                    # <2>
+      "Bad Blood",                                                       # <2>
+      "Wildest Dreams",                                                  # <2>
+      "How You Get The Girl",                                            # <2>
+      "Wonderland",                                                      # <2>
+      "New Romantics",                                                   # <2>
+      "Bad Blood (Remix)",                                               # <2>
+      "...Ready For It?",                                                # <2>
+      "End Game",                                                        # <2>
+      "I Did Something Bad",                                             # <2>
+      "Don't Blame Me",                                                  # <2>
+      "Delicate",                                                        # <2>
+      "So It Goes...",                                                   # <2>
+      "Gorgeous",                                                        # <2>
+      "King Of My Heart",                                                # <2>
+      "Dancing With Our Hands Tied"                                      # <2>
+    ) ~ TRUE,                                                            # <2>
+    .default = FALSE                                                     # <2>
+  )) |>                                                                  # <2>
+  select(album_name, track_name, max_shellback, danceability, energy, valence) |> 
+  mutate(album_name = case_when(track_name == "Bad Blood (Remix)" ~ "1989",
+                                album_name == "Red (Taylor's Version)" ~ "Red",
+                                .default = album_name)) |> 
+  pivot_longer(cols = c(danceability, energy, valence),
+               names_to = "metric", values_to = "value") |> 
+  filter(!is.na(value))
+```
+1. Remove duplicate songs, keeping the original versions.
+2. Add indicator for previous Max Martin and Shellback collaborations.
+
+And now we can compare!
+The plot below shows the middle 97%, 89%, and 67% of songs on valence, energy, and danceability for each collaborator group.
+Taylor's previous collaborations with Max and Shellback tend to have higher danceability, energy, and valence than her other songs.
+This definitely matches my own experience with these songs, and the reputation (pun intended) of these songs as Taylor's pop-iest songs.
+
+```{r}
+#| label: collab-compare
+#| code-fold: true
+#| fig-align: "center"
+#| fig-width: 8
+#| fig-asp: 0.618
+#| out-width: "100%"
+
+library(ggdist)
+library(ggpattern)
+
+rect_height <- .8
+rect_pad <- 0.3
+
+tms |> 
+  group_by(max_shellback, metric) |> 
+  median_qi(
+    .width = c(.67, .89, .97),
+    .exclude = c("album_name", "track_name")
+  ) |> 
+  mutate(.width = factor(.width)) |> 
+  ggplot(aes(
+    x = value,
+    y = fct_rev(factor(metric)),
+    width = .upper - .lower
+  )) +
+  geom_tile(
+    data = tibble(
+      value = c(.63, .60, .69, .54, .45, .35),
+      metric = rep(c("danceability", "energy", "valence"), each = 2),
+      max_shellback = rep(c(TRUE, FALSE), times = 3),
+      .width = rep(c("0.67", "0.89", "0.97"), each = 2)
+    ),
+    aes(group = max_shellback, alpha = .width),
+    height = rect_height,
+    width = 0.01,
+    fill = "grey20",
+    position = position_dodge2(padding = rect_pad)
+  ) +
+  geom_tile_pattern(
+    data = ~filter(.x, .width == "0.97"),
+    aes(pattern_filename = max_shellback,),
+    pattern = "image",
+    pattern_type = "tile",
+    pattern_scale = .5,
+    height = rect_height,
+    position = position_dodge2(padding = rect_pad)
+  ) +
+  geom_tile(
+    data = ~filter(.x, .width == "0.97"), 
+    aes(group = max_shellback),
+    height = rect_height,
+    fill = "white",
+    alpha = 0.7,
+    position = position_dodge2(padding = rect_pad)
+  ) +
+  geom_tile_pattern(
+    data = ~filter(.x, .width == "0.89"),
+    aes(pattern_filename = max_shellback,),
+    pattern = "image",
+    pattern_type = "tile",
+    pattern_scale = .5,
+    height = rect_height,
+    position = position_dodge2(padding = rect_pad)
+  ) +
+  geom_tile(
+    data = ~filter(.x, .width == "0.89"),
+    aes(group = max_shellback),
+    height = rect_height,
+    fill = "white",
+    alpha = 0.4,
+    position = position_dodge2(padding = rect_pad)
+  ) +
+  geom_tile_pattern(
+    data = ~filter(.x, .width == "0.67"),
+    aes(pattern_filename = max_shellback,),
+    pattern = "image",
+    pattern_type = "tile",
+    pattern_scale = .5,
+    height = rect_height,
+    position = position_dodge2(padding = rect_pad)
+  ) +
+  expand_limits(x = c(0, 1)) +
+  scale_y_discrete(labels = str_to_title) +
+  scale_pattern_filename_discrete(
+    choices = c("glitter/glitter-orange.png", "glitter/glitter-green.png"),
+    breaks = c("TRUE", "FALSE"),
+    labels = c("Max Martin & Shellback", "Solo and Other Collaborators"),
+    name = "Collaborator"
+  ) +
+  scale_alpha_manual(
+    values = c("0.67" = 1, "0.89" = 0.6, "0.97" = 0.3),
+    limits = c("0.97", "0.89", "0.67"),
+    labels = c("97%", "89%", "67%"),
+    drop = FALSE,
+    name = "Interval"
+  ) +
+  labs(x = NULL, y = NULL, pattern_filename = NULL) +
+  theme(legend.box = "vertical") +
+  guides(
+    pattern_filename = guide_legend(
+      override.aes = list(pattern_type = "expand")
+    )
+  )
+```
+
+As someone who loves glitter-pen Taylor Swift songs, I can't wait for the new album!
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@dagmara_rune?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Summer Rune</a> on <a href="https://unsplash.com/photos/a-close-up-of-a-group-of-different-colored-nail-polishes-h8oHBwv34yI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.
+      

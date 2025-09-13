@@ -31,7 +31,7 @@ execute:
   fig-align: "center"
   fig-width: 6
   fig-asp: 0.618
-  out.width: "80%"
+  out-width: "80%"
 
 # Default author
 author:

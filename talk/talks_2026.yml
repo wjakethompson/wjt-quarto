@@ -1,0 +1,15 @@
+- title: "Using diagnostic classification models to improve instructional decision-making"
+  date: 2026-01-05
+  description: >-
+    The IAFOR International Conference on Education in Hawaii (IICE)
+  location: Honolulu, HI
+  links:
+  - name: Slides
+    url: https://iice2026.wjakethompson.com
+    icon: fa-solid fa-chalkboard-user
+  - name: Article
+    url: https://doi.org/10.1111/emip.12619
+    icon: fa-solid fa-book
+  - name: Preprint
+    url: https://doi.org/10.35542/osf.io/7n9qz
+    icon: fa-regular fa-newspaper 

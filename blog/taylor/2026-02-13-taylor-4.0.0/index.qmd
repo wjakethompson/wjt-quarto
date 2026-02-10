@@ -1,0 +1,161 @@
+---
+title: "taylor 4.0.0"
+date: 2026-02-13
+subtitle: ""
+description: "The end of the The Eras era."
+image: "featured.jpg"
+twitter-card:
+  image: "featured.jpg"
+open-graph:
+  image: "featured.jpg"
+categories:
+  - R
+  - package
+  - taylor
+  - Taylor Swift
+engine: knitr
+---
+
+```{r}
+#| label: setup
+#| include: false
+#| message: false
+
+library(ggplot2)
+library(wjake)
+
+set_theme(base_family = "Source Sans Pro", plot_margin = margin(10, 10, 10, 10))
+
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+I'm very happy to announce the release of `{taylor}` 4.0.0.
+taylor provides data on Taylor Swift's discography, including lyrics from [Genius](https://genius.com/artists/Taylor-swift) and song characteristics from [SoundStat](https://soundstat.info).
+
+You can install the updated version from CRAN with:
+
+```{r}
+#| label: install-taylor
+#| eval: false
+
+install.packages("taylor")
+```
+
+This is a major release that brings significant changes to how we access audio features, celebrates Taylor's ownership of her masters, and introduces exciting new data from *The Life of a Showgirl*.
+
+```{r}
+#| label: load-taylor
+
+library(taylor)
+```
+
+## This is why we can't have nice things
+
+You may have noticed that this release is coming out much later than I would typically update taylor after a new album release.
+This is because in the time between the last update to taylor and the release of *The Life of a Showgirl*, Spotify [removed access](https://developer.spotify.com/blog/2024-11-27-changes-to-the-web-api) to the audio features endpoint of their API, meaning we had to find a new source for this data.
+
+Both `taylor_all_songs` and `taylor_album_songs` now use audio features from the [SoundStat API](https://soundstat.info).
+In many ways this transition is similar to Taylor's rerecordings.
+We've tried to make the new data as similar as possible to the old data, but there are places where it's just not quite the same.
+Specifically, three variables that are not included in the SoundStat API have been removed from the data sets: liveness, speechiness, and time_signature.
+Additionally, the remaining audio features (like danceability, energy, valence, etc.) may have slightly different values compared to the Spotify data due to differences in how SoundStat and Spotify calculate these metrics.
+If you need to convert SoundStat values to Spotify-equivalent values for comparison with previous data, check out the [SoundStat conversions article](https://soundstat.info/article/Understanding-Audio-Analysis.html).
+
+## I protect the family
+
+Now that Taylor [owns all of her masters](https://www.taylorswift.com/read-my-letter), we've added the original versions of *Fearless*, *Speak Now*, *Red*, and *1989* back to `taylor_album_songs`.
+Both the originals and Taylor's Versions are now included in the dataset, giving you access to the complete discography for analysis.
+
+As part of this change, we've made a few updates to album metadata.
+First, we've reordered the albums to be in release order.
+Previously, for example, *Fearless (Taylor's Version)* had slotted in after *Taylor Swift* as a replacement for the original *Fearless*.
+Now, *Fearless (Taylor's Version)* appears after *evermore* and before *Red (Taylor's Version)* to reflect actual release dates.
+This is reflected in `?album_levels`, which is in turn used to set the ordering of `?taylor_albums`, `?album_palettes`, and `?album_compare`.
+
+```{r}
+album_levels
+
+taylor_albums
+
+names(album_palettes)
+
+album_compare
+```
+
+## Now I know the life of a showgirl, babe
+
+
+
+```{r}
+#| label: tloas-data
+#| message: false
+
+library(tidyverse)
+
+taylor_all_songs %>% 
+  filter(album_name == "The Life of a Showgirl")
+```
+
+
+Finally, a new color palette inspired by the *Showgirl* aesthetic has been added to the `?album_palettes`, and the package website has been updated with a new theme and logo, also inspired by the album cover.
+
+```{r}
+#| label: fig-tloas-palette
+#| echo: false
+#| fig-alt: |
+#|   The five colors of the Showgirl color palette. The hexadecimal codes are
+#|   #C44615, #EB8246, #F0CD92, #6CAE90, and #3E5C38
+
+tibble(
+  color = as.character(album_palettes$showgirl),
+  x = c(1.5, 2.5, 3.5, 1.5, 2.5),
+  y = c(1.5, 1.5, 1.5, 0.5, 0.5)
+) |>
+  mutate(color = fct_inorder(color)) |> 
+  ggplot(aes(x = x, y = y, fill = color)) +
+  geom_tile(width = 1, height = 1, show.legend = FALSE) +
+  geom_text(
+    aes(
+      label = color,
+      color = after_scale(prismatic::best_contrast(fill, c("white", "black")))
+    ),
+    fontface = "bold"
+  ) +
+  scale_fill_taylor_d(album = "showgirl") +
+  theme_void()
+```
+
+
+```{r}
+#| label: fig-tloas-energy
+#| fig-align: "center"
+#| fig-alt: >
+#|   A horizontal bar graph showing track names on the y-axis and song energey
+#|   on the x-axis. Bars a filled with colors derived from the Showgirl color
+#|   palette, ranging from orange to green.
+
+taylor_album_songs %>% 
+  filter(album_name == "The Life of a Showgirl") %>% 
+  mutate(track_name = fct_inorder(track_name)) %>% 
+  ggplot(aes(x = energy, y = fct_rev(track_name))) +
+  geom_col(aes(fill = track_name), show.legend = FALSE) +
+  scale_fill_taylor_d(album = "The Life of a Showgirl") +
+  labs(x = "Song Energy (From SoundStat)", y = NULL)
+```
+
+
+## Minor Changes
+
+There were also a couple of minor improvements:
+
+* `scale_color_albums()`...
+
+For a complete list of changes, check out the [changelog](https://taylor.wjakethompson.com/news/index.html#taylor-400).
+
+## Acknowledgments {.appendix}
+
+Featured photo by <a href="https://unsplash.com/@karographix?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">KaroGraphix Photography</a> on <a href="https://unsplash.com/photos/woman-in-green-wig-and-white-stockings-standing-on-brown-wooden-floor-k2BcoUdGjmA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
+      

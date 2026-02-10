@@ -87,7 +87,8 @@ album_compare
 
 ## Now I know the life of a showgirl, babe
 
-
+The final major update is the inclusion of data from *The Life of a Showgirl*.
+You can know find SoundStat data and lyrics for all 12 songs in `?taylor_all_songs` and `?taylor_album_songs`.
 
 ```{r}
 #| label: tloas-data
@@ -99,8 +100,17 @@ taylor_all_songs %>%
   filter(album_name == "The Life of a Showgirl")
 ```
 
+*The Life of a Showgirl* has also been added to `?taylor_albums`.
+Metacritic is still undergoing updates to their music scores, so user scores are still unavailable for all albums after *Speak Now (Taylor's Version)*.
 
-Finally, a new color palette inspired by the *Showgirl* aesthetic has been added to the `?album_palettes`, and the package website has been updated with a new theme and logo, also inspired by the album cover.
+```{r}
+#| label: showgirl-albums
+
+taylor_albums
+```
+
+A new color palette inspired by the *Showgirl* aesthetic has also been added to the `?album_palettes`.
+The palette can be used inside any of the `scale_*_taylor_*()` functions (e.g., `scale_fill_taylor_d()`).
 
 ```{r}
 #| label: fig-tloas-palette
@@ -111,7 +121,7 @@ Finally, a new color palette inspired by the *Showgirl* aesthetic has been added
 
 tibble(
   color = as.character(album_palettes$showgirl),
-  x = c(1.5, 2.5, 3.5, 1.5, 2.5),
+  x = c(1.5, 2.5, 3.5, 2, 3),
   y = c(1.5, 1.5, 1.5, 0.5, 0.5)
 ) |>
   mutate(color = fct_inorder(color)) |> 
@@ -122,16 +132,18 @@ tibble(
       label = color,
       color = after_scale(prismatic::best_contrast(fill, c("white", "black")))
     ),
+    size = 5,
     fontface = "bold"
   ) +
   scale_fill_taylor_d(album = "showgirl") +
   theme_void()
 ```
 
-
 ```{r}
 #| label: fig-tloas-energy
 #| fig-align: "center"
+#| out-width: "90%"
+#| fig-width: 7
 #| fig-alt: >
 #|   A horizontal bar graph showing track names on the y-axis and song energey
 #|   on the x-axis. Bars a filled with colors derived from the Showgirl color
@@ -144,6 +156,18 @@ taylor_album_songs %>%
   geom_col(aes(fill = track_name), show.legend = FALSE) +
   scale_fill_taylor_d(album = "The Life of a Showgirl") +
   labs(x = "Song Energy (From SoundStat)", y = NULL)
+```
+
+Finally, the [package website](https://taylor.wjakethompson.com) has gotten a new theme to match the album aesthetic, and, of course, a new package logo!
+
+```{r}
+#| label: fig-tloas-hex
+#| echo: false
+#| out-width: "50%"
+#| fig-alt: |
+#|   taylor hex logo with a Showgirl theme.
+
+knitr::include_graphics("tloas.png")
 ```
 
 

@@ -10,10 +10,10 @@ listing:
       - "weight asc"
     date-format: MMMM YYYY
     template: ../assets/talks/listing.ejs
-  # - id: talks_2026
-  #   contents: talks_2026.yml
-  #   sort: "date desc"
-  #   template: ../assets/talks/listing.ejs
+  - id: talks_2026
+    contents: talks_2026.yml
+    sort: "date desc"
+    template: ../assets/talks/listing.ejs
   - id: talks_2025
     contents: talks_2025.yml
     sort: "date desc"
@@ -74,12 +74,10 @@ This page contains resources and materials for workshops, talks, lectures, and p
 :::{#talks_upcoming}
 :::
 
-<!--
 ## 2026
 
 :::{#talks_2026}
 :::
--->
 
 ## 2025
 

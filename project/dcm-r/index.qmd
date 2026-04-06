@@ -2,7 +2,7 @@
 title: "Diagnostic Psychometrics"
 author:
   - Jake Thompson
-date: 2024-04-11
+date: 2026-04-08
 slug: dcm-r
 image: featured.jpg
 alias:
@@ -22,6 +22,9 @@ links:
 - icon: door-open
   name: NCME 2024
   url: https://ncme2024.measr.info
+- icon: door-open
+  name: NCME 2026
+  url: https://learn.r-dcm.org
 ---
 
 
@@ -35,5 +38,6 @@ This workshop has previously been presented at:
 
 * StanCon 2023, Washington University in St. Louis
 * NCME 2024, Philadelphia, PA
+* NCME 2026, Los Angeles, CA
 
 See the workshop websites for more, including links to the GitHub repositories for all workshop materials.

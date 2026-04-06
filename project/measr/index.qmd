@@ -2,7 +2,7 @@
 title: "measr"
 author:
   - Jake Thompson
-date: 2026-01-14
+date: 2026-03-27
 slug: measr
 image: featured.jpg
 alias:

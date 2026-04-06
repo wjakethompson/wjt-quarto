@@ -1,5 +1,6 @@
 project:
   type: website
+  pre-render: talk-yml.R
   
   resources: 
     - "assets/wjakethompson/**"

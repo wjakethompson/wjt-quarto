@@ -1,27 +1,6 @@
-- title: "Introduction to diagnostic classification modeling with R and Stan"
-  date: 2026-04-08
+- title: "Improving assessment with diagnostic classification models"
+  date: 2026-06-15
   weight: 1
   description: >-
-    Workshop to be presented at the 2026 Annual Meeting of the National Council on Measurement in Education (NCME)
-  location: Los Angeles, CA
-  
-- title: "Advanced diagnostic classification modeling with R and Stan"
-  date: 2026-04-08
-  weight: 2
-  description: >-
-    Workshop to be presented at the 2026 Annual Meeting of the National Council on Measurement in Education (NCME)
-  location: Los Angeles, CA
-
-- title: "Estimating and evaluating diagnostic models with the R package measr"
-  date: 2026-04-09
-  weight: 1
-  description: >-
-    2026 Annual Meeting of the National Council on Measurement in Education (NCME)
-  location: Los Angeles, CA
-
-- title: "Creating summative scores from instructionally embedded results"
-  date: 2026-04-10
-  weight: 1
-  description: >-
-    Coordinated session on "Combining through-year scores: Operational approaches, challenges, and practical implications" at the 2026 Annual Meeting of the National Council on Measurement in Education (NCME)
-  location: Los Angeles, CA
+    Workshop to be presented at the Paris Conference on Education (PCE)
+  location: Paris, France

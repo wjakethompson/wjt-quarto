@@ -14,9 +14,7 @@ categories:
   - tidyverse
 ---
 
-I have once again been inspired by a tweet! This one came from [@WeAreRLadies](https://twitter.com/WeAreRLadies), which was being moderated by [Alison Hill](https://twitter.com/apreshill) at the time.
-
-{{< tweet apreshill 1060726286744739840 >}}
+I have once again been inspired by a tweet! This one came from [@WeAreRLadies](https://twitter.com/WeAreRLadies), which was being moderated by [Alison Hill](https://bsky.app/profile/apreshill.com) at the time.
 
 Alison was at RStudio headquarters in Boston, when she noticed a **ggplot2** themed clock! To which I had a totally normal reaction.
 

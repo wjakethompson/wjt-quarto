@@ -1,6 +1,13 @@
-- title: "Improving assessment with diagnostic classification models"
-  date: 2026-06-15
-  weight: 1
+- title: "Using diagnostic classification models to improve instructional decision-making"
+  date: 2026-09-28
+  weight: 2
   description: >-
-    Workshop to be presented at the Paris Conference on Education (PCE)
-  location: Paris, France
+    2026 Annual Conference of the International Association for Educational Assessment
+  location: Toronto, Canada
+
+- title: "Open and transparent scoring with measr: An R package for diagnostic classification models"
+  date: 2026-09-28
+  weight: 2
+  description: >-
+    2026 Annual Conference of the International Association for Educational Assessment
+  location: Toronto, Canada

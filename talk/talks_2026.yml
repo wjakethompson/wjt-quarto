@@ -66,3 +66,17 @@
   - name: Slides
     url: https://speakerdeck.com/wjakethompson/summative-scores
     icon: fa-solid fa-chalkboard-user
+
+- title: "Improving assessment with diagnostic classification models"
+  date: 2026-06-16
+  weight: 1
+  description: >-
+    Workshop presented at the Paris Conference on Education (PCE)
+  location: Paris, France
+  links:
+  - name: Companion site, slides, and materials
+    url: https://learn.r-dcm.org/
+    icon: fa-solid fa-chalkboard-user
+  - name: GitHub repository
+    url: https://github.com/r-dcm/learn.r-dcm.org
+    icon: fa-brands fa-github

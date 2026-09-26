@@ -80,3 +80,34 @@
   - name: GitHub repository
     url: https://github.com/r-dcm/learn.r-dcm.org
     icon: fa-brands fa-github
+
+- title: "Open and transparent scoring with measr: An R package for diagnostic classification models"
+  date: 2026-09-28
+  weight: 1
+  description: >-
+    2026 Annual Conference of the International Association for Educational Assessment
+  location: Toronto, Canada
+  links:
+  - name: Slides
+    url: https://iaea2026.wjakethompson.com
+    icon: fa-solid fa-chalkboard-user
+  - name: GitHub repository
+    url: https://github.com/wjakethompson/iaea-2026
+    icon: fa-brands fa-github
+
+- title: "Using diagnostic classification models to improve instructional decision-making"
+  date: 2026-10-01
+  weight: 1
+  description: >-
+    2026 Annual Conference of the International Association for Educational Assessment
+  location: Toronto, Canada
+  links:
+  - name: Slides
+    url: https://speakerdeck.com/wjakethompson/dcm-instructional-decisions
+    icon: fa-solid fa-chalkboard-user
+  - name: Article
+    url: https://doi.org/10.1111/emip.12619
+    icon: fa-solid fa-book
+  - name: Preprint
+    url: https://doi.org/10.35542/osf.io/7n9qz
+    icon: fa-regular fa-newspaper 
